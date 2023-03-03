@@ -1,0 +1,35 @@
+.search_wrapper {
+  background: rgba(34, 34, 34, 0.8);
+  border-radius: 20px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .search_icon {
+    color: rgba(212, 212, 212, 1);
+    font-size: 16px;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .search_input {
+    background-color: unset;
+    border: none;
+    outline: none;
+    width: 90%;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #d4d4d4;
+    &::placeholder {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: #d4d4d4;
+    }
+  }
+}

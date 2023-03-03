@@ -1,0 +1,33 @@
+.download_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  //   padding: 0.5rem 1rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  width: 12rem;
+  cursor: pointer;
+  .download_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+    .download_right_text1 {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #cfcfcf;
+      margin: 0px;
+    }
+    .download_right_text2 {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      color: #cfcfcf;
+      margin: 0px;
+    }
+  }
+}

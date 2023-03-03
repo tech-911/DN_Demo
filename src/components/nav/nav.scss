@@ -1,0 +1,31 @@
+@mixin nav_alignment {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5.5rem;
+}
+
+.nav_wrapper {
+  @include nav_alignment;
+  background: #090909;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  border: 1px solid rgba(205, 205, 205, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .nav_search {
+    margin-left: 10rem;
+  }
+  .nav_download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 3rem;
+    .nav_download1 {
+      margin-right: 1rem;
+    }
+  }
+}

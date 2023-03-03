@@ -1,14 +1,14 @@
 import React from "react";
+import "./App.scss";
+import { Route, Routes } from "react-router-dom";
+import Landing from "./pages/landing/Landing";
 
 const App = () => {
   return (
-    <div>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
-        perspiciatis consequatur quas, cum maxime nisi neque nobis odio
-        assumenda inventore nihil alias provident et saepe! Molestiae
-        consequatur quibusdam rem quisquam?
-      </div>
+    <div className="app_wrapper">
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
     </div>
   );
 };
