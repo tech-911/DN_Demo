@@ -1,0 +1,79 @@
+@mixin section_headers {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #d4d4d4;
+}
+@mixin section_layouts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidenav_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem 1rem;
+  .sidenav_logo {
+    margin-bottom: 1rem;
+  }
+  .sidenav_auth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    .sidenav_avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: #5e5e5e;
+      margin-right: 0.7rem;
+    }
+    .sidenav_auth_text {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      align-items: center;
+      color: #d4d4d4;
+    }
+  }
+  .sidenav_lectures {
+    @include section_layouts;
+    margin-bottom: 2rem;
+    .sidenav_lectures_header {
+      @include section_headers;
+    }
+  }
+  .sidenav_library {
+    @include section_layouts;
+    margin-bottom: 2rem;
+    .sidenav_library_header {
+      @include section_headers;
+    }
+  }
+  .sidenav_Buzz {
+    @include section_layouts;
+    margin-bottom: .5rem;
+    .sidenav_Buzz_header {
+      @include section_headers;
+    }
+  }
+  .sidenav_podcast {
+    @include section_layouts;
+    margin-bottom: 2rem;
+    .sidenav_podcast_header {
+      @include section_headers;
+    }
+  }
+}

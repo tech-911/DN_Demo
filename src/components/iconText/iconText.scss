@@ -1,0 +1,51 @@
+@mixin LinkHover {
+  background: #02aae2;
+  border-radius: 10px;
+  // color: white;
+}
+.icontext_active {
+  @include LinkHover();
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.icontext_active_text {
+  color: #d6ff00 !important;
+}
+.icontext_active_icon {
+  .icon {
+    color: #d6ff00;
+  }
+}
+
+.icontext_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  &:hover {
+    .icontext_icon {
+      .icon {
+        color: #d6ff00;
+      }
+    }
+    .icontext_name {
+      color: #d6ff00;
+    }
+  }
+  .icontext_icon {
+    .icon {
+      color: #aeaeae;
+      font-size: 16px;
+    }
+  }
+  .icontext_name {
+    margin-left: 1rem;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    align-items: center;
+    color: #868686;
+  }
+}

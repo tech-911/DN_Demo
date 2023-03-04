@@ -1,0 +1,23 @@
+.layout_wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .layout_sidenav {
+    height: 100%;
+    width: 20%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #030303;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .layout_outlet {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 80%;
+  }
+}

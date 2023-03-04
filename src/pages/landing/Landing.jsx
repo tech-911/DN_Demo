@@ -1,11 +1,11 @@
 import React from "react";
 import "./landing.scss";
-import Layout from "../../Layout/Layout";
+import Container from "../../components/container/Container";
 
 const Landing = () => {
   return (
     <div className="Landing_wrapper">
-      <Layout>Landing</Layout>
+      <Container>Landing</Container>
     </div>
   );
 };
