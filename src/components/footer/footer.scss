@@ -22,20 +22,12 @@
 .footer_wrapper {
   display: flex;
   flex-direction: column;
-  height: 28.813rem;
   align-items: flex-end;
-  padding: 3rem 10rem;
+  padding: 3rem 5rem;
   background-color: #222222;
-  @media screen and (max-width: 830px) {
-    height: 35rem;
-  }
-
-  @media screen and (max-width: 499px) {
-    height: 45rem;
-  }
-  @media screen and (max-width: 830px) {
-    padding-right: 2rem;
-    padding-left: 2rem;
+  @media screen and (max-width: 1224px) {
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
   .footer_main {
     display: flex;
@@ -50,8 +42,11 @@
       flex-direction: column;
       align-items: flex-start;
       margin-right: 8rem;
-      @media screen and (max-width: 1306px) {
+      @media screen and (max-width: 1464px) {
         margin-right: 4rem;
+      }
+      @media screen and (max-width: 1144px) {
+        margin-right: 2rem;
       }
       .footer_main_item1_header {
         @include footer_text_header;
@@ -59,7 +54,7 @@
       a {
         @include footer_text;
         text-decoration: none;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
       }
     }
     .footer_main_item2 {
@@ -67,8 +62,11 @@
       flex-direction: column;
       align-items: flex-start;
       margin-right: 8rem;
-      @media screen and (max-width: 1306px) {
+      @media screen and (max-width: 1464px) {
         margin-right: 4rem;
+      }
+      @media screen and (max-width: 1144px) {
+        margin-right: 2rem;
       }
       .footer_main_item2_header {
         @include footer_text_header;
@@ -76,7 +74,7 @@
       a {
         @include footer_text;
         text-decoration: none;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
       }
     }
     .footer_main_item3 {
@@ -84,10 +82,13 @@
       flex-direction: column;
       align-items: flex-start;
       margin-right: 8rem;
-      @media screen and (max-width: 1306px) {
+      @media screen and (max-width: 1464px) {
         margin-right: 4rem;
       }
-      @media screen and (max-width: 491px) {
+      @media screen and (max-width: 1144px) {
+        margin-right: 2rem;
+      }
+      @media screen and (max-width: 603px) {
         margin-right: 8rem;
       }
       .footer_main_item3_header {
@@ -96,16 +97,20 @@
       a {
         @include footer_text;
         text-decoration: none;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
       }
     }
     .footer_main_item4 {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      @media screen and (max-width: 798px) and (min-width: 620px) {
+        margin-left: 3rem;
+      }
       .footer_main_item4_header {
         @include footer_text_header;
       }
+
       .footer_follow_icons {
         display: flex;
         flex-direction: row;
@@ -125,6 +130,7 @@
       font-size: 14px;
       line-height: 21px;
       color: #e4ff55;
+      text-align: center;
     }
   }
 }

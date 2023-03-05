@@ -18,9 +18,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
   .sidenav_logo {
     margin-bottom: 1rem;
+    @media screen and (max-width: 890px) {
+      display: none;
+    }
   }
   .sidenav_auth {
     display: flex;
@@ -64,7 +67,7 @@
   }
   .sidenav_Buzz {
     @include section_layouts;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     .sidenav_Buzz_header {
       @include section_headers;
     }

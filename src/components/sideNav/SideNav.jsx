@@ -7,7 +7,7 @@ import { lectures, library } from "./data";
 import IconText from "../iconText/IconText";
 import { RiAwardFill } from "react-icons/ri";
 
-const SideNav = () => {
+const SideNav = ({ res }) => {
   return (
     <div className="sidenav_wrapper">
       <div className="sidenav_logo">
@@ -15,6 +15,7 @@ const SideNav = () => {
           <img src={Logo} alt="logo" />
         </Link>
       </div>
+
       <div className="sidenav_auth">
         <div className="sidenav_avatar">
           <img src={avatar} alt="avatar" />
@@ -45,7 +46,6 @@ const SideNav = () => {
           link={""}
           name={"Recommended"}
         />
-        ;
       </div>
       <div className="sidenav_podcast">
         <h1 className="sidenav_podcast_header">Podcast</h1>
@@ -55,7 +55,6 @@ const SideNav = () => {
           link={""}
           name={"Recommended"}
         />
-        ;
       </div>
     </div>
   );

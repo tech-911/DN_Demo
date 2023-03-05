@@ -9,14 +9,16 @@
 
 .container_wrapper {
   @include flex_column;
-  height: 100%;
   width: 100%;
-  //   overflow: hidden;
   position: relative;
+  // overflow-y: scroll;
   .container_child {
     width: 100%;
     padding-top: 5.5rem;
     background-color: #0d0d0d;
     overflow: hidden;
+    @media screen and (max-width: 690px) {
+      padding-top: 10rem;
+    }
   }
 }
