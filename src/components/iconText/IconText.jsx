@@ -14,7 +14,7 @@ const IconText = ({ icon, link, name, id, group }) => {
       setActive(7);
     } else if (location.pathname.includes("/recommend2")) {
       setActive(12);
-    } else if (location.pathname.includes("/user/settings")) {
+    } else if (location.pathname.includes("/lecturers")) {
       setActive(3);
     }
   });

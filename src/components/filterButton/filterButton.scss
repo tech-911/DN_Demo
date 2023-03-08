@@ -1,0 +1,26 @@
+.filter_wrapper {
+  height: 36px;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: #5e5e5e;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  &:hover {
+    background-color: #ddff2b;
+    color: #000000;
+  }
+}
+.filter_active {
+  background-color: #ddff2b;
+  color: #000000;
+}

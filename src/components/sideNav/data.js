@@ -34,7 +34,7 @@ export const lectures = [
     id: 3,
     name: "Lecturers",
     icon: <MdPerson className="icon3 icon" />,
-    link: "",
+    link: "/lecturers",
   },
   {
     id: 4,
