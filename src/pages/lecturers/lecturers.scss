@@ -4,5 +4,8 @@
   flex-direction: column;
   align-items: flex-start;
   .lecturers_filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
