@@ -1,0 +1,62 @@
+.groupWidget_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  .groupWidget_top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+    .groupWidget_top_heading {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      display: flex;
+      align-items: center;
+      color: #d4d4d4;
+      margin: unset;
+    }
+    .groupWidget_more {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      .groupWidget_more_text {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #d6ff00;
+        margin: unset;
+      }
+      .groupWidget_more_icon {
+        color: #d6ff00;
+        font-size: 25px;
+        margin-left: 0.2rem;
+      }
+    }
+  }
+  .groupWidget_items {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .groupWidget_close_more {
+    height: 14.313rem;
+  }
+  .groupWidget_open_more {
+    height: 100%;
+  }
+}

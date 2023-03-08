@@ -26,7 +26,14 @@ const SideNav = ({ res }) => {
         <h1 className="sidenav_lectures_header">Lectures</h1>
         {lectures.map(({ icon, id, link, name }) => {
           return (
-            <IconText key={id} icon={icon} id={id} link={link} name={name} />
+            <IconText
+              key={id}
+              icon={icon}
+              id={id}
+              link={link}
+              name={name}
+              group={"lectures"}
+            />
           );
         })}
       </div>
@@ -34,7 +41,14 @@ const SideNav = ({ res }) => {
         <h1 className="sidenav_library_header">Library</h1>
         {library.map(({ icon, id, link, name }) => {
           return (
-            <IconText key={id} icon={icon} id={id} link={link} name={name} />
+            <IconText
+              key={id}
+              icon={icon}
+              id={id}
+              link={link}
+              name={name}
+              group={"library"}
+            />
           );
         })}
       </div>
@@ -42,18 +56,20 @@ const SideNav = ({ res }) => {
         <h1 className="sidenav_Buzz_header">Buzz</h1>
         <IconText
           icon={<RiAwardFill className="icon0 icon" />}
-          id={0}
+          id={11}
           link={""}
           name={"Recommended"}
+          group={"buzz"}
         />
       </div>
       <div className="sidenav_podcast">
         <h1 className="sidenav_podcast_header">Podcast</h1>
         <IconText
           icon={<RiAwardFill className="icon0 icon" />}
-          id={0}
-          link={""}
+          id={12}
+          link={"/recommend2"}
           name={"Recommended"}
+          group={"podcast"}
         />
       </div>
     </div>

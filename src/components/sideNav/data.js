@@ -16,7 +16,7 @@ export const lectures = [
     id: 0,
     name: "Home",
     icon: <FaHome className="icon0 icon" />,
-    link: "",
+    link: "/home",
   },
   {
     id: 1,
@@ -58,24 +58,24 @@ export const lectures = [
     id: 7,
     name: "Genres",
     icon: <BsFileEarmarkMusicFill className="icon7 icon" />,
-    link: "",
+    link: "/genres",
   },
 ];
 export const library = [
   {
-    id: 0,
+    id: 8,
     name: "Add Playlist",
     icon: <BsFillDiscFill className="icon0 icon" />,
     link: "",
   },
   {
-    id: 1,
+    id: 9,
     name: "Favourites",
     icon: <MdFavorite className="icon1 icon" />,
     link: "",
   },
   {
-    id: 2,
+    id: 10,
     name: "My Playlist",
     icon: <CgUserList className="icon2 icon" />,
     link: "",

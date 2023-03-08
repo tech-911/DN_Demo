@@ -33,6 +33,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #030303;
+    transition: width 0.8s ease-in-out;
     &::-webkit-scrollbar {
       display: none;
     }

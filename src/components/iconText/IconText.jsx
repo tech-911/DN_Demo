@@ -6,14 +6,14 @@ const IconText = ({ icon, link, name, id, group }) => {
   const location = useLocation();
   const [active, setActive] = useState(null);
   useEffect(() => {
-    if (location.pathname.includes("/user/booking")) {
+    if (location.pathname.includes("/home")) {
       setActive(0);
-    } else if (location.pathname === "/user") {
+    } else if (location.pathname === "/") {
       setActive(0);
-    } else if (location.pathname.includes("/user/transaction")) {
-      setActive(1);
-    } else if (location.pathname.includes("/user/history")) {
-      setActive(2);
+    } else if (location.pathname.includes("/genres")) {
+      setActive(7);
+    } else if (location.pathname.includes("/recommend2")) {
+      setActive(12);
     } else if (location.pathname.includes("/user/settings")) {
       setActive(3);
     }

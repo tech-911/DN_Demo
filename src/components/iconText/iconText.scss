@@ -3,16 +3,16 @@
   border-radius: 10px;
   // color: white;
 }
-.icontext_active {
-  @include LinkHover();
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-}
+// .icontext_active {
+//   @include LinkHover();
+//   margin-bottom: 0.5rem;
+//   margin-top: 0.5rem;
+// }
 .icontext_active_text {
   color: #d6ff00 !important;
 }
 .icontext_active_icon {
-  .icon {
+  * {
     color: #d6ff00;
   }
 }

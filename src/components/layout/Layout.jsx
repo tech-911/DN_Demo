@@ -7,7 +7,10 @@ export const NavContext = createContext();
 
 const Layout = () => {
   const [res, setRes] = useState(() => {
-    return Number(localStorage.getItem("navControl")) || 1;
+    return (
+      Number(localStorage.getItem("navControl")) ||
+      (window.innerWidth > 890 ? 2 : 1)
+    );
   });
 
   useEffect(() => {
