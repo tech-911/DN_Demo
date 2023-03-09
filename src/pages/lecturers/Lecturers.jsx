@@ -98,11 +98,7 @@ const Lecturers = () => {
           </div>
         </div>
         <div className="lecturers_widget">
-          {filter.length === 0
-            ? data.map(({ img, rp }, idx) => {
-                return <LecturersWidget key={idx} img={img} rp={rp} />;
-              })
-            : filter.map(({ img, rp }, idx) => {
+          {filter.map(({ img, rp }, idx) => {
                 return <LecturersWidget key={idx} img={img} rp={rp} />;
               })}
         </div>
