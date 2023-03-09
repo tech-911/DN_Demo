@@ -43,9 +43,14 @@ const FilterButton = ({
       }
     } else if (action === "categories") {
       if (title === "All") {
-        setData3(data.filter((value) => value.cats));
+        setData3(data.filter((value) => value?.cats || value?.categories));
       } else {
-        setData3(data.filter((value) => value.cats.includes(title)));
+        setData3(
+          data.filter(
+            (value) =>
+              value?.cats?.includes(title) || value?.categories?.includes(title)
+          )
+        );
       }
     }
   };

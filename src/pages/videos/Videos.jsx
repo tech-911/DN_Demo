@@ -4,7 +4,7 @@ import Container from "../../components/container/Container";
 import { categories } from "./data";
 import axios from "axios";
 import FilterButton from "../../components/filterButton/FilterButton";
-import AlbumWidget from "../../components/albumWidget/AlbumWidget";
+import VideoWidget from "../../components/videoWidget/VideoWidget";
 
 const Videos = () => {
   const [data, setData] = useState([]);
@@ -22,7 +22,9 @@ const Videos = () => {
 
   useEffect(() => {
     axios
-      .get("https://www.dawahbox.com/mongo/api/leclisting_page_api.php?page=2")
+      .get(
+        "https://www.dawahbox.com/mongo/api/albumlisting_page_api.php?page=3&lim=10&langid=7"
+      )
       .then((res) => {
         setData(res.data);
       })
@@ -58,8 +60,10 @@ const Videos = () => {
           </div>
         </div>
         <div className="video_widget">
-          {filter.map(({ img, cats }, idx) => {
-            return <AlbumWidget key={idx} categories={cats} img={img} />;
+          {filter.map(({ img, categories, title }, idx) => {
+            return (
+              <VideoWidget key={idx} title={title} lecturer={categories} img={img} />
+            );
           })}
         </div>
       </div>
