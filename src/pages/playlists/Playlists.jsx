@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./lecturers.scss";
+import "./playlists.scss";
 import Container from "../../components/container/Container";
+import { categories, language } from "./data";
 import FilterButton from "../../components/filterButton/FilterButton";
-import { lecturers, language, alphabet } from "./data";
-import LecturersWidget from "../../components/lecturersWidget/LecturersWidget";
 import axios from "axios";
+import AlbumWidget from "../../components/albumWidget/AlbumWidget";
 
-const Lecturers = () => {
+const Playlists = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState([]);
   const [data1, setData1] = useState([]);
@@ -16,9 +16,9 @@ const Lecturers = () => {
   const [active1, setActive1] = useState("");
   const [active2, setActive2] = useState("");
 
-  useEffect(() => {
-    setData1(data);
-  }, [data]);
+//   useEffect(() => {
+//     setData1(data);
+//   }, [data]);
 
   useEffect(() => {
     axios
@@ -30,13 +30,12 @@ const Lecturers = () => {
         console.log(err);
       });
   }, []);
-
   return (
     <Container>
-      <div className="lecturers_wrapper">
-        <div className="lecturers_filter">
-          <div className="lecturers_filter_name">
-            {lecturers.map(({ lecturer, id }, idx) => {
+      <div className="playlist_wrapper">
+        <div className="playlist_filter">
+          <div className="playlist_filter_categories">
+            {categories.map(({ lecturer, id }, idx) => {
               return (
                 <FilterButton
                   key={idx}
@@ -51,13 +50,13 @@ const Lecturers = () => {
                   active={active}
                   setActive={setActive}
                   title={lecturer}
-                  action="name"
+                  action="categories"
                   data={data}
                 />
               );
             })}
           </div>
-          <div className="lecturers_filter_language">
+          <div className="playlist_filter_language">
             {language.map(({ language, id }, idx) => {
               return (
                 <FilterButton
@@ -79,32 +78,10 @@ const Lecturers = () => {
               );
             })}
           </div>
-          <div className="lecturers_filter_alphabet">
-            {alphabet.map(({ alphabet, id }, idx) => {
-              return (
-                <FilterButton
-                  key={idx}
-                  filter={filter}
-                  setFilter={setFilter}
-                  data1={data1}
-                  setData1={setData1}
-                  data2={data2}
-                  setData2={setData2}
-                  data3={data3}
-                  setData3={setData3}
-                  active={active2}
-                  setActive={setActive2}
-                  title={alphabet}
-                  action="alphabet"
-                  data={data}
-                />
-              );
-            })}
-          </div>
         </div>
-        <div className="lecturers_widget">
-          {filter.map(({ img, rp }, idx) => {
-            return <LecturersWidget key={idx} img={img} rp={rp} />;
+        <div className="playlist_widget">
+          {filter.map(({ img, cats }, idx) => {
+            return <AlbumWidget key={idx} categories={cats} img={img} />;
           })}
         </div>
       </div>
@@ -112,4 +89,4 @@ const Lecturers = () => {
   );
 };
 
-export default Lecturers;
+export default Playlists;

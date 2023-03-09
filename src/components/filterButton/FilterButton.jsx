@@ -25,7 +25,7 @@ const FilterButton = ({
       if (title === "All") {
         setData1(data.filter((value) => value.rp));
       } else {
-        setData1(data.filter((value) => value.rp === title));
+        setData1(data.filter((value) => value.rp.includes(title)));
       }
     } else if (action === "language") {
       if (title === "All") {
@@ -40,6 +40,12 @@ const FilterButton = ({
         setData3(
           data.filter((value) => value.title[0].toLocaleUpperCase() === title)
         );
+      }
+    } else if (action === "categories") {
+      if (title === "All") {
+        setData3(data.filter((value) => value.cats));
+      } else {
+        setData3(data.filter((value) => value.cats.includes(title)));
       }
     }
   };

@@ -40,13 +40,13 @@ export const lectures = [
     id: 4,
     name: "Videos",
     icon: <BsYoutube className="icon4 icon" />,
-    link: "",
+    link: "/videos",
   },
   {
     id: 5,
     name: "Playlists",
     icon: <BsMusicNoteList className="icon5 icon" />,
-    link: "",
+    link: "/playlists",
   },
   {
     id: 6,

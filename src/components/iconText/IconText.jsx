@@ -16,6 +16,10 @@ const IconText = ({ icon, link, name, id, group }) => {
       setActive(12);
     } else if (location.pathname.includes("/lecturers")) {
       setActive(3);
+    } else if (location.pathname.includes("/videos")) {
+      setActive(4);
+    } else if (location.pathname.includes("/playlists")) {
+      setActive(5);
     }
   });
   return (
