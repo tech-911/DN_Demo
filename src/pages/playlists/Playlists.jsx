@@ -16,9 +16,9 @@ const Playlists = () => {
   const [active1, setActive1] = useState("");
   const [active2, setActive2] = useState("");
 
-//   useEffect(() => {
-//     setData1(data);
-//   }, [data]);
+  useEffect(() => {
+    setData3(data);
+  }, [data]);
 
   useEffect(() => {
     axios
