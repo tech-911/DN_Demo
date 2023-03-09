@@ -1,5 +1,6 @@
 .filter_wrapper {
-  height: 36px;
+  cursor: pointer;
+  height: 40px;
   width: fit-content;
   display: flex;
   flex-direction: row;
@@ -9,7 +10,7 @@
   background: #5e5e5e;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-family: "Poppins";
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
