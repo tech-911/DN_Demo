@@ -1,0 +1,10 @@
+.charts_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 2rem;
+  .charts_space {
+    margin-bottom: 1rem;
+  }
+}
