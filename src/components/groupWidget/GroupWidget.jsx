@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./groupWidget.scss";
 import AlbumWidget from "../albumWidget/AlbumWidget";
 import { FiChevronsRight } from "react-icons/fi";
+import LecturersWidget from "../lecturersWidget/LecturersWidget";
 
-const GroupWidget = ({ data, heading }) => {
+const GroupWidget = ({ data, heading, type }) => {
   const [more, setMore] = useState(0);
   return (
     <div className="groupWidget_wrapper">
@@ -14,15 +15,28 @@ const GroupWidget = ({ data, heading }) => {
           <FiChevronsRight className="groupWidget_more_icon" />
         </div>
       </div>
-      <div
-        className={`groupWidget_items ${
-          more ? "groupWidget_open_more" : "groupWidget_close_more"
-        }`}
-      >
-        {data.map(({ img, categories }, idx) => {
-          return <AlbumWidget key={idx} categories={categories} img={img} />;
-        })}
-      </div>
+      {type === "album" && (
+        <div
+          className={`groupWidget_items ${
+            more ? "groupWidget_open_more" : "groupWidget_close_more"
+          }`}
+        >
+          {data.map(({ img, categories }, idx) => {
+            return <AlbumWidget key={idx} categories={categories} img={img} />;
+          })}
+        </div>
+      )}
+      {type === "lecturer" && (
+        <div
+          className={`groupWidget_items ${
+            more ? "groupWidget_open_more" : "groupWidget_albumclose_more"
+          }`}
+        >
+          {data.map(({ img, categories }, idx) => {
+            return <LecturersWidget key={idx} rp={categories} img={img} />;
+          })}
+        </div>
+      )}
     </div>
   );
 };

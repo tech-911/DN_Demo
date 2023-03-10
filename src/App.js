@@ -8,6 +8,7 @@ import Recommend2 from "./pages/recommend2/Recommend2";
 import Lecturers from "./pages/lecturers/Lecturers";
 import Videos from "./pages/videos/Videos";
 import Playlists from "./pages/playlists/Playlists";
+import Charts from "./pages/charts/Charts";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/lecturers" element={<Lecturers />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/playlists" element={<Playlists />} />
+          <Route path="/charts" element={<Charts />} />
         </Route>
       </Routes>
     </div>

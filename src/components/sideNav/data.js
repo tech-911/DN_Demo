@@ -52,7 +52,7 @@ export const lectures = [
     id: 6,
     name: "Charts",
     icon: <TiChartBar className="icon6 icon" />,
-    link: "",
+    link: "/charts",
   },
   {
     id: 7,
