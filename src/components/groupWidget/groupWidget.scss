@@ -52,6 +52,9 @@
     flex-wrap: wrap;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
+    @media screen and (max-width: 512px) {
+      justify-content: center;
+    }
   }
   .groupWidget_close_more {
     height: 14.313rem;

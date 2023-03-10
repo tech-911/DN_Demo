@@ -48,16 +48,16 @@ const Landing = () => {
 
         <div className="landing_recent landing_space">
           {" "}
-          <GroupWidget data={data} heading="Recent" />
+          <GroupWidget data={data} heading="Recent" type={"album"} />
         </div>
         <div className="landing_trending landing_space">
-          <GroupWidget data={data} heading="Trending" />
+          <GroupWidget data={data} heading="Trending" type={"album"} />
         </div>
         <div className="landing_tafsir landing_space">
-          <GroupWidget data={data} heading="Ramadan Tafsir" />
+          <GroupWidget data={data} heading="Ramadan Tafsir" type={"album"} />
         </div>
         <div className="landing_quran landing_space">
-          <GroupWidget data={data} heading="Quran Recitations" />
+          <GroupWidget data={data} heading="Quran Recitations" type={"album"} />
         </div>
       </div>
     </Container>
