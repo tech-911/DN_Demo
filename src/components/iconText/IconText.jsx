@@ -22,6 +22,10 @@ const IconText = ({ icon, link, name, id, group }) => {
       setActive(5);
     } else if (location.pathname.includes("/charts")) {
       setActive(6);
+    } else if (location.pathname.includes("/trending")) {
+      setActive(1);
+    } else if (location.pathname.includes("/new")) {
+      setActive(2);
     }
   });
   return (

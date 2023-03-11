@@ -22,13 +22,13 @@ export const lectures = [
     id: 1,
     name: "Trending",
     icon: <AiOutlineLineChart className="icon1 icon" />,
-    link: "",
+    link: "/trending",
   },
   {
     id: 2,
     name: "New",
     icon: <ImMusic className="icon2 icon" />,
-    link: "",
+    link: "/new",
   },
   {
     id: 3,

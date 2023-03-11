@@ -1,0 +1,52 @@
+@mixin title_text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5e5e5e;
+}
+
+.trend_wrapper {
+  padding: 3rem 2rem;
+  .trend_title_wrap {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    justify-items: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
+    .tend_title2,
+    .tend_title3,
+    .tend_title4 {
+      @include title_text;
+      margin: unset;
+      padding: unset;
+    }
+    .tend_title1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      grid-column: span 5 / span 5;
+      * {
+        @include title_text;
+        margin: unset;
+        padding: unset;
+      }
+      .tend_hash {
+        // margin-right: 1.6rem;
+        width: 30px;
+      }
+    
+    }
+    .tend_title2 {
+      grid-column: span 2 / span 2;
+    }
+    .tend_title3 {
+      grid-column: span 2 / span 2;
+    }
+    .tend_title4 {
+      grid-column: span 2 / span 2;
+    }
+  }
+}

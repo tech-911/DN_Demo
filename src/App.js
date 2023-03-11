@@ -9,6 +9,8 @@ import Lecturers from "./pages/lecturers/Lecturers";
 import Videos from "./pages/videos/Videos";
 import Playlists from "./pages/playlists/Playlists";
 import Charts from "./pages/charts/Charts";
+import Trending from "./pages/trending/Trending";
+import New from "./pages/new/New";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/videos" element={<Videos />} />
           <Route path="/playlists" element={<Playlists />} />
           <Route path="/charts" element={<Charts />} />
+          <Route path="/trending" element={<Trending />} />
+          <Route path="/new" element={<New />} />
         </Route>
       </Routes>
     </div>

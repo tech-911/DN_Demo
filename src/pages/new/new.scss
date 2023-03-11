@@ -1,0 +1,51 @@
+@mixin title_text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5e5e5e;
+}
+
+.new_wrapper {
+  padding: 3rem 2rem;
+  .new_title_wrap {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    justify-items: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
+    .new_title2,
+    .new_title3,
+    .new_title4 {
+      @include title_text;
+      margin: unset;
+      padding: unset;
+    }
+    .new_title1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      grid-column: span 5 / span 5;
+      * {
+        @include title_text;
+        margin: unset;
+        padding: unset;
+      }
+      .new_hash {
+        // margin-right: 1.6rem;
+        width: 30px;
+      }
+    }
+    .new_title2 {
+      grid-column: span 2 / span 2;
+    }
+    .new_title3 {
+      grid-column: span 2 / span 2;
+    }
+    .new_title4 {
+      grid-column: span 2 / span 2;
+    }
+  }
+}
