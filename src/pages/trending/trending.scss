@@ -9,7 +9,33 @@
 
 .trend_wrapper {
   padding: 3rem 2rem;
+  .trend_title_res_wrap {
+    @media screen and (min-width: 1221px) {
+      display: none;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    .trending_title_res_icon {
+      font-size: 40px;
+      color: #d4d4d4;
+      cursor: pointer;
+    }
+    .trending_title_res_text {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #d4d4d4;
+      margin-left: 40%;
+    }
+  }
   .trend_title_wrap {
+    @media screen and (max-width: 1220px) {
+      display: none;
+    }
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(11, minmax(0, 1fr));
@@ -37,7 +63,6 @@
         // margin-right: 1.6rem;
         width: 30px;
       }
-    
     }
     .tend_title2 {
       grid-column: span 2 / span 2;

@@ -29,8 +29,16 @@ const New = () => {
           <p className="new_title4">Time</p>
         </div>
         <div className="new_content">
-          {data.map(({ title, rp }, idx) => {
-            return <MusicList key={idx} id={idx} title={title} lecturer={rp} />;
+          {data.map(({ title, rp, img }, idx) => {
+            return (
+              <MusicList
+                key={idx}
+                id={idx}
+                img={img}
+                title={title}
+                lecturer={rp}
+              />
+            );
           })}
         </div>
       </div>
