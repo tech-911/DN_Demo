@@ -6,6 +6,7 @@ import MusicList from "../../components/musicList/MusicList";
 
 const New = () => {
   const [data, setData] = useState([]);
+  const [drop, setDrop] = useState("");
   useEffect(() => {
     axios
       .get("https://www.dawahbox.com/mongo/api/leclisting_page_api.php?page=2")
@@ -37,6 +38,8 @@ const New = () => {
                 img={img}
                 title={title}
                 lecturer={rp}
+                drop={drop}
+                setDrop={setDrop}
               />
             );
           })}

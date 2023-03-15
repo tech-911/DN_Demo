@@ -11,14 +11,8 @@ import {
 import { RiAddBoxLine, RiDownload2Fill } from "react-icons/ri";
 import { SlOptionsVertical } from "react-icons/sl";
 
-const MusicList = ({ lecturer, id, title, img }) => {
-  const [drop, setDrop] = useState(0);
-  const handleDrop = () => {
-    setDrop(0);
-    setTimeout(() => {
-      setDrop(!drop);
-    }, 1000);
-  };
+const MusicList = ({ lecturer, id, title, img, drop, setDrop }) => {
+  
   return (
     <div className="musicList_wrapper_main">
       <div className="musicList_wrapper">
@@ -70,7 +64,7 @@ const MusicList = ({ lecturer, id, title, img }) => {
       <div className="musicListres_wrapper">
         <div
           className={` ${
-            drop ? "musicListres_drop" : "musicListres_drop_close"
+            drop === id ? "musicListres_drop" : "musicListres_drop_close"
           }`}
         >
           <div className="musicListres_drop1">
@@ -127,7 +121,7 @@ const MusicList = ({ lecturer, id, title, img }) => {
           </div>
           <SlOptionsVertical
             onClick={() => {
-              handleDrop();
+              drop === id ? setDrop("") : setDrop(id);
             }}
             className="musicListres_wrapper_right_menue"
           />

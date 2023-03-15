@@ -8,6 +8,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 const Trending = () => {
   const [data, setData] = useState([]);
+  const [drop, setDrop] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
     axios
@@ -49,6 +50,8 @@ const Trending = () => {
                 img={img}
                 title={title}
                 lecturer={rp}
+                drop={drop}
+                setDrop={setDrop}
               />
             );
           })}
