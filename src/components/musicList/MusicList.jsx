@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./musicList.scss";
 import Music from "../../assets/png/musicList.png";
 import { FiHeadphones } from "react-icons/fi";
@@ -12,6 +12,13 @@ import { RiAddBoxLine, RiDownload2Fill } from "react-icons/ri";
 import { SlOptionsVertical } from "react-icons/sl";
 
 const MusicList = ({ lecturer, id, title, img }) => {
+  const [drop, setDrop] = useState(0);
+  const handleDrop = () => {
+    setDrop(0);
+    setTimeout(() => {
+      setDrop(!drop);
+    }, 1000);
+  };
   return (
     <div className="musicList_wrapper_main">
       <div className="musicList_wrapper">
@@ -61,6 +68,20 @@ const MusicList = ({ lecturer, id, title, img }) => {
       </div>
       {/* -----------------MusicListResponsive--------------------- */}
       <div className="musicListres_wrapper">
+        <div
+          className={` ${
+            drop ? "musicListres_drop" : "musicListres_drop_close"
+          }`}
+        >
+          <div className="musicListres_drop1">
+            <BsShareFill className="icon" />
+            <p className="text">Share</p>
+          </div>
+          <div className="musicListres_drop2">
+            <RiAddBoxLine className="icon" />
+            <p className="text">Add to Playlist</p>
+          </div>
+        </div>
         <div className="musicListres_wrapper_left">
           <div className="musicListres_container">
             <img
@@ -81,7 +102,9 @@ const MusicList = ({ lecturer, id, title, img }) => {
             >
               {title}
             </marquee>
-            <span className="musicListres_main_right_content2_mid">{lecturer}</span>
+            <span className="musicListres_main_right_content2_mid">
+              {lecturer}
+            </span>
             <div className="musicListres_main_right_content2_body">
               <div className="musicListres_main_right_content2_body2">
                 <BsHeartFill className="musicListres_hearticon" />
@@ -102,7 +125,12 @@ const MusicList = ({ lecturer, id, title, img }) => {
           <div className="musicListres_wrapper_right_download">
             <BsArrowDown className="musicListres_wrapper_right_download_icon" />
           </div>
-          <SlOptionsVertical className="musicListres_wrapper_right_menue" />
+          <SlOptionsVertical
+            onClick={() => {
+              handleDrop();
+            }}
+            className="musicListres_wrapper_right_menue"
+          />
         </div>
       </div>
     </div>

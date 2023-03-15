@@ -150,12 +150,54 @@
     @media screen and (min-width: 1221px) {
       display: none;
     }
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.5rem;
+    .musicListres_drop_close {
+      display: none;
+    }
+    .musicListres_drop {
+      z-index: 90;
+      position: absolute;
+      width: 150px;
+      height: 60px;
+      background: #222222;
+      right: 4px;
+      top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.5rem;
+      border-radius: 2px;
+      .musicListres_drop1,
+      .musicListres_drop2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        .icon {
+          font-size: 14px;
+          color: #ffffff;
+        }
+        .text {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+          color: #ffffff;
+          margin: unset;
+          padding: unset;
+        }
+      }
+    }
     .musicListres_wrapper_left {
       display: flex;
       flex-direction: row;
