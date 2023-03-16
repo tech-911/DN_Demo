@@ -1,0 +1,267 @@
+@mixin input_style {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  height: 47px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.5294px;
+  line-height: 22px;
+  color: white;
+  &::placeholder {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.5294px;
+    line-height: 22px;
+    color: #5e5e5e;
+  }
+}
+
+.signupform_wrapper {
+  width: 100%;
+  .signupform_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .signupform_fullname {
+      @include input_style;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .signupform_name {
+      @include input_style;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .signupform_password_wrap {
+      @include input_style;
+      margin-bottom: 1.5rem;
+      .signupform_password {
+        background-color: rgba(255, 255, 255, 0);
+        outline: none;
+        border: none;
+        width: 85%;
+        height: 100%;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.5294px;
+        line-height: 22px;
+        padding-left: 1rem;
+        color: white;
+      }
+      .signupform_password_icon_show_wrap,
+      .signupform_password_icon_hide_wrap {
+        height: 100%;
+        width: 15%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .signupform_password_icon_show,
+        .signupform_password_icon_hide {
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    .signupform_confpassword_wrap {
+      @include input_style;
+      .signupform_confpassword {
+        background-color: rgba(255, 255, 255, 0);
+        outline: none;
+        border: none;
+        width: 85%;
+        height: 100%;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.5294px;
+        line-height: 22px;
+        padding-left: 1rem;
+        color: white;
+      }
+      .signupform_confpassword_icon_show_wrap,
+      .signupform_confpassword_icon_hide_wrap {
+        height: 100%;
+        width: 15%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .signupform_confpassword_icon_show,
+        .signupform_confpassword_icon_hide {
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    .signupform_gender_wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 1.5rem 0rem 3rem;
+      gap: 3rem;
+      .signupform_male {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        .signupform_male_button {
+          height: 1rem;
+          width: 1rem;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .signupform_male_icon {
+            color: black;
+            font-size: 12px;
+          }
+        }
+        .signupform_male_button_active {
+          background-color: #d6ff00;
+        }
+        .signupform_male_button_inactive {
+          background-color: #aeaeae;
+        }
+        .signupform_male_text {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: #d4d4d4;
+          margin: unset;
+        }
+      }
+      .signupform_female {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        .signupform_female_button {
+          height: 1rem;
+          width: 1rem;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .signupform_female_icon {
+            color: black;
+            font-size: 12px;
+          }
+        }
+        .signupform_female_button_active {
+          background-color: #d6ff00;
+        }
+        .signupform_female_button_inactive {
+          background-color: #aeaeae;
+        }
+        .signupform_female_text {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: #d4d4d4;
+          margin: unset;
+        }
+      }
+    }
+    .signupform_button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #d6ff00;
+      height: 3.2rem;
+      width: 100%;
+      border-radius: 5px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0.279529px;
+      color: #070707;
+      margin-bottom: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+    .signupform_terms {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      .signupform_terms_button {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        border: 1px solid #cfcfcf;
+      }
+      .signupform_terms_button_active {
+        background-color: #d6ff00;
+      }
+      .signupform_terms_button_inactive {
+        background-color: rgba(255, 255, 255, 0);
+      }
+      .signupform_terms_text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.2rem;
+        .signupform_terms_text1,
+        .signupform_terms_text2 {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+        }
+        .signupform_terms_text1 {
+          color: #d4d4d4;
+          margin: unset;
+        }
+        .signupform_terms_text2 {
+          color: #d6ff00;
+          cursor: pointer;
+          margin: unset;
+        }
+      }
+    }
+    .signupform_or {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 23px;
+      color: #d4d4d4;
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+    .signupform_social_wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      width: 100%;
+      * {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -6,8 +6,10 @@ import avatar from "../../assets/svg/avatar.svg";
 import { lectures, library } from "./data";
 import IconText from "../iconText/IconText";
 import { RiAwardFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const SideNav = ({ res }) => {
+  const navigate = useNavigate();
   return (
     <div className="sidenav_wrapper">
       <div className="sidenav_logo">
@@ -20,7 +22,24 @@ const SideNav = ({ res }) => {
         <div className="sidenav_avatar">
           <img src={avatar} alt="avatar" />
         </div>
-        <p className="sidenav_auth_text">Log in/ Sign Up</p>
+        <div className="sidenav_auth_text">
+          <p
+            onClick={() => {
+              navigate("/auth/login");
+            }}
+            className="sidenav_auth_text1"
+          >
+            Log in/
+          </p>
+          <p
+            onClick={() => {
+              navigate("/auth/signup");
+            }}
+            className="sidenav_auth_text2"
+          >
+            Sign Up
+          </p>
+        </div>
       </div>
       <div className="sidenav_lectures">
         <h1 className="sidenav_lectures_header">Lectures</h1>

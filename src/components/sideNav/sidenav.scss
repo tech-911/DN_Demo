@@ -42,13 +42,24 @@
       margin-right: 0.7rem;
     }
     .sidenav_auth_text {
-      font-family: "Nunito Sans";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 21px;
+      display: flex;
+      flex-direction: row;
       align-items: center;
-      color: #d4d4d4;
+      gap: 0.2rem;
+      .sidenav_auth_text1,
+      .sidenav_auth_text2 {
+        cursor: pointer;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        align-items: center;
+        color: #d4d4d4;
+        &:hover {
+          color: #d6ff00;
+        }
+      }
     }
   }
   .sidenav_lectures {
