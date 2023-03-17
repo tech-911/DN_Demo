@@ -111,6 +111,11 @@
       justify-content: flex-start;
       margin: 1.5rem 0rem 3rem;
       gap: 3rem;
+      @media screen and (min-width: 700px) {
+        justify-content: space-between;
+        gap: unset;
+        width: 100%;
+      }
       .signupform_male {
         display: flex;
         flex-direction: row;

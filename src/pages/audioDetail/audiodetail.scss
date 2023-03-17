@@ -1,0 +1,369 @@
+@mixin button_style {
+  width: 90px;
+  height: 38px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.audiodetail_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .audiodetail_hero {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 0;
+  }
+  .audiodetail_container {
+    z-index: 1;
+    padding: 2rem 2rem 3rem;
+    .audiodetail_breadcrumb {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.3rem;
+      margin-bottom: 3rem;
+      .audiodetail_breadcrumb_first {
+        margin: unset;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #868686;
+        cursor: pointer;
+        &:hover {
+          color: #d6ff00;
+        }
+      }
+      .audiodetail_breadcrumb_second {
+        margin: unset;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+    }
+    .audiodetail_head_wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 1132px) {
+        flex-direction: column;
+      }
+
+      .audiodetail_head_left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 240px;
+        height: 240px;
+        border-radius: 8px;
+        overflow: hidden;
+        .audiodetail_head_left_img {
+          width: 100%;
+          height: 100%;
+        }
+        @media screen and (max-width: 1132px) {
+          margin-bottom: 1rem;
+        }
+      }
+      .audiodetail_head_right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 10rem;
+        .audiodetail_head_right_head {
+          margin: unset;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 26px;
+          color: #ffffff;
+        }
+        .audiodetail_head_right_text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.1rem;
+          .audiodetail_head_right_text1 {
+            margin: unset;
+            font-family: "Nunito Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #d4d4d4;
+          }
+          .audiodetail_head_right_text2 {
+            margin: unset;
+            font-family: "Nunito Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #d4d4d4;
+          }
+        }
+
+        .audiodetail_head_right_actions_wrap {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+          .audiodetail_play {
+            background: #ddff2b;
+            @include button_style;
+            .audiodetail_play_icon {
+              font-size: 30px;
+              color: #000000;
+            }
+            .audiodetail_play_text {
+              font-family: "Nunito Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #000000;
+              margin: unset;
+            }
+          }
+          .audiodetail_fav {
+            background-color: #ffffff17;
+            @include button_style;
+            &:hover {
+              background-color: #ffffff2d;
+            }
+            .audiodetail_fav_icon {
+              font-size: 25px;
+              color: #cfcfcf;
+            }
+            .audiodetail_fav_text {
+              font-family: "Nunito Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #cfcfcf;
+              margin: unset;
+            }
+          }
+          .audiodetail_share {
+            background-color: #ffffff17;
+            @include button_style;
+            &:hover {
+              background-color: #ffffff2d;
+            }
+            .audiodetail_share_icon {
+              font-size: 25px;
+              color: #cfcfcf;
+            }
+            .audiodetail_share_text {
+              font-family: "Nunito Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #cfcfcf;
+              margin: unset;
+            }
+          }
+          .audiodetail_comment {
+            background-color: #ffffff17;
+            @include button_style;
+            &:hover {
+              background-color: #ffffff2d;
+            }
+            .audiodetail_comment_icon {
+              font-size: 25px;
+              color: #cfcfcf;
+            }
+            .audiodetail_comment_text {
+              font-family: "Nunito Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #cfcfcf;
+              margin: unset;
+            }
+          }
+          .audiodetail_download {
+            background-color: #ffffff17;
+            @include button_style;
+            &:hover {
+              background-color: #ffffff2d;
+            }
+            .audiodetail_download_icon {
+              font-size: 25px;
+              color: #cfcfcf;
+            }
+          }
+        }
+      }
+    }
+    .audiodetail_info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+      .audiodetail_info_wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.2rem;
+        .audiodetail_info_name,
+        .audiodetail_info_value {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 24px;
+          color: #d4d4d4;
+          margin: unset;
+        }
+      }
+    }
+    .audiodetail_summary {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .audiodetail_summary_header {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 32px;
+        color: #ffffff;
+        margin: unset;
+      }
+      .audiodetail_summary_body {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+        width: 300px;
+        text-align: justify;
+        overflow: hidden;
+      }
+      .audiodetail_summary_body_close {
+        height: 150px;
+      }
+      .audiodetail_summary_body_open {
+        height: 100%;
+      }
+      .audiodetail_more {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 0.6rem;
+        .audiodetail_more_text {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          color: #d6ff00;
+          margin: unset;
+        }
+        .audiodetail_more_icon {
+          color: #d6ff00;
+          font-size: 25px;
+          margin-left: 0.2rem;
+        }
+      }
+    }
+
+    .audiodetail_songs {
+      margin-top: 3rem;
+    }
+
+    .audiodetail_album {
+      margin-top: 1rem;
+    }
+    .audiodetail_comments {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin: 1rem 0 1rem;
+      .audiodetail_comments_header {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 42px;
+        color: #d4d4d4;
+        margin: unset;
+      }
+      .audiodetail_comment_input {
+        background: #222222;
+        border: 1px solid rgba(212, 212, 212, 0.5);
+        border-radius: 8px;
+        width: 100%;
+        padding: 1rem;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #d4d4d4;
+
+        &::placeholder {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          color: #999999;
+        }
+      }
+      .audiodetail_comment_action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        align-self: flex-end;
+        .audiodetail_comment_moji {
+          color: #d4d4d4;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        .audiodetail_comment_button {
+          background: #ddff2b;
+          border-radius: 12px;
+          border: none;
+          width: 108px;
+          height: 29px;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          color: #000000;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -14,6 +14,7 @@ import New from "./pages/new/New";
 import Auth from "./pages/Authentication/auth/Auth";
 import LoginForm from "./pages/Authentication/LoginForm";
 import SignupForm from "./pages/Authentication/SignupForm";
+import AudioDetail from "./pages/audioDetail/AudioDetail";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/charts" element={<Charts />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/new" element={<New />} />
+          <Route path="/audiodetail" element={<AudioDetail />} />
         </Route>
       </Routes>
     </div>
