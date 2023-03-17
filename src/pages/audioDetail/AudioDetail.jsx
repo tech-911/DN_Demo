@@ -7,15 +7,24 @@ import detailHead from "../../assets/png/detailHeadImage.png";
 import { BsPlay } from "react-icons/bs";
 import { MdFavoriteBorder } from "react-icons/md";
 import { BiMessageMinus, BiShareAlt } from "react-icons/bi";
-import { RiDownload2Fill } from "react-icons/ri";
+import { RiDownload2Fill, RiPlayListFill } from "react-icons/ri";
 import { FiChevronsRight } from "react-icons/fi";
-import { SlEmotsmile } from "react-icons/sl";
+import { FaPlay } from "react-icons/fa";
+import { SlEmotsmile, SlOptionsVertical, SlArrowDown } from "react-icons/sl";
+import { GoDiffAdded } from "react-icons/go";
+import {
+  TbPlayerSkipForwardFilled,
+  TbPlayerSkipBackFilled,
+  TbRepeat,
+  TbMarquee,
+} from "react-icons/tb";
 import GroupWidget from "../../components/groupWidget/GroupWidget";
 import axios from "axios";
-
+import Disk from "../../assets/png/Disk_tranparent.png";
 const AudioDetail = () => {
   const navigate = useNavigate();
   const [more, setMore] = useState(0);
+  const [play, setPlay] = useState(0);
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
@@ -48,7 +57,6 @@ const AudioDetail = () => {
               Ramadan Tafseer 1443- Suratul Al- Waqiah
             </p>
           </div>
-
           <div className="audiodetail_head_wrap">
             <div className="audiodetail_head_left">
               <img
@@ -71,7 +79,12 @@ const AudioDetail = () => {
               </div>
 
               <div className="audiodetail_head_right_actions_wrap">
-                <div className="audiodetail_play">
+                <div
+                  onClick={() => {
+                    setPlay(!play);
+                  }}
+                  className="audiodetail_play"
+                >
                   <BsPlay className="audiodetail_play_icon" />
                   <p className="audiodetail_play_text">Play</p>
                 </div>
@@ -93,7 +106,44 @@ const AudioDetail = () => {
               </div>
             </div>
           </div>
+          {/* -------------------------- Audio Detial play ------------------- */}
+          {play ? (
+            <div className="audiodetail_play_wrap">
+              <img src={Disk} alt="disk" />
+              <div className="audiodetail_play_txt">
+                <marquee className="audiodetail_play_txt1">
+                  Ramadan Tafseer 1443- Suratul Al- Waqiah
+                </marquee>
+                <marquee className="audiodetail_play_txt2">
+                  Ustadh Muslih Ibrahim (Hausa)
+                </marquee>
+              </div>
+              <div className="audiodetail_play_control">
+                <TbPlayerSkipBackFilled className="audiodetail_play_back" />
+                <div className="audiodetail_play_start">
+                  <FaPlay className="audiodetail_play_start_icon" />
+                </div>
+                <TbPlayerSkipForwardFilled className="audiodetail_play_forward" />
+              </div>
 
+              <div className="audiodetail_play_action">
+                <TbRepeat className="audiodetail_play_repeat" />
+                <RiDownload2Fill className="audiodetail_play_download" />
+                <MdFavoriteBorder className="audiodetail_play_fav" />
+                <BiShareAlt className="audiodetail_play_share" />
+                <GoDiffAdded className="audiodetail_play_add" />
+              </div>
+              <div className="audiodetail_timing">
+                <p className="audiodetail_timing_text">00:00 /04:22</p>
+              </div>
+              <div className="audiodetail_close">
+                <SlArrowDown className="audiodetail_close_icon" />
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+          {/* -------------------------- End ------------------- */}
           <div className="audiodetail_info">
             <div className="audiodetail_info_wrap">
               <p className="audiodetail_info_name">Genre: </p>
@@ -125,7 +175,6 @@ const AudioDetail = () => {
               <FiChevronsRight className="audiodetail_more_icon" />
             </div>
           </div>
-
           <div className="audiodetail_songs">
             <GroupWidget data={data} heading="More Songs" type={"album"} />
           </div>
@@ -145,13 +194,46 @@ const AudioDetail = () => {
               id=""
               cols="30"
               rows="10"
-              maxlength="500"
+              maxLength="500"
             ></textarea>
             <div className="audiodetail_comment_action">
               <SlEmotsmile className="audiodetail_comment_moji" />
               <button className="audiodetail_comment_button">Comment</button>
             </div>
           </div>
+          {/* // ----------------------- audiores --------------------- // */}
+          <div className="audiores_wrapper">
+            <div className="audiores_image_wrap">
+              <img className="audiores_image" src={detailHead} alt="head" />
+            </div>
+            <div className="audiores_text">
+              <p className="audiores_text1">Ustadh Muslih Ibrahim (Hausa)</p>
+              <p className="audiores_text2">Ramadan Tafseer 1443</p>
+            </div>
+            <div className="audiores_scroll_wrap">
+              <p className="audiores_scroll_start">00:00</p>
+              <div className="audiores_scroll_bar"></div>
+              <p className="audiores_scroll_stop">30:45</p>
+            </div>
+            <div className="audiores_play_control_wrap">
+              <TbRepeat className="audiores_play_control_repeat" />
+              <div className="audiores_play_control">
+                <TbPlayerSkipBackFilled className="audiores_play_back" />
+                <div className="audiores_play_start">
+                  <FaPlay className="audiores_play_start_icon" />
+                </div>
+                <TbPlayerSkipForwardFilled className="audiores_play_forward" />
+              </div>
+              <RiPlayListFill className="audiores_play_control_list" />
+            </div>
+            <div className="audiores_actions">
+              <RiDownload2Fill className="audiores_download" />
+              <MdFavoriteBorder className="audiores_fav" />
+              <BiMessageMinus className="audiores_comment" />
+              <SlOptionsVertical className="audiores_option" />
+            </div>
+          </div>
+          {/* ----------------------- audiores ends --------------------- */}
         </div>
       </div>
     </Container>

@@ -11,7 +11,7 @@ const GroupWidget = ({ data, heading, type }) => {
       <div className="groupWidget_top">
         <h1 className="groupWidget_top_heading">{heading}</h1>
         <div onClick={() => setMore(!more)} className="groupWidget_more">
-          <p className="groupWidget_more_text">more</p>
+          <p className="groupWidget_more_text">{more ? "less" : "more"}</p>
           <FiChevronsRight className="groupWidget_more_icon" />
         </div>
       </div>

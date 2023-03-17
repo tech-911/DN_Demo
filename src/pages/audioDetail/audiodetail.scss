@@ -25,6 +25,7 @@
   .audiodetail_container {
     z-index: 1;
     padding: 2rem 2rem 3rem;
+    width: 100%;
     .audiodetail_breadcrumb {
       display: flex;
       flex-direction: row;
@@ -62,6 +63,9 @@
       margin-bottom: 2rem;
       @media screen and (max-width: 1132px) {
         flex-direction: column;
+      }
+      @media screen and (max-width: 1096px) {
+        display: none;
       }
 
       .audiodetail_head_left {
@@ -217,12 +221,145 @@
         }
       }
     }
+    // -------------------------- Audio Detial play -------------------
+
+    .audiodetail_play_wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      padding-left: 1rem;
+      background: #000;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 1096px) {
+        display: none;
+      }
+      .audiodetail_play_txt {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: scroll;
+        max-width: 100px;
+        // gap: .2rem;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        @media screen and (min-width: 1100px) {
+          max-width: unset;
+        }
+        .audiodetail_play_txt1 {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ffffff;
+          margin: unset;
+          white-space: nowrap;
+        }
+        .audiodetail_play_txt2 {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 24px;
+          color: #ffffff;
+          margin: unset;
+          white-space: nowrap;
+        }
+      }
+      .audiodetail_play_control {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        .audiodetail_play_back {
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        .audiodetail_play_start {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          height: 42px;
+          width: 42px;
+          border-radius: 50%;
+          background-color: #ddff2b;
+          .audiodetail_play_start_icon {
+            font-size: 22px;
+            cursor: pointer;
+          }
+        }
+        .audiodetail_play_forward {
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+      .audiodetail_play_action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.6rem;
+        @media screen and (max-width: 650px) {
+          display: none;
+        }
+        .audiodetail_play_repeat,
+        .audiodetail_play_download,
+        .audiodetail_play_fav,
+        .audiodetail_play_share,
+        .audiodetail_play_add {
+          color: white;
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
+
+      .audiodetail_timing {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100%;
+        .audiodetail_timing_text {
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: #5e5e5e;
+        }
+      }
+      .audiodetail_close {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 30px;
+        background: #353535;
+        .audiodetail_close_icon {
+          color: white;
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // -------------------------- End -------------------
+
     .audiodetail_info {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 0.6rem;
       margin-bottom: 2rem;
+      @media screen and (max-width: 1096px) {
+        display: none;
+      }
       .audiodetail_info_wrap {
         display: flex;
         flex-direction: row;
@@ -244,6 +381,9 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      @media screen and (max-width: 1096px) {
+        display: none;
+      }
       .audiodetail_summary_header {
         font-family: "Nunito Sans";
         font-style: normal;
@@ -297,10 +437,16 @@
 
     .audiodetail_songs {
       margin-top: 3rem;
+      @media screen and (max-width: 1096px) {
+        display: none;
+      }
     }
 
     .audiodetail_album {
       margin-top: 1rem;
+      @media screen and (max-width: 1096px) {
+        display: none;
+      }
     }
     .audiodetail_comments {
       display: flex;
@@ -308,6 +454,9 @@
       align-items: flex-start;
       gap: 1rem;
       margin: 1rem 0 1rem;
+      @media screen and (max-width: 1096px) {
+        display: none;
+      }
       .audiodetail_comments_header {
         font-family: "Nunito Sans";
         font-style: normal;
@@ -365,5 +514,151 @@
         }
       }
     }
+    // ----------------------- audiores ---------------------
+    .audiores_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media screen and (min-width: 1097px) {
+        display: none;
+      }
+      .audiores_image_wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        height: 320px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        .audiores_image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .audiores_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+        margin-bottom: 1rem;
+        .audiores_text1 {
+          margin: unset;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: #d4d4d4;
+        }
+        .audiores_text2 {
+          margin: unset;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: #d4d4d4;
+        }
+      }
+      .audiores_scroll_wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+        .audiores_scroll_start {
+          margin: unset;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: #d4d4d4;
+        }
+        .audiores_scroll_bar {
+          width: 80%;
+          padding: 3px;
+          background-color: white;
+          border-radius: 100px;
+        }
+        .audiores_scroll_stop {
+          margin: unset;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: #d4d4d4;
+        }
+      }
+      .audiores_play_control_wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 3rem;
+        .audiores_play_control_repeat {
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        .audiores_play_control {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 3rem;
+
+          .audiores_play_back {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+          }
+          .audiores_play_start {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            background-color: #ddff2b;
+            .audiores_play_start_icon {
+              font-size: 22px;
+              cursor: pointer;
+            }
+          }
+          .audiores_play_forward {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+        .audiores_play_control_list {
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+      .audiores_actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        gap: 3rem;
+        margin-top: 3rem;
+        * {
+          color: white;
+          font-size: 27px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // ----------------------- audiores ends ---------------------
   }
 }
