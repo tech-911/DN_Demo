@@ -29,7 +29,7 @@
     .audiodetail_breadcrumb {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.3rem;
       margin-bottom: 3rem;
       .audiodetail_breadcrumb_first {
