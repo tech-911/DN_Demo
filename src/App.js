@@ -5,6 +5,7 @@ import Landing from "./pages/landing/Landing";
 import Layout from "./components/layout/Layout";
 import Genres from "./pages/genres/Genres";
 import Recommend2 from "./pages/recommend2/Recommend2";
+import Recommend1 from "./pages/recommend1/Recommend1";
 import Lecturers from "./pages/lecturers/Lecturers";
 import Videos from "./pages/videos/Videos";
 import Playlists from "./pages/playlists/Playlists";
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/home" element={<Landing />} />
           <Route path="/genres" element={<Genres />} />
           <Route path="/recommend2" element={<Recommend2 />} />
+          <Route path="/recommend1" element={<Recommend1 />} />
           <Route path="/lecturers" element={<Lecturers />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/playlists" element={<Playlists />} />

@@ -74,4 +74,13 @@
       grid-column: span 2 / span 2;
     }
   }
+  .trend_content {
+    .trend_content_item {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.404);
+        border-radius: 8px;
+        padding-left: 4px;
+      }
+    }
+  }
 }

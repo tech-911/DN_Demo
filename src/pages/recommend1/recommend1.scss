@@ -1,0 +1,17 @@
+.recommend1_wrapper {
+    padding: 3rem 2rem;
+  .recommend1_filter_categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .recommend1_content{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}

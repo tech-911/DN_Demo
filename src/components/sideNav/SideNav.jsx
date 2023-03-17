@@ -76,7 +76,7 @@ const SideNav = ({ res }) => {
         <IconText
           icon={<RiAwardFill className="icon0 icon" />}
           id={11}
-          link={""}
+          link={"/recommend1"}
           name={"Recommended"}
           group={"buzz"}
         />

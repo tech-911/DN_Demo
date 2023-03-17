@@ -44,15 +44,17 @@ const Trending = () => {
         <div className="trend_content">
           {data.map(({ title, rp, img }, idx) => {
             return (
-              <MusicList
-                key={idx}
-                id={idx}
-                img={img}
-                title={title}
-                lecturer={rp}
-                drop={drop}
-                setDrop={setDrop}
-              />
+              <div key={idx} className="trend_content_item">
+                <MusicList
+                  key={idx}
+                  id={idx}
+                  img={img}
+                  title={title}
+                  lecturer={rp}
+                  drop={drop}
+                  setDrop={setDrop}
+                />
+              </div>
             );
           })}
         </div>
