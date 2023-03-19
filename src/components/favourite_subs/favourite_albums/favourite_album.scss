@@ -1,0 +1,39 @@
+.favalbum_wrapper {
+  padding: 2rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  .favalbum_img_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    .favalbum_text {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+  .favalbum_button {
+    background: #ddff2b;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 198px;
+    height: 56px;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    cursor: pointer;
+  }
+}

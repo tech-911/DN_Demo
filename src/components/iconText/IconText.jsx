@@ -28,6 +28,12 @@ const IconText = ({ icon, link, name, id, group }) => {
       setActive(1);
     } else if (location.pathname.includes("/new")) {
       setActive(2);
+    } else if (location.pathname.includes("/addplaylist")) {
+      setActive(8);
+    } else if (location.pathname.includes("/favourite")) {
+      setActive(9);
+    } else if (location.pathname.includes("/myplaylist")) {
+      setActive(10);
     }
   });
   return (

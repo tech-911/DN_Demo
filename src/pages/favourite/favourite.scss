@@ -1,0 +1,170 @@
+@mixin grid_item_span2 {
+  grid-column: span 2 / span 2;
+}
+@mixin grid_item_span3 {
+  grid-column: span 3 / span 3;
+}
+@mixin grid_item_span4 {
+  grid-column: span 4 / span 4;
+}
+@mixin tab_text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #aeaeae;
+  cursor: pointer;
+}
+@mixin tab_text_align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@mixin tab_activetext {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 30px;
+  color: #ffffff;
+}
+@mixin tab_sub_activetext {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 30px;
+  color: #868686;
+}
+
+.fav_wrapper {
+  padding: 1rem 2rem 2rem;
+  .fav_tab_wrap {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .fav_tab {
+      display: grid;
+      grid-template-columns: repeat(13, minmax(0, 1fr));
+      justify-items: center;
+      gap: 1rem;
+      width: 60%;
+      // border-bottom: 1px solid #5e5e5e;
+      @media screen and (max-width: 1400px) {
+        width: 600px;
+      }
+      .fav_tab_song {
+        @include tab_text_align;
+        @include grid_item_span3;
+        .fav_tab_song1 {
+          @include tab_text;
+          margin: unset;
+        }
+        .fav_tab_song1_active {
+          @include tab_activetext;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            left: 12px;
+            background-color: #ddff2b;
+            border-radius: 50px;
+            width: 2rem;
+            height: 0.25rem;
+          }
+        }
+        .fav_tab_song2_active {
+          @include tab_sub_activetext;
+        }
+        .fav_tab_song2 {
+          @include tab_text;
+          margin: unset;
+        }
+      }
+      .fav_tab_album {
+        @include tab_text_align;
+        @include grid_item_span3;
+        .fav_tab_album1 {
+          @include tab_text;
+          margin: unset;
+        }
+        .fav_tab_album1_active {
+          @include tab_activetext;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            left: 12px;
+            background-color: #ddff2b;
+            border-radius: 50px;
+            width: 2rem;
+            height: 0.25rem;
+          }
+        }
+        .fav_tab_album2_active {
+          @include tab_sub_activetext;
+        }
+        .fav_tab_album2 {
+          @include tab_text;
+          margin: unset;
+        }
+      }
+      .fav_tab_playlist {
+        @include tab_text_align;
+        @include grid_item_span3;
+        .fav_tab_playlist1 {
+          @include tab_text;
+          margin: unset;
+        }
+        .fav_tab_playlist1_active {
+          @include tab_activetext;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            left: 24px;
+            background-color: #ddff2b;
+            border-radius: 50px;
+            width: 2rem;
+            height: 0.25rem;
+          }
+        }
+        .fav_tab_playlist2_active {
+          @include tab_sub_activetext;
+        }
+        .fav_tab_playlist2 {
+          @include tab_text;
+          margin: unset;
+        }
+      }
+      .fav_tab_video {
+        @include tab_text_align;
+        @include grid_item_span4;
+        .fav_tab_video1 {
+          @include tab_text;
+          margin: unset;
+        }
+        .fav_tab_video1_active {
+          @include grid_item_span4;
+          @include tab_activetext;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            left: 32px;
+            background-color: #ddff2b;
+            border-radius: 50px;
+            width: 2rem;
+            height: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}

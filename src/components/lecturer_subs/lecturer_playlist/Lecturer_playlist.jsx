@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AlbumWidget from "../../../components/albumWidget/AlbumWidget";
 import axios from "axios";
-import "../lecturerplaylist.scss";
+import "./lecturerplaylist.scss";
 import { SlEmotsmile } from "react-icons/sl";
 
 const Lecturer_playlist = () => {

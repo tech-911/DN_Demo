@@ -66,18 +66,18 @@ export const library = [
     id: 8,
     name: "Add Playlist",
     icon: <BsFillDiscFill className="icon0 icon" />,
-    link: "",
+    link: "/addplaylist",
   },
   {
     id: 9,
     name: "Favourites",
     icon: <MdFavorite className="icon1 icon" />,
-    link: "",
+    link: "/favourite",
   },
   {
     id: 10,
     name: "My Playlist",
     icon: <CgUserList className="icon2 icon" />,
-    link: "",
+    link: "/myplaylist",
   },
 ];
