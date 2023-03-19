@@ -193,7 +193,7 @@ const AudioDetail = () => {
               name=""
               id=""
               cols="30"
-              rows="10"
+              rows="5"
               maxLength="500"
             ></textarea>
             <div className="audiodetail_comment_action">

@@ -5,6 +5,7 @@ import FilterButton from "../../components/filterButton/FilterButton";
 import { lecturers, language, alphabet } from "./data";
 import LecturersWidget from "../../components/lecturersWidget/LecturersWidget";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Lecturers = () => {
   const [data, setData] = useState([]);
@@ -15,6 +16,7 @@ const Lecturers = () => {
   const [active, setActive] = useState("All");
   const [active1, setActive1] = useState("");
   const [active2, setActive2] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     setData1(data);
@@ -104,7 +106,19 @@ const Lecturers = () => {
         </div>
         <div className="lecturers_widget">
           {filter.map(({ img, rp }, idx) => {
-            return <LecturersWidget key={idx} img={img} rp={rp} />;
+            return (
+              <div
+                key={idx}
+                onClick={() => {
+                  navigate(`/lecturerdetail`, {
+                    state: { filter },
+                  });
+                }}
+                className="lecturers_item"
+              >
+                <LecturersWidget key={idx} img={img} rp={rp} />
+              </div>
+            );
           })}
         </div>
       </div>

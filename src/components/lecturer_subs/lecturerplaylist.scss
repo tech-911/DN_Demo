@@ -1,0 +1,76 @@
+.lecplaylist_wrapper {
+  height: 100%;
+  padding: 1rem 0rem 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.lecplaylist_comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem 0 1rem;
+  width: 70%;
+  @media screen and (max-width: 1096px) {
+    width: 100%;
+  }
+  .lecplaylist_comments_header {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 42px;
+    color: #d4d4d4;
+    margin: unset;
+  }
+  .lecplaylist_comment_input {
+    background: #222222;
+    border: 1px solid rgba(212, 212, 212, 0.5);
+    border-radius: 4px;
+    width: 100%;
+    padding: 1rem;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #d4d4d4;
+
+    &::placeholder {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: #999999;
+    }
+  }
+  .lecplaylist_comment_action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: flex-end;
+    .lecplaylist_comment_moji {
+      color: #d4d4d4;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .lecplaylist_comment_button {
+      background: #ddff2b;
+      border-radius: 12px;
+      border: none;
+      width: 108px;
+      height: 29px;
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000;
+      cursor: pointer;
+    }
+  }
+}

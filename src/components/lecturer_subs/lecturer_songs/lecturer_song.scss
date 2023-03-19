@@ -1,0 +1,154 @@
+@mixin title_text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5e5e5e;
+}
+
+.lecsong_wrapper {
+  padding: 1rem 0rem 3rem;
+  .lecsong_title_res_wrap {
+    @media screen and (min-width: 1221px) {
+      display: none;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    .lecsong_title_res_icon {
+      font-size: 40px;
+      color: #d4d4d4;
+      cursor: pointer;
+    }
+    .lecsong_title_res_text {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #d4d4d4;
+      margin-left: 40%;
+    }
+  }
+  .lecsong_title_wrap {
+    @media screen and (max-width: 1220px) {
+      display: none;
+    }
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    justify-items: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
+    .lecsong_title2,
+    .lecsong_title3,
+    .lecsong_title4 {
+      @include title_text;
+      margin: unset;
+      padding: unset;
+    }
+    .lecsong_title1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      grid-column: span 5 / span 5;
+      * {
+        @include title_text;
+        margin: unset;
+        padding: unset;
+      }
+      .lecsong_hash {
+        // margin-right: 1.6rem;
+        width: 30px;
+      }
+    }
+    .lecsong_title2 {
+      grid-column: span 2 / span 2;
+    }
+    .lecsong_title3 {
+      grid-column: span 2 / span 2;
+    }
+    .lecsong_title4 {
+      grid-column: span 2 / span 2;
+    }
+  }
+  .lecsong_content {
+    .lecsong_content_item {
+      //   &:hover {
+      //     background-color: rgba(255, 255, 255, 0.404);
+      //     border-radius: 8px;
+      //     padding-left: 4px;
+      //   }
+    }
+  }
+
+  .lecsong_comments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1rem 0 1rem;
+    width: 70%;
+    @media screen and (max-width: 1096px) {
+      width: 100%;
+    }
+    .lecsong_comments_header {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 42px;
+      color: #d4d4d4;
+      margin: unset;
+    }
+    .lecsong_comment_input {
+      background: #222222;
+      border: 1px solid rgba(212, 212, 212, 0.5);
+      border-radius: 4px;
+      width: 100%;
+      padding: 1rem;
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #d4d4d4;
+
+      &::placeholder {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: #999999;
+      }
+    }
+    .lecsong_comment_action {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      align-self: flex-end;
+      .lecsong_comment_moji {
+        color: #d4d4d4;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .lecsong_comment_button {
+        background: #ddff2b;
+        border-radius: 12px;
+        border: none;
+        width: 108px;
+        height: 29px;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,408 @@
+@mixin button_style {
+  width: 90px;
+  height: 38px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+@mixin grid_item_span2 {
+  grid-column: span 2 / span 2;
+}
+@mixin grid_item_span3 {
+  grid-column: span 3 / span 3;
+}
+@mixin grid_item_span4 {
+  grid-column: span 4 / span 4;
+}
+@mixin tab_text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #aeaeae;
+  cursor: pointer;
+}
+@mixin tab_text_align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@mixin tab_activetext {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 30px;
+  color: #ffffff;
+}
+@mixin tab_sub_activetext {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 30px;
+  color: #868686;
+}
+
+.lecdet_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .lecdet_hero {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 0;
+  }
+  .lecdet_container {
+    z-index: 1;
+    padding: 2rem 2rem 3rem;
+    width: 100%;
+    // ----------- Bread Crumbs --------------
+    .lecdet_breadcrumb {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.3rem;
+      margin-bottom: 3rem;
+      .lecdet_breadcrumb_first {
+        margin: unset;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #868686;
+        cursor: pointer;
+        &:hover {
+          color: #d6ff00;
+        }
+      }
+      .lecdet_breadcrumb_second {
+        margin: unset;
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+    }
+    // ----------- Bread Crumbs End --------------
+
+    // ----------- Section 1 --------------
+    .lecdet_head_wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 1132px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .lecdet_head_left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 240px;
+        height: 240px;
+        border-radius: 8px;
+        overflow: hidden;
+        .lecdet_head_left_img {
+          width: 100%;
+          height: 100%;
+        }
+        @media screen and (max-width: 1132px) {
+          margin-bottom: 1rem;
+        }
+      }
+      .lecdet_head_right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 10rem;
+        margin-bottom: 1rem;
+        .lecdet_head_right_head {
+          margin: unset;
+          font-family: "Nunito Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 26px;
+          color: #ffffff;
+        }
+        .lecdet_head_right_text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.1rem;
+          .lecdet_head_right_text1 {
+            margin: unset;
+            font-family: "Nunito Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #d4d4d4;
+            @media screen and (max-width: 382px) {
+              margin-top: 0.3rem;
+            }
+          }
+          .lecdet_head_right_text2 {
+            margin: unset;
+            font-family: "Nunito Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #d4d4d4;
+            @media screen and (max-width: 382px) {
+              margin-top: 0.3rem;
+            }
+          }
+        }
+
+        .lecdet_head_right_actions_wrap {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1rem;
+          @media screen and (max-width: 382px) {
+            margin-top: 1rem;
+          }
+          .lecdet_play {
+            background: #ddff2b;
+            @include button_style;
+            .lecdet_play_icon {
+              font-size: 30px;
+              color: #000000;
+            }
+            .lecdet_play_text {
+              font-family: "Nunito Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #000000;
+              margin: unset;
+            }
+          }
+          .lecdet_fav {
+            background-color: #ffffff17;
+            @include button_style;
+            &:hover {
+              background-color: #ffffff2d;
+            }
+            .lecdet_fav_icon {
+              font-size: 25px;
+              color: #cfcfcf;
+            }
+            .lecdet_fav_text {
+              font-family: "Nunito Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #cfcfcf;
+              margin: unset;
+            }
+          }
+          .lecdet_share {
+            background-color: #ffffff17;
+            @include button_style;
+            &:hover {
+              background-color: #ffffff2d;
+            }
+            .lecdet_share_icon {
+              font-size: 25px;
+              color: #cfcfcf;
+            }
+            .lecdet_share_text {
+              font-family: "Nunito Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #cfcfcf;
+              margin: unset;
+            }
+          }
+          .lecdet_comment {
+            background-color: #ffffff17;
+            @include button_style;
+            &:hover {
+              background-color: #ffffff2d;
+            }
+            .lecdet_comment_icon {
+              font-size: 25px;
+              color: #cfcfcf;
+            }
+            .lecdet_comment_text {
+              font-family: "Nunito Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #cfcfcf;
+              margin: unset;
+            }
+          }
+          .lecdet_download {
+            background-color: #ffffff17;
+            @include button_style;
+            &:hover {
+              background-color: #ffffff2d;
+            }
+            .lecdet_download_icon {
+              font-size: 25px;
+              color: #cfcfcf;
+            }
+          }
+        }
+      }
+    }
+    // ----------- Section1 ends --------------
+    // ----------- Section2 --------------
+
+    .lecdet_tab_wrap {
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .lecdet_tab {
+        display: grid;
+        grid-template-columns: repeat(13, minmax(0, 1fr));
+        justify-items: center;
+        gap: 1rem;
+        width: 60%;
+        // border-bottom: 1px solid #5e5e5e;
+        @media screen and (max-width: 1400px) {
+          width: 600px;
+        }
+        .lecdet_tab_song {
+          @include tab_text_align;
+          @include grid_item_span3;
+          .lecdet_tab_song1 {
+            @include tab_text;
+            margin: unset;
+          }
+          .lecdet_tab_song1_active {
+            @include tab_activetext;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -0.3rem;
+              left: 12px;
+              background-color: #ddff2b;
+              border-radius: 50px;
+              width: 2rem;
+              height: 0.25rem;
+            }
+          }
+          .lecdet_tab_song2_active {
+            @include tab_sub_activetext;
+          }
+          .lecdet_tab_song2 {
+            @include tab_text;
+            margin: unset;
+          }
+        }
+        .lecdet_tab_album {
+          @include tab_text_align;
+          @include grid_item_span3;
+          .lecdet_tab_album1 {
+            @include tab_text;
+            margin: unset;
+          }
+          .lecdet_tab_album1_active {
+            @include tab_activetext;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -0.3rem;
+              left: 12px;
+              background-color: #ddff2b;
+              border-radius: 50px;
+              width: 2rem;
+              height: 0.25rem;
+            }
+          }
+          .lecdet_tab_album2_active {
+            @include tab_sub_activetext;
+          }
+          .lecdet_tab_album2 {
+            @include tab_text;
+            margin: unset;
+          }
+        }
+        .lecdet_tab_playlist {
+          @include tab_text_align;
+          @include grid_item_span3;
+          .lecdet_tab_playlist1 {
+            @include tab_text;
+            margin: unset;
+          }
+          .lecdet_tab_playlist1_active {
+            @include tab_activetext;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -0.3rem;
+              left: 12px;
+              background-color: #ddff2b;
+              border-radius: 50px;
+              width: 2rem;
+              height: 0.25rem;
+            }
+          }
+          .lecdet_tab_playlist2_active {
+            @include tab_sub_activetext;
+          }
+          .lecdet_tab_playlist2 {
+            @include tab_text;
+            margin: unset;
+          }
+        }
+        .lecdet_tab_video {
+          @include tab_text_align;
+          @include grid_item_span4;
+          .lecdet_tab_video1 {
+            @include tab_text;
+            margin: unset;
+          }
+          .lecdet_tab_video1_active {
+            @include grid_item_span4;
+            @include tab_activetext;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -0.3rem;
+              left: 63px;
+              background-color: #ddff2b;
+              border-radius: 50px;
+              width: 2rem;
+              height: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+    // ----------- Section2 ends --------------
+  }
+}
