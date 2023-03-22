@@ -4,7 +4,7 @@ import Container from "../../components/container/Container";
 import axios from "axios";
 import MusicList from "../../components/musicList/MusicList";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Trending = () => {
   const [data, setData] = useState([]);
@@ -12,7 +12,9 @@ const Trending = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("https://www.dawahbox.com/mongo/api/leclisting_page_api.php?page=2")
+      .get(
+        "http://www.dawahbox.com/mongo/api/popular_lec_api.php?langid=6&lim=100"
+      )
       .then((res) => {
         setData(res.data);
       })
@@ -42,15 +44,23 @@ const Trending = () => {
           <p className="tend_title4">Time</p>
         </div>
         <div className="trend_content">
-          {data.map(({ title, rp, img }, idx) => {
+          {data.map(({ Title, rpname, img, cats, nid }, idx) => {
             return (
-              <div key={idx} className="trend_content_item">
+              <div
+                onClick={() => {
+                  navigate(`/audiodetail`, {
+                    state: { title: Title, rpname, img, cats, nid },
+                  });
+                }}
+                key={idx}
+                className="trend_content_item"
+              >
                 <MusicList
                   key={idx}
                   id={idx}
                   img={img}
-                  title={title}
-                  lecturer={rp}
+                  title={Title}
+                  lecturer={rpname}
                   drop={drop}
                   setDrop={setDrop}
                 />

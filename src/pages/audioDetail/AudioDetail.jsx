@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./audiodetail.scss";
 import Container from "../../components/container/Container";
 import audioHero from "../../assets/png/detialPagehero.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import detailHead from "../../assets/png/detailHeadImage.png";
 import { BsPlay } from "react-icons/bs";
 import { MdFavoriteBorder } from "react-icons/md";
@@ -16,7 +16,6 @@ import {
   TbPlayerSkipForwardFilled,
   TbPlayerSkipBackFilled,
   TbRepeat,
-  TbMarquee,
 } from "react-icons/tb";
 import GroupWidget from "../../components/groupWidget/GroupWidget";
 import axios from "axios";
@@ -26,6 +25,11 @@ const AudioDetail = () => {
   const [more, setMore] = useState(0);
   const [play, setPlay] = useState(0);
   const [data, setData] = useState([]);
+  const [subdata, setSubData] = useState([]);
+
+  const { state } = useLocation();
+  const { title, rpname, img, cats, nid } = state;
+
   useEffect(() => {
     axios
       .get(
@@ -33,6 +37,15 @@ const AudioDetail = () => {
       )
       .then((res) => {
         setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get(`http://www.dawahbox.com/mongo/api/leclistingapi.php?lecid=${nid}`)
+      .then((res) => {
+        setSubData(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -59,22 +72,18 @@ const AudioDetail = () => {
           </div>
           <div className="audiodetail_head_wrap">
             <div className="audiodetail_head_left">
-              <img
-                className="audiodetail_head_left_img"
-                src={detailHead}
-                alt="head"
-              />
+              <img className="audiodetail_head_left_img" src={img} alt="head" />
             </div>
             <div className="audiodetail_head_right">
               <h1 className="audiodetail_head_right_head">
-                Ramadan Tafseer 1443- Suratul Al- Waqiah
+                {title || "Unknown"}
               </h1>
               <div className="audiodetail_head_right_text">
                 <p className="audiodetail_head_right_text1">
-                  Ustadh Muslih Ibrahim (Hausa)
+                  {rpname || "unknown"}
                 </p>
                 <p className="audiodetail_head_right_text2">
-                  Ramadan Tafseer 1443
+                  {cats || "unknown"}
                 </p>
               </div>
 
@@ -112,10 +121,10 @@ const AudioDetail = () => {
               <img src={Disk} alt="disk" />
               <div className="audiodetail_play_txt">
                 <marquee className="audiodetail_play_txt1">
-                  Ramadan Tafseer 1443- Suratul Al- Waqiah
+                  {title || "unknown"}
                 </marquee>
                 <marquee className="audiodetail_play_txt2">
-                  Ustadh Muslih Ibrahim (Hausa)
+                  {rpname || "unknown"}
                 </marquee>
               </div>
               <div className="audiodetail_play_control">
@@ -147,11 +156,14 @@ const AudioDetail = () => {
           <div className="audiodetail_info">
             <div className="audiodetail_info_wrap">
               <p className="audiodetail_info_name">Genre: </p>
-              <p className="audiodetail_info_value">Tafsir</p>
+              <p className="audiodetail_info_value">{cats || "unknown"}</p>
             </div>
             <div className="audiodetail_info_wrap">
               <p className="audiodetail_info_name">Year of Release: </p>
-              <p className="audiodetail_info_value">2022</p>
+              <p className="audiodetail_info_value">
+                {subdata[0]?.post_date?.split(" ")[1]?.split("/")[0] ||
+                  "unknow"}
+              </p>
             </div>
           </div>
           <div className="audiodetail_summary">
@@ -163,12 +175,7 @@ const AudioDetail = () => {
                   : "audiodetail_summary_body_close "
               }`}
             >
-              Iman is not a static phenomenal. it either increases or decreases
-              based on Muslims’ firmness and consistency on the Deen. When
-              Muslims do self evaluation of themselves, they will have the
-              chance of detecting their laxities and strengths. This leaves the
-              room for the amendment of laxities and consolidation of strengths
-              opened, thus, leading to a healthy spiritual life.{" "}
+              {subdata[0]?.description || "unknow"}
             </p>
             <div onClick={() => setMore(!more)} className="audiodetail_more">
               <p className="audiodetail_more_text">{more ? "less" : "more"}</p>
@@ -204,11 +211,11 @@ const AudioDetail = () => {
           {/* // ----------------------- audiores --------------------- // */}
           <div className="audiores_wrapper">
             <div className="audiores_image_wrap">
-              <img className="audiores_image" src={detailHead} alt="head" />
+              <img className="audiores_image" src={img} alt="head" />
             </div>
             <div className="audiores_text">
-              <p className="audiores_text1">Ustadh Muslih Ibrahim (Hausa)</p>
-              <p className="audiores_text2">Ramadan Tafseer 1443</p>
+              <p className="audiores_text1">{title || "Unknown"}</p>
+              <p className="audiores_text2">{cats || "unknow"}</p>
             </div>
             <div className="audiores_scroll_wrap">
               <p className="audiores_scroll_start">00:00</p>

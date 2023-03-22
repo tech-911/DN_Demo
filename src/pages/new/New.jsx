@@ -3,15 +3,19 @@ import "./new.scss";
 import Container from "../../components/container/Container";
 import axios from "axios";
 import MusicList from "../../components/musicList/MusicList";
+import { useNavigate } from "react-router-dom";
 
 const New = () => {
   const [data, setData] = useState([]);
   const [drop, setDrop] = useState("");
+  const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("https://www.dawahbox.com/mongo/api/leclisting_page_api.php?page=2")
+      .get(
+        `http://www.dawahbox.com/mongo/api/popular_lec_api.php?langid=6&lim=200`
+      )
       .then((res) => {
-        setData(res.data);
+        setData(() => res.data.slice(99, 200));
       })
       .catch((err) => {
         console.log(err);
@@ -30,17 +34,27 @@ const New = () => {
           <p className="new_title4">Time</p>
         </div>
         <div className="new_content">
-          {data.map(({ title, rp, img }, idx) => {
+          {data.map(({ Title, rpname, img, cats, nid }, idx) => {
             return (
-              <MusicList
+              <div
+                onClick={() => {
+                  navigate(`/audiodetail`, {
+                    state: { title: Title, rpname, img, cats, nid },
+                  });
+                }}
                 key={idx}
-                id={idx}
-                img={img}
-                title={title}
-                lecturer={rp}
-                drop={drop}
-                setDrop={setDrop}
-              />
+                className="new_content_item"
+              >
+                <MusicList
+                  key={idx}
+                  id={idx}
+                  img={img}
+                  title={Title}
+                  lecturer={rpname}
+                  drop={drop}
+                  setDrop={setDrop}
+                />
+              </div>
             );
           })}
         </div>

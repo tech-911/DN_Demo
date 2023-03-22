@@ -1,9 +1,12 @@
 .recommend2_wrapper {
-  height: 100%;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  .recommended2_album_wrap {
+    cursor: pointer;
+  }
 }

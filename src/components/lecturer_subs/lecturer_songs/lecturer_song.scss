@@ -75,6 +75,9 @@
     }
   }
   .lecsong_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     .lecsong_content_item {
       //   &:hover {
       //     background-color: rgba(255, 255, 255, 0.404);
