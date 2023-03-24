@@ -55,6 +55,10 @@
     @media screen and (max-width: 512px) {
       justify-content: center;
     }
+    .groupWidget_lecturer_item,
+    .groupWidget_album_item {
+      cursor: pointer;
+    }
   }
   .groupWidget_close_more {
     height: 14.313rem;

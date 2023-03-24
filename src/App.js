@@ -20,6 +20,7 @@ import LecturerDetail from "./components/lecturer_detail/Lecturer_detail";
 import Add_playlist from "./pages/add_playlist/Add_playlist";
 import Favourite from "./pages/favourite/Favourite";
 import My_playlist from "./pages/my_playlist/My_playlist";
+import LecturesListDetail from "./pages/lecturesListDetail/LecturesListDetail";
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/new" element={<New />} />
           <Route path="/audiodetail" element={<AudioDetail />} />
           <Route path="/lecturerdetail" element={<LecturerDetail />} />
+          <Route path="/lecturesdetail" element={<LecturesListDetail />} />
           <Route path="/addplaylist" element={<Add_playlist />} />
           <Route path="/favourite" element={<Favourite />} />
           <Route path="/myplaylist" element={<My_playlist />} />

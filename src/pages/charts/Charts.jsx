@@ -6,6 +6,9 @@ import GroupWidget from "../../components/groupWidget/GroupWidget";
 
 const Charts = () => {
   const [data, setData] = useState([]);
+  const [weeklyCharts, setWeeklyCharts] = useState([]);
+  const [monthlyCharts, setMonthlyCharts] = useState([]);
+  const [dailyCharts, setDailyCharts] = useState([]);
   useEffect(() => {
     axios
       .get(
@@ -17,19 +20,64 @@ const Charts = () => {
       .catch((err) => {
         console.log(err);
       });
+    axios
+      .get(
+        "https://www.dawahbox.com/mongo/api/albumlisting_page_api.php?page=8&lim=10&langid=6"
+      )
+      .then((res) => {
+        setWeeklyCharts(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get(
+        "https://www.dawahbox.com/mongo/api/albumlisting_page_api.php?page=9&lim=10&langid=6"
+      )
+      .then((res) => {
+        setMonthlyCharts(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get(
+        "https://www.dawahbox.com/mongo/api/albumlisting_page_api.php?page=10&lim=10&langid=6"
+      )
+      .then((res) => {
+        setDailyCharts(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
   return (
     <Container>
       <div className="charts_wrapper">
         <div className="charts_recent charts_space">
           {" "}
-          <GroupWidget data={data} heading="Weekly Charts" type={"album"} />
+          <GroupWidget
+            data={weeklyCharts}
+            heading="Weekly Charts"
+            type={"album"}
+            navLinking={"/lecturesdetail"}
+          />
         </div>
         <div className="charts_trending charts_space">
-          <GroupWidget data={data} heading="Daily Charts" type={"album"} />
+          <GroupWidget
+            data={dailyCharts}
+            heading="Daily Charts"
+            type={"album"}
+            navLinking={"/lecturesdetail"}
+          />
         </div>
         <div className="charts_tafsir charts_space">
-          <GroupWidget data={data} heading="Montly Charts" type={"album"} />
+          <GroupWidget
+            data={monthlyCharts}
+            heading="Montly Charts"
+            type={"album"}
+            navLinking={"/lecturesdetail"}
+          />
         </div>
         <div className="charts_tafsir charts_space">
           <GroupWidget

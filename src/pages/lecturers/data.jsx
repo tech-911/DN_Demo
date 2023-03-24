@@ -47,7 +47,23 @@ export const language = [
   },
   {
     id: 5,
-    language: "Arabia",
+    language: "Arabic",
+  },
+  {
+    id: 6,
+    language: "Nupe",
+  },
+  {
+    id: 7,
+    language: "Pidgin",
+  },
+  {
+    id: 8,
+    language: "Igbo",
+  },
+  {
+    id: 9,
+    language: "Ebira",
   },
 ];
 export const alphabet = [

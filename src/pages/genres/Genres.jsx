@@ -10,12 +10,12 @@ const Genres = () => {
     <Container>
       <div className="genre_wrapper">
         <div className="genre_lists">
-          {genreData.map(({ title, rpname, img, cats, nid }, idx) => {
+          {genreData.map(({ title, rpname, img, cats, nid, audio }, idx) => {
             return (
               <div
                 onClick={() => {
                   navigate("/audiodetail", {
-                    state: { title: title, rpname, img, cats, nid },
+                    state: { title: title, rpname, img, cats, nid, audio },
                   });
                 }}
                 key={idx + 1}

@@ -11,14 +11,58 @@ import img2 from "../../assets/png/home_slider_images/bigger 1.png";
 import img3 from "../../assets/png/home_slider_images/biggest 1.png";
 
 const Landing = () => {
-  const [data, setData] = useState([]);
+  const [recent, setRecent] = useState([]);
+  const [trending, setTrending] = useState([]);
+  const [ramadan, setRamadan] = useState([]);
+  const [quran, setQuran] = useState([]);
   useEffect(() => {
     axios
       .get(
-        "https://www.dawahbox.com/mongo/api/albumlisting_page_api.php?page=3&lim=10&langid=7"
+        "http://www.dawahbox.com/mongo/api/popular_lec_api.php?langid=6&lim=20"
       )
       .then((res) => {
-        setData(res.data);
+        setRecent(res.data);
+        // console.log("recent: ", res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    axios
+      .get(
+        "https://www.dawahbox.com/mongo/api/leclisting_lang.php?page=11&langid=6"
+      )
+      .then((res) => {
+        setTrending(res.data);
+        // console.log("trending: ", res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get(
+        "http://www.dawahbox.com/mongo/api/leclistingapi.php?lim=3000&langid=6"
+      )
+      .then((res) => {
+        setRamadan(
+          res.data?.filter((obj) => obj.cat_id[0] == 40217).slice(0, 20)
+        );
+        // console.log("Ramadan: ", res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get(
+        "http://www.dawahbox.com/mongo/api/leclistingapi.php?lim=1000&langid=6"
+      )
+      .then((res) => {
+        setQuran(
+          res.data
+            ?.filter((obj) => obj.cats?.includes("Quran & Tafsir"))
+            .slice(0, 20)
+        );
+        // console.log("Quran: ", res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -48,16 +92,36 @@ const Landing = () => {
 
         <div className="landing_recent landing_space">
           {" "}
-          <GroupWidget data={data} heading="Recent" type={"album"} />
+          <GroupWidget
+            data={recent}
+            heading="Recent"
+            type={"album"}
+            navLinking={"/audiodetail"}
+          />
         </div>
         <div className="landing_trending landing_space">
-          <GroupWidget data={data} heading="Trending" type={"album"} />
+          <GroupWidget
+            data={trending}
+            heading="Trending"
+            type={"album"}
+            navLinking={"/audiodetail"}
+          />
         </div>
         <div className="landing_tafsir landing_space">
-          <GroupWidget data={data} heading="Ramadan Tafsir" type={"album"} />
+          <GroupWidget
+            data={ramadan}
+            heading="Ramadan Tafsir"
+            type={"album"}
+            navLinking={"/audiodetail"}
+          />
         </div>
         <div className="landing_quran landing_space">
-          <GroupWidget data={data} heading="Quran Recitations" type={"album"} />
+          <GroupWidget
+            data={quran}
+            heading="Quran Recitations"
+            type={"album"}
+            navLinking={"/audiodetail"}
+          />
         </div>
       </div>
     </Container>

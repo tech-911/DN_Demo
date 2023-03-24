@@ -1,0 +1,90 @@
+@mixin title_text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5e5e5e;
+}
+
+.songlidet_wrapper {
+  padding: 3rem 2rem;
+  .songlidet_title_res_wrap {
+    @media screen and (min-width: 1221px) {
+      display: none;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    .songlidet_title_res_icon {
+      font-size: 40px;
+      color: #d4d4d4;
+      cursor: pointer;
+    }
+    .songlidet_title_res_text {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #d4d4d4;
+      margin-left: 40%;
+    }
+  }
+  .songlidet_title_wrap {
+    @media screen and (max-width: 1220px) {
+      display: none;
+    }
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    justify-items: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
+    .songlidet_title2,
+    .songlidet_title3,
+    .songlidet_title4 {
+      @include title_text;
+      margin: unset;
+      padding: unset;
+    }
+    .songlidet_title1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      grid-column: span 5 / span 5;
+      * {
+        @include title_text;
+        margin: unset;
+        padding: unset;
+      }
+      .songlidet_hash {
+        // margin-right: 1.6rem;
+        width: 30px;
+      }
+    }
+    .songlidet_title2 {
+      grid-column: span 2 / span 2;
+    }
+    .songlidet_title3 {
+      grid-column: span 2 / span 2;
+    }
+    .songlidet_title4 {
+      grid-column: span 2 / span 2;
+    }
+  }
+  .songlidet_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .songlidet_content_item {
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.404);
+        border-radius: 8px;
+        padding: 0.5rem 0.2rem;
+      }
+    }
+  }
+}

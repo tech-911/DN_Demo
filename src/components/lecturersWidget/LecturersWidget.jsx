@@ -2,14 +2,14 @@ import React from "react";
 import "./lecturersWidget.scss";
 import { FiHeadphones } from "react-icons/fi";
 
-const LecturersWidget = ({ img, rp }) => {
+const LecturersWidget = ({ img, rp, rpname }) => {
   return (
     <div className="lecturerWidget_wrapper">
       <div className="lecturerWidget_circle">
         <img className="lecturerWidget_img" src={img} alt="circleImg" />
       </div>
       <p className="lecturerWidget_text">
-        {`${rp.split(" ")[0]} ${rp.split(" ")[1]}`}
+        {`${(rp || rpname).split(" ")[0]} ${(rp || rpname).split(" ")[1]}`}
       </p>
       <div className="lecturerWidget_views_wrapper">
         <FiHeadphones className="lecturerWidget_views_icon" />

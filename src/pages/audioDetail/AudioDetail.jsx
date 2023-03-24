@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./audiodetail.scss";
 import Container from "../../components/container/Container";
 import audioHero from "../../assets/png/detialPagehero.png";
 import { useLocation, useNavigate } from "react-router-dom";
-import detailHead from "../../assets/png/detailHeadImage.png";
 import { BsPlay } from "react-icons/bs";
 import { MdFavoriteBorder } from "react-icons/md";
-import { BiMessageMinus, BiShareAlt } from "react-icons/bi";
+import { BiMessageMinus, BiShareAlt, BiPause } from "react-icons/bi";
 import { RiDownload2Fill, RiPlayListFill } from "react-icons/ri";
 import { FiChevronsRight } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { SlEmotsmile, SlOptionsVertical, SlArrowDown } from "react-icons/sl";
 import { GoDiffAdded } from "react-icons/go";
+import { GiPauseButton } from "react-icons/gi";
 import {
   TbPlayerSkipForwardFilled,
   TbPlayerSkipBackFilled,
@@ -20,16 +20,19 @@ import {
 import GroupWidget from "../../components/groupWidget/GroupWidget";
 import axios from "axios";
 import Disk from "../../assets/png/Disk_tranparent.png";
+
 const AudioDetail = () => {
   const navigate = useNavigate();
   const [more, setMore] = useState(0);
   const [play, setPlay] = useState(0);
+  const [playicon, setPlayicon] = useState(0);
+  const [music, setMusic] = useState(0);
   const [data, setData] = useState([]);
   const [subdata, setSubData] = useState([]);
-
+  const audioRef = useRef();
+  const rangeRef = useRef();
   const { state } = useLocation();
-  const { title, rpname, img, cats, nid } = state;
-
+  const { nid } = state;
   useEffect(() => {
     axios
       .get(
@@ -44,14 +47,50 @@ const AudioDetail = () => {
     axios
       .get(`http://www.dawahbox.com/mongo/api/leclistingapi.php?lecid=${nid}`)
       .then((res) => {
-        setSubData(res.data);
-        console.log(res.data);
+        setSubData(res.data[0]);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
+  // useEffect(() => {
+  //   if (audioRef.current) {
+  //     audioRef.current.currentTime = music;
+  //     console.log("audiouseeffect: ");
+  //   }
+  // }, []);
+
+  const handlePlay = () => {
+    if (playicon) {
+      setPlayicon(!playicon);
+      audioRef.current?.pause();
+    } else {
+      setPlayicon(!playicon);
+      audioRef.current?.play();
+    }
+  };
+
+  const handleRange = (e) => {
+    setMusic(e.target.value);
+    if (audioRef.current) {
+      audioRef.current.currentTime = e.target.value;
+    }
+  };
+
+  const {
+    title,
+    Title,
+    rpname,
+    img,
+    cats,
+    categories,
+    description,
+    duration,
+    post_date,
+    audio = "https://media.dawahnigeria.com/dnlectures/Shaykh%20Umar%20Dada%20Paiko%20%28Niger%29/Paiko_Backlog1435/Paiko-Non-Series/Ustaz-Umar-Paiko_Modern-Muslim-The-Confuse-Specie_www.dawahnigeria.com.mp3",
+  } = subdata;
+  // console.log(audio);
   return (
     <Container>
       <div className="audiodetail_wrapper">
@@ -67,7 +106,7 @@ const AudioDetail = () => {
               Home/
             </p>
             <p className="audiodetail_breadcrumb_second">
-              Ramadan Tafseer 1443- Suratul Al- Waqiah
+              {Title?.split("-")[0] || title?.split("-")[0] || "Unknown"}
             </p>
           </div>
           <div className="audiodetail_head_wrap">
@@ -76,7 +115,7 @@ const AudioDetail = () => {
             </div>
             <div className="audiodetail_head_right">
               <h1 className="audiodetail_head_right_head">
-                {title || "Unknown"}
+                {title || Title || "Unknown"}
               </h1>
               <div className="audiodetail_head_right_text">
                 <p className="audiodetail_head_right_text1">
@@ -94,8 +133,15 @@ const AudioDetail = () => {
                   }}
                   className="audiodetail_play"
                 >
-                  <BsPlay className="audiodetail_play_icon" />
-                  <p className="audiodetail_play_text">Play</p>
+                  {play ? (
+                    <BiPause className="audiodetail_play_icon" />
+                  ) : (
+                    <BsPlay className="audiodetail_play_icon" />
+                  )}
+
+                  <p className="audiodetail_play_text">
+                    {play ? "close" : "Play"}
+                  </p>
                 </div>
                 <div className="audiodetail_fav">
                   <MdFavoriteBorder className="audiodetail_fav_icon" />
@@ -117,37 +163,69 @@ const AudioDetail = () => {
           </div>
           {/* -------------------------- Audio Detial play ------------------- */}
           {play ? (
-            <div className="audiodetail_play_wrap">
-              <img src={Disk} alt="disk" />
-              <div className="audiodetail_play_txt">
-                <marquee className="audiodetail_play_txt1">
-                  {title || "unknown"}
-                </marquee>
-                <marquee className="audiodetail_play_txt2">
-                  {rpname || "unknown"}
-                </marquee>
-              </div>
-              <div className="audiodetail_play_control">
-                <TbPlayerSkipBackFilled className="audiodetail_play_back" />
-                <div className="audiodetail_play_start">
-                  <FaPlay className="audiodetail_play_start_icon" />
+            <div className="audiodetail_play_contain">
+              <div className="audiodetail_play_wrap">
+                <img src={Disk} alt="disk" />
+                <div className="audiodetail_play_txt">
+                  <marquee className="audiodetail_play_txt1">
+                    {title || Title || "unknown"}
+                  </marquee>
+                  <marquee className="audiodetail_play_txt2">
+                    {rpname || "unknown"}
+                  </marquee>
                 </div>
-                <TbPlayerSkipForwardFilled className="audiodetail_play_forward" />
-              </div>
+                <div className="audiodetail_play_control">
+                  <TbPlayerSkipBackFilled className="audiodetail_play_back" />
+                  <div onClick={handlePlay} className="audiodetail_play_start">
+                    {!playicon ? (
+                      <FaPlay className="audiodetail_play_start_icon" />
+                    ) : (
+                      <GiPauseButton className="audiodetail_play_start_icon" />
+                    )}
+                  </div>
+                  <TbPlayerSkipForwardFilled className="audiodetail_play_forward" />
+                </div>
 
-              <div className="audiodetail_play_action">
-                <TbRepeat className="audiodetail_play_repeat" />
-                <RiDownload2Fill className="audiodetail_play_download" />
-                <MdFavoriteBorder className="audiodetail_play_fav" />
-                <BiShareAlt className="audiodetail_play_share" />
-                <GoDiffAdded className="audiodetail_play_add" />
+                <div className="audiodetail_play_action">
+                  <TbRepeat className="audiodetail_play_repeat" />
+                  <RiDownload2Fill className="audiodetail_play_download" />
+                  <MdFavoriteBorder className="audiodetail_play_fav" />
+                  <BiShareAlt className="audiodetail_play_share" />
+                  <GoDiffAdded className="audiodetail_play_add" />
+                </div>
+                <div className="audiodetail_timing">
+                  <p className="audiodetail_timing_text">{` ${
+                    audioRef.current?.currentTime == 0
+                      ? "00:00"
+                      : `${Math.floor(audioRef.current?.currentTime / 60)}:${(
+                          audioRef.current?.currentTime % 60
+                        ).toFixed(0)}`
+                  } /${duration}`}</p>
+                </div>
+                <div className="audiodetail_close">
+                  <SlArrowDown className="audiodetail_close_icon" />
+                </div>
               </div>
-              <div className="audiodetail_timing">
-                <p className="audiodetail_timing_text">00:00 /04:22</p>
-              </div>
-              <div className="audiodetail_close">
-                <SlArrowDown className="audiodetail_close_icon" />
-              </div>
+              <input
+                ref={rangeRef}
+                type="range"
+                min={"0"}
+                max={audioRef.current?.duration}
+                value={music}
+                onChange={(e) => {
+                  handleRange(e);
+                }}
+                className="audiodetail_scroll_bar"
+              />
+              {/* <audio
+                ref={audioRef}
+                src={audio}
+                onTimeUpdate={() => {
+                  if (audioRef.current && !audioRef.current?.seeking) {
+                    setMusic(audioRef?.current?.currentTime);
+                  }
+                }}
+              /> */}
             </div>
           ) : (
             ""
@@ -161,8 +239,7 @@ const AudioDetail = () => {
             <div className="audiodetail_info_wrap">
               <p className="audiodetail_info_name">Year of Release: </p>
               <p className="audiodetail_info_value">
-                {subdata[0]?.post_date?.split(" ")[1]?.split("/")[0] ||
-                  "unknow"}
+                {post_date?.split(" ")[1]?.split("/")[0] || "unknow"}
               </p>
             </div>
           </div>
@@ -175,7 +252,7 @@ const AudioDetail = () => {
                   : "audiodetail_summary_body_close "
               }`}
             >
-              {subdata[0]?.description || "unknow"}
+              {description || "unknow"}
             </p>
             <div onClick={() => setMore(!more)} className="audiodetail_more">
               <p className="audiodetail_more_text">{more ? "less" : "more"}</p>
@@ -214,20 +291,51 @@ const AudioDetail = () => {
               <img className="audiores_image" src={img} alt="head" />
             </div>
             <div className="audiores_text">
-              <p className="audiores_text1">{title || "Unknown"}</p>
-              <p className="audiores_text2">{cats || "unknow"}</p>
+              <p className="audiores_text1">{title || Title || "Unknown"}</p>
+              <p className="audiores_text2">{cats || categories || "unknow"}</p>
             </div>
             <div className="audiores_scroll_wrap">
-              <p className="audiores_scroll_start">00:00</p>
-              <div className="audiores_scroll_bar"></div>
-              <p className="audiores_scroll_stop">30:45</p>
+              <p className="audiores_scroll_start">
+                {audioRef.current?.currentTime == 0
+                  ? "00:00"
+                  : `${Math.floor(audioRef.current?.currentTime / 60)}:${(
+                      audioRef.current?.currentTime % 60
+                    ).toFixed(0)}`}
+              </p>
+              {/* <div className="audiores_scroll_bar"></div> */}
+              <input
+                ref={rangeRef}
+                type="range"
+                min={"0"}
+                max={audioRef.current?.duration}
+                value={music}
+                onChange={(e) => {
+                  handleRange(e);
+                }}
+                className="audiores_scroll_bar"
+              />
+              <audio
+                ref={audioRef}
+                src={audio}
+                onTimeUpdate={() => {
+                  if (audioRef.current && !audioRef.current?.seeking) {
+                    setMusic(audioRef?.current?.currentTime);
+                  }
+                }}
+              />
+
+              <p className="audiores_scroll_stop">{duration}</p>
             </div>
             <div className="audiores_play_control_wrap">
               <TbRepeat className="audiores_play_control_repeat" />
               <div className="audiores_play_control">
                 <TbPlayerSkipBackFilled className="audiores_play_back" />
-                <div className="audiores_play_start">
-                  <FaPlay className="audiores_play_start_icon" />
+                <div onClick={handlePlay} className="audiores_play_start">
+                  {!playicon ? (
+                    <FaPlay className="audiores_play_start_icon" />
+                  ) : (
+                    <GiPauseButton className="audiores_play_start_icon" />
+                  )}
                 </div>
                 <TbPlayerSkipForwardFilled className="audiores_play_forward" />
               </div>
