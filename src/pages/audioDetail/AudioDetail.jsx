@@ -90,7 +90,7 @@ const AudioDetail = () => {
     post_date,
     audio = "https://media.dawahnigeria.com/dnlectures/Shaykh%20Umar%20Dada%20Paiko%20%28Niger%29/Paiko_Backlog1435/Paiko-Non-Series/Ustaz-Umar-Paiko_Modern-Muslim-The-Confuse-Specie_www.dawahnigeria.com.mp3",
   } = subdata;
-  // console.log(audio);
+  // console.log(subdata);
   return (
     <Container>
       <div className="audiodetail_wrapper">

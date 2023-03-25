@@ -21,24 +21,27 @@ const Recommend2 = () => {
         console.log(err);
       });
   }, []);
+  // console.log(r)
   return (
     <Container>
       <div className="recommend2_wrapper">
-        {recommended2Data.map(({ cats, img, title, rpname, nid }, idx) => {
-          return (
-            <div
-              onClick={() => {
-                navigate(`/audiodetail`, {
-                  state: { title: title, rpname, img, cats, nid },
-                });
-              }}
-              key={idx}
-              className="recommended2_album_wrap"
-            >
-              <AlbumWidget key={idx} categories={cats} img={img} />
-            </div>
-          );
-        })}
+        {recommended2Data.map(
+          ({ cats, img, title, rpname, nid, cats_name }, idx) => {
+            return (
+              <div
+                onClick={() => {
+                  navigate(`/audiodetail`, {
+                    state: { title: title, rpname, img, cats, nid },
+                  });
+                }}
+                key={idx}
+                className="recommended2_album_wrap"
+              >
+                <AlbumWidget key={idx} categories={cats_name} img={img} />
+              </div>
+            );
+          }
+        )}
       </div>
     </Container>
   );

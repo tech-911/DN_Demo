@@ -5,6 +5,7 @@ import axios from "axios";
 import { categories } from "./data";
 import FilterButton from "../../components/filterButton/FilterButton";
 import Recommend_widget from "../../components/recommend_widget/Recommend_widget";
+import { useNavigate } from "react-router-dom";
 const Recommend1 = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState([]);
@@ -12,25 +13,43 @@ const Recommend1 = () => {
   const [data2, setData2] = useState([]);
   const [data3, setData3] = useState([]);
   const [active, setActive] = useState("All");
+  const [catid, setCatid] = useState("26");
   const [active1, setActive1] = useState("");
   const [active2, setActive2] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     setData3(data);
   }, [data]);
 
   useEffect(() => {
-    axios
-      .get(
-        "https://www.dawahbox.com/mongo/api/albumlisting_page_api.php?page=3&lim=10&langid=7"
-      )
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    const handleRequest = () => {
+      let hold = [];
+      let countloop = 0;
+      for (let i = 1; i <= 10; i++) {
+        axios
+          .get(
+            `http://www.dawahbox.com/mongo/api/leclisting_cat_api.php?page=${i}&langid=6&catid=${catid}`
+          )
+          .then((res) => {
+            countloop++;
+            hold = [...hold, ...res.data];
+            if (countloop === 10 && hold.length !== 0) {
+              setData([...hold]);
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      // console.log("hold line 40", hold);
+
+      // console.log("data line 42: ", data);
+    };
+
+    handleRequest();
+  }, [catid]);
+
   return (
     <Container>
       <div className="recommend1_wrapper">
@@ -52,14 +71,43 @@ const Recommend1 = () => {
                 title={categories}
                 action="categories"
                 data={data}
+                id={id}
+                setCatid={setCatid}
               />
             );
           })}
         </div>
         <div className="recommend1_content">
           {" "}
-          {filter.map(({ img, categories, title }, idx) => {
-            return <Recommend_widget />;
+          {filter.map((value, idx) => {
+            const { img, rpname, title, categories, nid, audio } = value;
+            const catsname = Object.values(value)[3];
+
+            return (
+              <div
+                onClick={() => {
+                  navigate("/audiodetail", {
+                    state: {
+                      title: title,
+                      rpname,
+                      img,
+                      cats: catsname,
+                      nid,
+                      audio,
+                    },
+                  });
+                }}
+                className="recommend1_item_listing"
+              >
+                <Recommend_widget
+                  key={idx}
+                  img={img}
+                  title={title}
+                  rpname={rpname}
+                  catsname={catsname}
+                />
+              </div>
+            );
           })}
         </div>
       </div>

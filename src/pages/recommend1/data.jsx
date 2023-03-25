@@ -1,38 +1,38 @@
 export const categories = [
   {
-    id: 0,
+    id: "26",
     categories: "All",
   },
   {
-    id: 1,
+    id: "40389",
     categories: "Charity",
   },
   {
-    id: 2,
-    categories: "Men",
+    id: "40300",
+    categories: "Hadith & Sunnah",
   },
   {
-    id: 3,
+    id: "40460",
     categories: "Character & Manners",
   },
   {
-    id: 4,
+    id: "45500",
     categories: "Knowledge",
   },
   {
-    id: 5,
+    id: "40887",
     categories: "Q&A",
   },
   {
-    id: 6,
-    categories: "Jumuah",
+    id: "40295",
+    categories: "Jumah",
   },
   {
-    id: 7,
+    id: "40217",
     categories: "Ramadan",
   },
   {
-    id: 8,
+    id: "40216",
     categories: "Sacred Months",
   },
 ];

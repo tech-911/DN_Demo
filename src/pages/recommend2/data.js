@@ -3,7 +3,7 @@ export const recommended2Data = [
     nid: 24549,
     title: "Ask The Shaykh -06- Shaykh Muhammad Bn Uthman (Kano, English)",
     cats: ["40887"],
-    "cats name": "Q&A",
+    cats_name: "Q&A",
     mp3_size: "32.39 MB",
     duration: "00:35:18",
     description: "Language: English.\nSize: 32.39 MB [MP3]  | 2.02 MB [AMR]\n",
@@ -19,7 +19,7 @@ export const recommended2Data = [
     nid: 28977,
     title: "Questions And Answers - Ustaz Umar Paiko (English)",
     cats: ["40887"],
-    "cats name": "Q&A",
+    cats_name: "Q&A",
     mp3_size: "18.87 MB",
     duration: "0",
     description: "Language: English.\nSize: 18.87 MB [MP3]  | 2.36 MB [AMR]\n",
@@ -36,7 +36,7 @@ export const recommended2Data = [
     title:
       "Q & A on Tafseer Q02 vs 41-143 (Halqah-January-1-2017) - Ustadh AbdGhaniy Jumah (English)",
     cats: ["40887"],
-    "cats name": "Q&A",
+    cats_name: "Q&A",
     mp3_size: "36.75 MB",
     duration: "0",
     description: "Language: English.\nSize: 36.75 MB [MP3]  | 4.59 MB [AMR]\n",
@@ -53,7 +53,7 @@ export const recommended2Data = [
     title:
       "Q & A  on Al-Arbaeen (Hadith 3) (Halqah February 12-2017) - Ustadh AbdGhaniyy Jumah (English)",
     cats: ["40887"],
-    "cats name": "Q&A",
+    cats_name: "Q&A",
     mp3_size: "26.85 MB",
     duration: "0",
     description: "Language: English.\nSize: 26.85 MB [MP3]  | 3.36 MB [AMR]\n",
@@ -70,7 +70,7 @@ export const recommended2Data = [
     title:
       "Q & A on Tafseer Q02 vs 144-145 (Halqah Febuary 5-2017 ) - Ustadh AbdGhaniy Jumah(English)",
     cats: ["40887"],
-    "cats name": "Q&A",
+    cats_name: "Q&A",
     mp3_size: "12.32 MB",
     duration: "0",
     description: "Language: English.\nSize: 12.32 MB [MP3]  | 1.54 MB [AMR]\n",
@@ -87,7 +87,7 @@ export const recommended2Data = [
     title:
       "Q & A on Tafseer Q02 vs 144-145 (Halqah Febuary-5-2017)  - Ustadh AbdGhaniy Jumah(English)",
     cats: ["40887"],
-    "cats name": "Q&A",
+    cats_name: "Q&A",
     mp3_size: "14.01 MB",
     duration: "0",
     description: "Language: English.\nSize: 14.01 MB [MP3]  | 1.75 MB [AMR]\n",
@@ -104,7 +104,7 @@ export const recommended2Data = [
     title:
       "Q & A on Chapter Of Talaq, Iila ,Dhihar & Kafarah (Halqah January 29-2017) - Ustadh AbdGhaniyy Jumah (English)",
     cats: ["40887"],
-    "cats name": "Q&A",
+    cats_name: "Q&A",
     mp3_size: "36.51 MB",
     duration: "0",
     description: "Language: English.\nSize: 36.51 MB [MP3]  | 4.56 MB [AMR]\n",
@@ -121,7 +121,7 @@ export const recommended2Data = [
     title:
       "Question And Answer Session On Hadith 6&7 Of Al- Arbaeen - Ustadh AbdulGhani Jumuah (English)",
     cats: ["40887"],
-    "cats name": "Q&A",
+    cats_name: "Q&A",
     mp3_size: "34.28 MB",
     duration: "01:14:52",
     description: "Language: English.\nSize: 34.28 MB [MP3]  | 6.85 MB [AMR]\n",
@@ -137,7 +137,7 @@ export const recommended2Data = [
     nid: 37466,
     title: "Question And Answer (23-07-2017) - Ustadh Saeed Hamzah (English)",
     cats: ["40927", "40887"],
-    "cats name": "Dawah & Methodology, Q&A",
+    cats_name: "Dawah & Methodology, Q&A",
     mp3_size: "6.22 MB ",
     duration: "0",
     description: "Language: English.\nSize: 6.22 MB [MP3]  | 4.97 MB [AMR]\n",
@@ -154,7 +154,7 @@ export const recommended2Data = [
     title:
       "Questions And Answers On Contemporary Muslim Home,Conflicts And Solution - Ustadh AbdulGhani Jumat (English)",
     cats: ["40413", "40887"],
-    "cats name": "Family and Relationships, Q&A",
+    cats_name: "Family and Relationships, Q&A",
     mp3_size: "28.48 MB",
     duration: "01:02:12",
     description: "Language: English.\nSize: 28.48 MB [MP3]  | 5.7 MB [AMR]\n",
@@ -170,7 +170,7 @@ export const recommended2Data = [
     nid: 20505,
     title: "Fiqh on Trade 02 - Ustadh AbdGhaniy Jum'ah",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "5.68 MB",
     duration: "0",
     description: "Language: English.\nSize: 49.16 MB [MP3]  | 6.14 MB [AMR]\n",
@@ -187,7 +187,7 @@ export const recommended2Data = [
     title:
       "Fiqh-Islamic Jurispudences On Trading-Ustadh Abdul Gany Jum'a-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "41.26 MB",
     duration: "01:30:00",
     description: "Language: English.\nSize: 41.26 MB [MP3]  | 5.15 MB [AMR]\n",
@@ -204,7 +204,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Ar-Riba (Interest)-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "42.68 MB",
     duration: "01:33:13",
     description: "Language: English.\nSize: 42.68 MB [MP3]  | 5.33 MB [AMR]\n",
@@ -221,7 +221,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 01-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "29.64 MB",
     duration: "01:04:44",
     description: "Language: English.\nSize: 29.64 MB [MP3]  | 3.7 MB [AMR]\n",
@@ -238,7 +238,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 04-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "47.71 MB",
     duration: "01:44:13",
     description: "Language: English.\nSize: 47.71 MB [MP3]  | 5.96 MB [AMR]\n",
@@ -255,7 +255,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 09-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "45.17 MB",
     duration: "01:38:40",
     description: "Language: English.\nSize: 45.17 MB [MP3]  | 5.65 MB [AMR]\n",
@@ -272,7 +272,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Kitaabul Buyu' Hadith 291-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "29.64 MB",
     duration: "01:04:36",
     description: "Language: English.\nSize: 29.64 MB [MP3]  | 3.7 MB [AMR]\n",
@@ -289,7 +289,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 05-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "38.58 MB",
     duration: "01:24:16",
     description: "Language: English.\nSize: 38.58 MB [MP3]  | 4.82 MB [AMR]\n",
@@ -306,7 +306,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 06-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "26.39 MB",
     duration: "00:57:38",
     description: "Language: English.\nSize: 26.39 MB [MP3]  | 3.3 MB [AMR]\n",
@@ -323,7 +323,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 08-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "24.35 MB",
     duration: "00:53:11",
     description: "Language: English.\nSize: 24.35 MB [MP3]  | 3.04 MB [AMR]\n",
@@ -340,7 +340,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 10-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "21.69 MB",
     duration: "00:47:22",
     description: "Language: English.\nSize: 21.69 MB [MP3]  | 2.71 MB [AMR]\n",
@@ -357,7 +357,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Kitaabul Buyu' Hadith 285-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "26.27 MB",
     duration: "00:57:15",
     description: "Language: English.\nSize: 26.27 MB [MP3]  | 3.28 MB [AMR]\n",
@@ -374,7 +374,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 03-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "36.9 MB",
     duration: "01:20:36",
     description: "Language: English.\nSize: 36.9 MB [MP3]  | 4.61 MB [AMR]\n",
@@ -391,7 +391,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 07-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "33.91 MB",
     duration: "01:14:04",
     description: "Language: English.\nSize: 33.91 MB [MP3]  | 4.24 MB [AMR]\n",
@@ -408,7 +408,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Kitaabul Buyu' Hadith 283-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "26.22 MB",
     duration: "00:57:08",
     description: "Language: English.\nSize: 26.22 MB [MP3]  | 3.27 MB [AMR]\n",
@@ -425,7 +425,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Kitaabul Buyu'-WILL-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "28.18 MB",
     duration: "01:01:25",
     description: "Language: English.\nSize: 28.18 MB [MP3]  | 3.52 MB [AMR]\n",
@@ -442,7 +442,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Questions & Answers On Trading 001-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "31.88 MB",
     duration: "0",
     description: "Language: English.\nSize: 31.88 MB [MP3]  | 3.99 MB [AMR]\n",
@@ -459,7 +459,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Rulings On Trading 02-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "30.23 MB",
     duration: "01:06:02",
     description: "Language: English.\nSize: 30.23 MB [MP3]  | 3.78 MB [AMR]\n",
@@ -476,7 +476,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Islamic Ethics Of Business (21-04-19) (Yoruba) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40394", "40260"],
-    "cats name": "Business & Finance, Fiqh & Shariah Rulings",
+    cats_name: "Business & Finance, Fiqh & Shariah Rulings",
     mp3_size: "25.47 MB",
     duration: "1:51:10",
     description: "Language: English.\nSize: 25.47 MB [MP3]  | 10.18 MB [AMR]\n",
@@ -493,7 +493,7 @@ export const recommended2Data = [
     title:
       "Manhaj-As-Saalikeen - Financial Transaction 3 (03-09-20) (English) - Ustadh Abdul Ganiy Jum'ah (Yoruba)",
     cats: ["40300", "40394"],
-    "cats name": "Hadith & Sunnah, Business & Finance",
+    cats_name: "Hadith & Sunnah, Business & Finance",
     mp3_size: "30.54 MB",
     duration: "1:06:40",
     description: "Language: English.\nSize: 30.54 MB [MP3]  | 6.1 MB [AMR]\n",
@@ -510,7 +510,7 @@ export const recommended2Data = [
     title:
       "Expalanation of The Book Buluughul-Maraam (Inheritance, Mar. 1st, 2015) - Ustaadh Abdulghnani Jumat",
     cats: ["40413", "40460"],
-    "cats name": "Family and Relationships, Character & Manners",
+    cats_name: "Family and Relationships, Character & Manners",
     mp3_size: "75.33 MB",
     duration: "02:44:25",
     description: "Language: English.\nSize: 75.33 MB [MP3]  | 9.41 MB [AMR]\n",
@@ -527,7 +527,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Prohibition Of Men From Wearing Gold-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40409", "40460"],
-    "cats name": "Community, Character & Manners",
+    cats_name: "Community, Character & Manners",
     mp3_size: "26.92 MB",
     duration: "00:58:48",
     description: "Language: English.\nSize: 26.92 MB [MP3]  | 3.36 MB [AMR]\n",
@@ -544,7 +544,7 @@ export const recommended2Data = [
     title:
       "Explanation Of The Book Ar-Risalah - Adornment & Dressing 1 - Ustadh AbdulGaniyy Jumuah (English)",
     cats: ["40460", "40260"],
-    "cats name": "Character & Manners, Fiqh & Shariah Rulings",
+    cats_name: "Character & Manners, Fiqh & Shariah Rulings",
     mp3_size: "25.6 MB",
     duration: "00:55:54",
     description: "Language: English.\nSize: 25.6 MB [MP3]  | 5.12 MB [AMR]\n",
@@ -561,7 +561,7 @@ export const recommended2Data = [
     title:
       "Explanation Of The Book Ar-Risalah - Adornment & Dressing 4 - Ustadh AbdulGaniyy Jumuah (English)",
     cats: ["40460", "26"],
-    "cats name": "Character & Manners, Miscellaneous",
+    cats_name: "Character & Manners, Miscellaneous",
     mp3_size: "27.75 MB",
     duration: "01:00:33",
     description: "Language: English.\nSize: 27.75 MB [MP3]  | 5.55 MB [AMR]\n",
@@ -578,7 +578,7 @@ export const recommended2Data = [
     title:
       "Usuulul  Eeman 19 - The Oneness Of Allah - Ustadh Saeed Hamzah (English)",
     cats: ["40460", "40622"],
-    "cats name": "Character & Manners, Biography & Islamic History",
+    cats_name: "Character & Manners, Biography & Islamic History",
     mp3_size: "5.58 MB",
     duration: "00:48:32",
     description: "Language: English.\nSize: 5.56 MB [MP3]  | 4.44 MB [AMR]\n",
@@ -595,7 +595,7 @@ export const recommended2Data = [
     title:
       "Law Of Inheritance In Islam 10 (23-11-2017) - Ustadh Abdul Ghaniy Jumua (English)",
     cats: ["40460", "40413"],
-    "cats name": "Character & Manners, Family and Relationships",
+    cats_name: "Character & Manners, Family and Relationships",
     mp3_size: "20.56 MB",
     duration: "00:44:51",
     description: "Language: English.\nSize: 20.56 MB [MP3]  | 4.11 MB [AMR]\n",
@@ -612,7 +612,7 @@ export const recommended2Data = [
     title:
       "Khutbah Jumua - The Evils Of Sins - Ustadh Sirnucy Larfiagy (English)",
     cats: ["40460", "40260"],
-    "cats name": "Character & Manners, Fiqh & Shariah Rulings",
+    cats_name: "Character & Manners, Fiqh & Shariah Rulings",
     mp3_size: "12.2 MB",
     duration: "00:53:11",
     description: "Language: English.\nSize: 12.2 MB [MP3]  | 4.87 MB [AMR]\n",
@@ -628,7 +628,7 @@ export const recommended2Data = [
     nid: 39265,
     title: "My Friends My Success - Ustadh Sirnucy Larfiagy (English)",
     cats: ["40460", "40325"],
-    "cats name": "Character & Manners, Contemporary Issues",
+    cats_name: "Character & Manners, Contemporary Issues",
     mp3_size: "8.59 MB",
     duration: "00:37:25",
     description: "Language: English.\nSize: 8.59 MB [MP3]  | 3.43 MB [AMR]\n",
@@ -645,7 +645,7 @@ export const recommended2Data = [
     title:
       "Law Of Inheritance In Islam 9 (16-11-2017) - Ustadh Abdul Ghaniy Jumua (English)",
     cats: ["40460", "40413"],
-    "cats name": "Character & Manners, Family and Relationships",
+    cats_name: "Character & Manners, Family and Relationships",
     mp3_size: "29.69 MB",
     duration: "01:04:48",
     description: "Language: English.\nSize: 22.04 MB [MP3]  | 4.4 MB [AMR]\n",
@@ -662,7 +662,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Is It A Change or Chain Life After School (27-07-19) - Ustadh Abu Rayyan AbdulHameed Uthman  (English)",
     cats: ["45500", "40460"],
-    "cats name": "Knowledge, Character & Manners",
+    cats_name: "Knowledge, Character & Manners",
     mp3_size: "51.9 MB",
     duration: "00:56:39",
     description: "Language: English.\nSize: 51.9 MB [MP3]  | 5.19 MB [AMR]\n",
@@ -679,7 +679,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Explanation Of The Book Manhaj As Saalikeen Sujud As Sahw 02 (29-08-19) (English) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40927", "40460"],
-    "cats name": "Dawah & Methodology, Character & Manners",
+    cats_name: "Dawah & Methodology, Character & Manners",
     mp3_size: "26.31 MB",
     duration: "0",
     description: "Language: English.\nSize: 26.31 MB [MP3]  | 5.26 MB [AMR]\n",
@@ -696,7 +696,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Good Character - (17-11-19) (Yoruba) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40460", "40927"],
-    "cats name": "Character & Manners, Dawah & Methodology",
+    cats_name: "Character & Manners, Dawah & Methodology",
     mp3_size: "64.52 MB",
     duration: "2:20:56",
     description: "Language: English.\nSize: 64.52 MB [MP3]  | 12.9 MB [AMR]\n",
@@ -713,7 +713,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Hastiness - (6-12-19) (Yoruba) - Ustadh Abu Rayyan AbdulHameed Uthman  (English)",
     cats: ["40460", "40445"],
-    "cats name": "Character & Manners, Personal Development",
+    cats_name: "Character & Manners, Personal Development",
     mp3_size: "23.42 MB",
     duration: "00:51:09",
     description: "Language: English.\nSize: 23.42 MB [MP3]  | 4.68 MB [AMR]\n",
@@ -730,7 +730,7 @@ export const recommended2Data = [
     title:
       "Public Lecture - Mcan Oyo State - Surviving the Tides Q&A - (01-03-20) (English) - Ustadh Abdul Kabir Al-Asfar (Lagos)",
     cats: ["40460", "45500"],
-    "cats name": "Character & Manners, Knowledge",
+    cats_name: "Character & Manners, Knowledge",
     mp3_size: "7.2 MB",
     duration: "0",
     description: "Language: English.\nSize: 7.2 MB [MP3]  | 1.44 MB [AMR]\n",
@@ -747,7 +747,7 @@ export const recommended2Data = [
     title:
       "Sahih Al Bukhari -Kindness to Parents - 2 (31-01-20)- (Yoruba) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40460"],
-    "cats name": "Character & Manners",
+    cats_name: "Character & Manners",
     mp3_size: "32.51 MB",
     duration: "0",
     description: "Language: English.\nSize: 32.51 MB [MP3]  | 6.5 MB [AMR]\n",
@@ -764,7 +764,7 @@ export const recommended2Data = [
     title:
       "Malaysia  Brothers Talim- Significance of helping one Another - (25-09-20) (English) - Shaykh Abdullahi Abu Jabir Penabdul",
     cats: ["40460", "40389"],
-    "cats name": "Character & Manners, Charity",
+    cats_name: "Character & Manners, Charity",
     mp3_size: "21.21 MB",
     duration: "0:46:19",
     description: "Language: English.\nSize: 21.21 MB [MP3]  | 4.24 MB [AMR]\n",
@@ -781,7 +781,7 @@ export const recommended2Data = [
     title:
       "WeFm - Religious Tolerance 003 - (Nov.2020) (English) - Shaykh Abdullahi Abu Jabir Penabdul",
     cats: ["40409", "40460"],
-    "cats name": "Community, Character & Manners",
+    cats_name: "Community, Character & Manners",
     mp3_size: "5.01 MB",
     duration: "0:10:53",
     description:
@@ -799,7 +799,7 @@ export const recommended2Data = [
     title:
       "WeFm - Religious Tolerance 001 - (Nov.2020) (English) - Shaykh Abdullahi Abu Jabir Penabdul",
     cats: ["40409", "40460"],
-    "cats name": "Community, Character & Manners",
+    cats_name: "Community, Character & Manners",
     mp3_size: "16.85 MB",
     duration: "0:36:45",
     description: "Language: English.\nSize: 16.85 MB [MP3]  | 3.36 MB [AMR]\n",
@@ -816,7 +816,7 @@ export const recommended2Data = [
     title:
       "WeFm - Religious Tolerance 002 - (Nov.2020) (English) - Shaykh Abdullahi Abu Jabir Penabdul",
     cats: ["40409", "40460"],
-    "cats name": "Community, Character & Manners",
+    cats_name: "Community, Character & Manners",
     mp3_size: "7.69 MB",
     duration: "0:16:44",
     description: "Language: English.\nSize: 7.69 MB [MP3]  | 1.53 MB [AMR]\n",
@@ -833,7 +833,7 @@ export const recommended2Data = [
     title:
       "Halqoh - A Dinstinct Muslim Identity (25-11-22) (English) - Prof. Abdur-Razzaaq Abdul Majeed Alaro (Yoruba)",
     cats: ["40460", "40375"],
-    "cats name": "Character & Manners, Faith & Creed",
+    cats_name: "Character & Manners, Faith & Creed",
     mp3_size: "",
     duration: "00:12:40",
     description: "",
@@ -850,7 +850,7 @@ export const recommended2Data = [
     title:
       "Wages For Being Devoted 02 - (Halqah, Feb 21, 2016) - Ustaadh Sa'eed Hamzah (English)",
     cats: ["40387"],
-    "cats name": "Heart & Soul",
+    cats_name: "Heart & Soul",
     mp3_size: "3.02 MB",
     duration: "00:08:46",
     description: "Language: English.\nSize: 3.02 MB [MP3]  | 514.3 KB [AMR]\n",
@@ -866,7 +866,7 @@ export const recommended2Data = [
     nid: 29717,
     title: "Heart Diseases - Ustaadh Rasheed Haashim(English)",
     cats: ["40387"],
-    "cats name": "Heart & Soul",
+    cats_name: "Heart & Soul",
     mp3_size: "27.64 MB",
     duration: "01:00:14",
     description: "Language: English.\nSize: 27.64 MB [MP3]  | 3.45 MB [AMR]\n",
@@ -883,7 +883,7 @@ export const recommended2Data = [
     title:
       "Wages For Being Devoted 01 - (Halqah, Feb 21, 2016) - Ustaadh Sa'eed Hamzah (English)",
     cats: ["40387"],
-    "cats name": "Heart & Soul",
+    cats_name: "Heart & Soul",
     mp3_size: "32.48 MB",
     duration: "01:34:34",
     description: "Language: English.\nSize: 32.48 MB [MP3]  | 5.41 MB [AMR]\n",
@@ -900,7 +900,7 @@ export const recommended2Data = [
     title:
       "Explanation Of Gentleness and Kindness In Quran (Q3v159) - Shaykh Ahmad Sa'ad (English)",
     cats: ["40387"],
-    "cats name": "Heart & Soul",
+    cats_name: "Heart & Soul",
     mp3_size: "8.19 MB",
     duration: "01:11:30",
     description: "Language: English.\nSize: 8.19 MB [MP3]  | 4.09 MB [AMR]\n",
@@ -917,7 +917,7 @@ export const recommended2Data = [
     title:
       "Tafseer Of Quran On Goodness To Parents (Q17v23-24) - Shaykh Ahmad Sa'ad (English)",
     cats: ["40300", "40387"],
-    "cats name": "Hadith & Sunnah, Heart & Soul",
+    cats_name: "Hadith & Sunnah, Heart & Soul",
     mp3_size: "7.69 MB",
     duration: "0",
     description: "Language: English.\nSize: 7.69 MB [MP3]  | 3.84 MB [AMR]\n",
@@ -934,7 +934,7 @@ export const recommended2Data = [
     title:
       "Tafseer Of Quran Verses On Shirk (Q17v22-23) - Shaykh Ahmad Sa'ad (English)",
     cats: ["40300", "40387"],
-    "cats name": "Hadith & Sunnah, Heart & Soul",
+    cats_name: "Hadith & Sunnah, Heart & Soul",
     mp3_size: "7.19 MB",
     duration: "0",
     description: "Language: English.\nSize: 7.19 MB [MP3]  | 3.59 MB [AMR]\n",
@@ -950,7 +950,7 @@ export const recommended2Data = [
     nid: 35444,
     title: "Preparation For Ramadan - Shaykh Ahmad Sa'ad (English)",
     cats: ["40387"],
-    "cats name": "Heart & Soul",
+    cats_name: "Heart & Soul",
     mp3_size: "6.57 MB",
     duration: "01:24:12",
     description: "Language: English.\nSize: 6.57 MB [MP3]  | 3.28 MB [AMR]\n",
@@ -966,7 +966,7 @@ export const recommended2Data = [
     nid: 35452,
     title: "Associating Patners With Allaah - Shaykh Ahmad Sa'ad (English)",
     cats: ["40387"],
-    "cats name": "Heart & Soul",
+    cats_name: "Heart & Soul",
     mp3_size: "3.5 MB",
     duration: "00:30:27",
     description: "Language: English.\nSize: 3.5 MB [MP3]  | 1.74 MB [AMR]\n",
@@ -983,7 +983,7 @@ export const recommended2Data = [
     title:
       "Tafseer On Goodness To Relatives And Poor (Q17v27) - Shaykh Ahmad Sa'ad (English)",
     cats: ["40300", "40387"],
-    "cats name": "Hadith & Sunnah, Heart & Soul",
+    cats_name: "Hadith & Sunnah, Heart & Soul",
     mp3_size: "7.69 MB",
     duration: "0",
     description: "Language: English.\nSize: 8.53 MB [MP3]  | 4.26 MB [AMR]\n",
@@ -1000,7 +1000,7 @@ export const recommended2Data = [
     title:
       "Halqoh Tafseer [Q23vs111-118] (03-06-18) (Yoruba) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40255", "40387"],
-    "cats name": "Quran & Tafsir, Heart & Soul",
+    cats_name: "Quran & Tafsir, Heart & Soul",
     mp3_size: "10.86 MB",
     duration: "0:47:20",
     description: "Language: English.\nSize: 10.86 MB [MP3]  | 4.33 MB [AMR]\n",
@@ -1017,7 +1017,7 @@ export const recommended2Data = [
     title:
       "Halqoh Tafseer [Q49vs10] (02-03-19) (Yoruba) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40255", "40387"],
-    "cats name": "Quran & Tafsir, Heart & Soul",
+    cats_name: "Quran & Tafsir, Heart & Soul",
     mp3_size: "6.37 MB",
     duration: "0:27:42",
     description: "Language: English.\nSize: 6.37 MB [MP3]  | 2.54 MB [AMR]\n",
@@ -1034,7 +1034,7 @@ export const recommended2Data = [
     title:
       "Halqoh Tafseer [Q25vs63-67] (24-08-19) (Yoruba) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40255", "40387"],
-    "cats name": "Quran & Tafsir, Heart & Soul",
+    cats_name: "Quran & Tafsir, Heart & Soul",
     mp3_size: "22.51 MB",
     duration: "0:49:07",
     description: "Language: English.\nSize: 22.51 MB [MP3]  | 4.5 MB [AMR]\n",
@@ -1050,7 +1050,7 @@ export const recommended2Data = [
     nid: 25994,
     title: "Sujuudus-Sahwee - Ustaadh Rasheed Haashim",
     cats: ["45689", "40260"],
-    "cats name": "Salat, Fiqh & Shariah Rulings",
+    cats_name: "Salat, Fiqh & Shariah Rulings",
     mp3_size: "39.56 MB",
     duration: "01:26:16",
     description: "Language: English.\nSize: 39.56 MB [MP3]  | 4.94 MB [AMR]\n",
@@ -1067,7 +1067,7 @@ export const recommended2Data = [
     title:
       "Umdatul Ahkaam-Lessons On Witr Solat 01-Ustadh AbdulGhani Jumat-(Lagos, English)",
     cats: ["40260", "45689"],
-    "cats name": "Fiqh & Shariah Rulings, Salat",
+    cats_name: "Fiqh & Shariah Rulings, Salat",
     mp3_size: "43.9 MB",
     duration: "01:35:46",
     description: "Language: English.\nSize: 43.9 MB [MP3]  | 5.48 MB [AMR]\n",
@@ -1084,7 +1084,7 @@ export const recommended2Data = [
     title:
       "Explanation Of The Book Al-Fiqh Al-Muyassar (Times When Supererogatory Salahs Are Avoidable) - Ustaadh Sa'eed Hamzah (English)",
     cats: ["40260", "45689"],
-    "cats name": "Fiqh & Shariah Rulings, Salat",
+    cats_name: "Fiqh & Shariah Rulings, Salat",
     mp3_size: "24.58 MB",
     duration: "01:11:34",
     description: "Language: English.\nSize: 24.58 MB [MP3]  | 4.1 MB [AMR]\n",
@@ -1100,7 +1100,7 @@ export const recommended2Data = [
     nid: 31195,
     title: "Solat - Shaykh Yusuf  Ariyibi (English)",
     cats: ["45689"],
-    "cats name": "Salat",
+    cats_name: "Salat",
     mp3_size: "5.44 MB",
     duration: "1:34:56",
     description: "Language: English.\nSize: 10.87 MB [MP3]\n",
@@ -1116,7 +1116,7 @@ export const recommended2Data = [
     nid: 33635,
     title: "Voluntary Salaah 2 - Ustaadh Mas'ud Sa'ad (English)",
     cats: ["45689"],
-    "cats name": "Salat",
+    cats_name: "Salat",
     mp3_size: "5.98 MB",
     duration: "00:52:08",
     description: "Language: English.\nSize: 5.98 MB [MP3]  | 2.98 MB [AMR]\n",
@@ -1132,7 +1132,7 @@ export const recommended2Data = [
     nid: 33636,
     title: "Voluntary Salaah 3 - Ustaadh Mas'ud Sa'ad (English)",
     cats: ["45689"],
-    "cats name": "Salat",
+    cats_name: "Salat",
     mp3_size: "9.41 MB",
     duration: "01:22:07",
     description: "Language: English.\nSize: 9.41 MB [MP3]  | 4.7 MB [AMR]\n",
@@ -1148,7 +1148,7 @@ export const recommended2Data = [
     nid: 33634,
     title: "Voluntary Salaah 1 - Ustaadh Mas'ud Sa'ad (English)",
     cats: ["45689"],
-    "cats name": "Salat",
+    cats_name: "Salat",
     mp3_size: "7.27 MB",
     duration: "01:03:28",
     description: "Language: English.\nSize: 7.27 MB [MP3]  | 3.63 MB [AMR]\n",
@@ -1164,7 +1164,7 @@ export const recommended2Data = [
     nid: 33387,
     title: "Nawafi Solat  -  Shaykh Yusuf  Aribi (English)",
     cats: ["45689"],
-    "cats name": "Salat",
+    cats_name: "Salat",
     mp3_size: "5.81 MB",
     duration: "1:41:27",
     description: "Language: English.\nSize: 11.62 MB [MP3]  | 5.81 MB [AMR]\n",
@@ -1180,7 +1180,7 @@ export const recommended2Data = [
     nid: 33633,
     title: "Sujood Sahw And Tilawwah - Ustaadh Mas'ud Sa'ad (English)",
     cats: ["45689"],
-    "cats name": "Salat",
+    cats_name: "Salat",
     mp3_size: "7.15 MB",
     duration: "0",
     description: "Language: English.\nSize: 7.15 MB [MP3]  | 3.57 MB [AMR]\n",
@@ -1196,7 +1196,7 @@ export const recommended2Data = [
     nid: 113451,
     title: "Voluntary Salaah 1 (Eng) - Ustadh Mas'ud Sa'ad (Yoruba)",
     cats: ["40260", "45689"],
-    "cats name": "Fiqh & Shariah Rulings, Salat",
+    cats_name: "Fiqh & Shariah Rulings, Salat",
     mp3_size: "7.27 MB",
     duration: "01:03:28",
     description: "Language: English.\nSize: 7.27 MB [MP3]\n",
@@ -1212,7 +1212,7 @@ export const recommended2Data = [
     nid: 113452,
     title: "Voluntary Salaah 2 (Eng) - Ustadh Mas'ud Sa'ad (Yoruba)",
     cats: ["40260", "45689"],
-    "cats name": "Fiqh & Shariah Rulings, Salat",
+    cats_name: "Fiqh & Shariah Rulings, Salat",
     mp3_size: "5.98 MB",
     duration: "00:52:08",
     description: "Language: English.\nSize: 5.98 MB [MP3]\n",
@@ -1228,7 +1228,7 @@ export const recommended2Data = [
     nid: 113453,
     title: "Voluntary Salaah 3 (Eng) - Ustadh Mas'ud Sa'ad (Yoruba)",
     cats: ["40260", "45689"],
-    "cats name": "Fiqh & Shariah Rulings, Salat",
+    cats_name: "Fiqh & Shariah Rulings, Salat",
     mp3_size: "9.41 MB",
     duration: "01:22:07",
     description: "Language: English.\nSize: 9.41 MB [MP3]\n",
@@ -1245,7 +1245,7 @@ export const recommended2Data = [
     title:
       "Manhaj As-Saalikeen- Eid Salat 2 - (30-01-20)- (Yoruba) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40429", "45689"],
-    "cats name": "Eid, Salat",
+    cats_name: "Eid, Salat",
     mp3_size: "20.61 MB",
     duration: "0",
     description: "Language: English.\nSize: 20.61 MB [MP3]  | 4.12 MB [AMR]\n",
@@ -1262,7 +1262,7 @@ export const recommended2Data = [
     title:
       "Halqoh -Things that invalidates Solah - (Yoruba) - Ustadh Abu Rayyan Uthman (Yoruba)",
     cats: ["45689", "45500"],
-    "cats name": "Salat, Knowledge",
+    cats_name: "Salat, Knowledge",
     mp3_size: "18.61 MB",
     duration: "00:40:35",
     description: "Language: English.\nSize: 18.61 MB [MP3]  | 3.72 MB [AMR]\n",
@@ -1278,7 +1278,7 @@ export const recommended2Data = [
     nid: 188406,
     title: "Halqoh -Tayammum - (Yoruba) - Ustadh Abu Rayyan Uthman (Yoruba)",
     cats: ["45689", "45500"],
-    "cats name": "Salat, Knowledge",
+    cats_name: "Salat, Knowledge",
     mp3_size: "7.65 MB",
     duration: "00:16:40",
     description: "Language: English.\nSize: 7.65 MB [MP3]  | 1.53 MB [AMR]\n",
@@ -1295,7 +1295,7 @@ export const recommended2Data = [
     title:
       "Sahih Al Bukhari - Kitaabus Solaat Hadith 395 (04-08-21) (Yoruba) - Shaykh Umar Dada Paiko (English)",
     cats: ["45689", "40300"],
-    "cats name": "Salat, Hadith & Sunnah",
+    cats_name: "Salat, Hadith & Sunnah",
     mp3_size: "23.68 MB",
     duration: "0:51:40",
     description: "Language: English.\nSize: 23.68 MB [MP3]  | 4.73 MB [AMR]\n",
@@ -1312,7 +1312,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Causes Of The Deviation Of The Youth And Their Solutions (30-06-19) (Yoruba) - Ustadh AbdulGhani Jumat (English)",
     cats: ["40570", "40413"],
-    "cats name": "Youth, Family and Relationships",
+    cats_name: "Youth, Family and Relationships",
     mp3_size: "21.63 MB",
     duration: "1:34:22",
     description: "Language: English.\nSize: 21.63 MB [MP3]  | 8.64 MB [AMR]\n",
@@ -1329,7 +1329,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Hastiness - (6-12-19) (Yoruba) - Ustadh Abu Rayyan AbdulHameed Uthman  (English)",
     cats: ["40460", "40445"],
-    "cats name": "Character & Manners, Personal Development",
+    cats_name: "Character & Manners, Personal Development",
     mp3_size: "23.42 MB",
     duration: "00:51:09",
     description: "Language: English.\nSize: 23.42 MB [MP3]  | 4.68 MB [AMR]\n",
@@ -1346,7 +1346,7 @@ export const recommended2Data = [
     title:
       "Karatun Sharhu Aqeedatut Tawheed (13-09-20) (English) - Shaykh Idris Abdullah Al-Madaneey (Hausa)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "24.77 MB",
     duration: "0:54:03",
     description: "Language: English.\nSize: 24.77 MB [MP3]  | 4.95 MB [AMR]\n",
@@ -1363,7 +1363,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Al-Aqeedatul-Waasitiyyah Ep 05- (Engliah) - Shaykh Umar Dada Paiko (English)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "31.77 MB",
     duration: "1:09:21",
     description: "Language: English.\nSize: 31.77 MB [MP3]  | 6.35 MB [AMR]\n",
@@ -1380,7 +1380,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Al-Aqeedatul-Waasitiyyah Ep 05- (Engliah) - Shaykh Umar Dada Paiko (English)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "31.77 MB",
     duration: "1:09:21",
     description: "Language: English.\nSize: 31.77 MB [MP3]  | 6.35 MB [AMR]\n",
@@ -1397,7 +1397,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Al-Aqeedatul-Waasitiyyah Ep 04 - (Engliah) - Shaykh Umar Dada Paiko (English)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "21.16 MB",
     duration: "0:46:10",
     description: "Language: English.\nSize: 21.16 MB [MP3]  | 4.23 MB [AMR]\n",
@@ -1414,7 +1414,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Al-Aqeedatul-Waasitiyyah Ep 03 - (Engliah) - Shaykh Umar Dada Paiko (English)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "23.45 MB",
     duration: "0:51:10",
     description: "Language: English.\nSize: 23.45 MB [MP3]  | 4.68 MB [AMR]\n",
@@ -1431,7 +1431,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Sharh Aqeedatul Wasitiyyah 008 - (English) - Shaykh Umar Dada Paiko (English)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "20.44 MB",
     duration: "0:44:35",
     description: "Language: English.\nSize: 20.44 MB [MP3]  | 4.08 MB [AMR]\n",
@@ -1448,7 +1448,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Aqeedatul Waasitiyah - Episode 006 - (English) - Shaykh Umar Dada Paiko (English)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "20.81 MB",
     duration: "0:45:24",
     description: "Language: English.\nSize: 20.81 MB [MP3]  | 4.16 MB [AMR]\n",
@@ -1465,7 +1465,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Aqeedatul Waasitiyah - Episode 007 - (English) - Shaykh Umar Dada Paiko (English)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "19.07 MB",
     duration: "0:41:36",
     description: "Language: English.\nSize: 19.07 MB [MP3]  | 3.81 MB [AMR]\n",
@@ -1482,7 +1482,7 @@ export const recommended2Data = [
     title:
       "Usool ath-Thalatha Lesson 27  - The love between believers (08-11-20) (English) - Shaykh Abdullahi Abu Jabir Penabdul",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "25.17 MB",
     duration: "0:54:56",
     description: "Language: English.\nSize: 25.17 MB [MP3]  | 5.03 MB [AMR]\n",
@@ -1499,7 +1499,7 @@ export const recommended2Data = [
     title:
       "Halqoh - Aqeedatul Wasitiyyah Episode 11  (24-11-20) (English) - Shaykh Umar Dada Paiko (English)",
     cats: ["40375", "40445"],
-    "cats name": "Faith & Creed, Personal Development",
+    cats_name: "Faith & Creed, Personal Development",
     mp3_size: "17.34 MB",
     duration: "0:37:49",
     description: "Language: English.\nSize: 17.34 MB [MP3]  | 3.46 MB [AMR]\n",

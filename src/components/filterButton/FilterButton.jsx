@@ -14,6 +14,8 @@ const FilterButton = ({
   active,
   setActive,
   data,
+  id,
+  setCatid,
 }) => {
   useEffect(() => {
     setFilter([...data1, ...data2, ...data3]);
@@ -21,6 +23,7 @@ const FilterButton = ({
 
   const handleFilter = () => {
     setActive(title);
+    setCatid(id);
     if (action === "name") {
       if (title === "All") {
         setData1(data.filter((value) => value.rp));
