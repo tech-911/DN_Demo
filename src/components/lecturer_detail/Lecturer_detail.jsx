@@ -27,24 +27,9 @@ import Lecturer_playlist from "../lecturer_subs/lecturer_playlist/Lecturer_playl
 import Lecturer_videos from "../lecturer_subs/lecturer_videos/Lecturer_videos";
 const LecturerDetail = () => {
   const navigate = useNavigate();
-  const [more, setMore] = useState(0);
-  const [play, setPlay] = useState(0);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-      .get(
-        "https://www.dawahbox.com/mongo/api/albumlisting_page_api.php?page=3&lim=10&langid=7"
-      )
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
   const [tab, setTab] = useState(1);
   const { state } = useLocation();
-  const { filter } = state;
+  const { title, rpname, img, cats, nid } = state;
 
   return (
     <Container>
@@ -62,29 +47,19 @@ const LecturerDetail = () => {
             >
               Home/
             </p>
-            <p className="lecdet_breadcrumb_second">
-              Ramadan Tafseer 1443- Suratul Al- Waqiah
-            </p>
+            <p className="lecdet_breadcrumb_second">{title}</p>
           </div>
 
           {/* ------------------------------------ Section 1 -------------------------------------- */}
           <div className="lecdet_head_wrap">
             <div className="lecdet_head_left">
-              <img
-                className="lecdet_head_left_img"
-                src={detailHead}
-                alt="head"
-              />
+              <img className="lecdet_head_left_img" src={img} alt="head" />
             </div>
             <div className="lecdet_head_right">
-              <h1 className="lecdet_head_right_head">
-                Ramadan Tafseer 1443- Suratul Al- Waqiah
-              </h1>
+              <h1 className="lecdet_head_right_head">{title}</h1>
               <div className="lecdet_head_right_text">
-                <p className="lecdet_head_right_text1">
-                  Ustadh Muslih Ibrahim (Hausa)
-                </p>
-                <p className="lecdet_head_right_text2">Ramadan Tafseer 1443</p>
+                <p className="lecdet_head_right_text1">{title.split(" ")[2]}</p>
+                <p className="lecdet_head_right_text2">{cats}</p>
               </div>
 
               <div className="lecdet_head_right_actions_wrap">
@@ -187,8 +162,8 @@ const LecturerDetail = () => {
           </div>
           {/* ------------------------------------ Section 2 ends -------------------------------------- */}
           {/* ------------------------------------ Section 3 -------------------------------------- */}
-          {tab === 1 && <Lecturer_songs />}
-          {tab === 2 && <Lecturer_album />}
+          {tab === 1 && <Lecturer_songs id={nid} />}
+          {tab === 2 && <Lecturer_album id={nid} />}
           {tab === 3 && <Lecturer_playlist />}
           {tab === 4 && <Lecturer_videos />}
 

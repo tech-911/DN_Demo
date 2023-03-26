@@ -6,6 +6,9 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
+  .lecalb_album_item {
+    cursor: pointer;
+  }
 }
 .lecalb_comments {
   display: flex;

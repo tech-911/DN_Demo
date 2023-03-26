@@ -1,71 +1,89 @@
 export const categories = [
   {
-    id: 0,
-    lecturer: "All",
+    id: "40217",
+    cats: "All",
   },
   {
-    id: 1,
-    lecturer: "Ramadan",
+    id: "40622",
+    cats: "Biography & Islamic History",
   },
   {
-    id: 2,
-    lecturer: "Riyaadus Saliheen",
+    id: "40422",
+    cats: "Children",
   },
   {
-    id: 3,
-    lecturer: "Halaqahs",
+    id: "40927",
+    cats: "Dawah & Methodology",
   },
   {
-    id: 4,
-    lecturer: "Musabaqah",
+    id: "40299",
+    cats: "Women",
   },
   {
-    id: 5,
-    lecturer: "Question & Answer",
+    id: "40217",
+    cats: " Ramadan",
   },
   {
-    id: 6,
-    lecturer: "Adabul Mufrad",
+    id: "40213",
+    cats: "Fasting",
   },
   {
-    id: 7,
-    lecturer: "Faith & Creed",
+    id: "40375",
+    cats: "Faith & Creed",
   },
   {
-    id: 8,
-    lecturer: "Quran Recitations",
+    id: "40429",
+    cats: "Eid",
   },
   {
-    id: 9,
-    lecturer: "Halaqah",
+    id: "40394",
+    cats: "Business & Finance",
+  },
+  {
+    id: "40413",
+    cats: "Family and Relationships",
+  },
+  {
+    id: "40609",
+    cats: "Men",
   },
 ];
+
 export const language = [
   {
-    id: 0,
     language: "All",
+    lid: "6",
   },
   {
-    id: 1,
-    language: "Yoruba",
+    language: "Ebira",
+    lid: "877",
   },
   {
-    id: 2,
-    language: "Hausa",
-  },
-  {
-    id: 3,
     language: "English",
+    lid: "6",
   },
   {
-    id: 4,
+    language: "Hausa",
+    lid: "8",
+  },
+  {
     language: "Igala",
+    lid: "50041",
   },
   {
-    id: 5,
-    language: "Arabia",
+    language: "Igbo",
+    lid: "9",
+  },
+  {
+    language: "Nupe",
+    lid: "53181",
+  },
+  {
+    language: "Yoruba",
+    lid: "7",
   },
 ];
+
 export const alphabet = [
   { alphabet: "Hot" },
   { alphabet: "A" },

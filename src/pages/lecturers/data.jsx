@@ -26,46 +26,43 @@ export const lecturers = [
 ];
 export const language = [
   {
-    id: 0,
     language: "All",
+    lid: "6",
   },
   {
-    id: 1,
-    language: "Yoruba",
-  },
-  {
-    id: 2,
-    language: "Hausa",
-  },
-  {
-    id: 3,
-    language: "English",
-  },
-  {
-    id: 4,
-    language: "Igala",
-  },
-  {
-    id: 5,
-    language: "Arabic",
-  },
-  {
-    id: 6,
-    language: "Nupe",
-  },
-  {
-    id: 7,
-    language: "Pidgin",
-  },
-  {
-    id: 8,
-    language: "Igbo",
-  },
-  {
-    id: 9,
     language: "Ebira",
+    lid: "877",
+  },
+  {
+    language: "English",
+    lid: "6",
+  },
+  {
+    language: "Hausa",
+    lid: "8",
+  },
+  {
+    language: "Igala",
+    lid: "50041",
+  },
+  {
+    language: "Igbo",
+    lid: "9",
+  },
+  {
+    language: "Nupe",
+    lid: "53181",
+  },
+  {
+    language: "Yoruba",
+    lid: "7",
+  },
+  {
+    language: "Arabic",
+    lid: "157",
   },
 ];
+
 export const alphabet = [
   { alphabet: "Hot" },
   { alphabet: "A" },

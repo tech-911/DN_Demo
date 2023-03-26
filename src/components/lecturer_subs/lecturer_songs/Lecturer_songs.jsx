@@ -3,21 +3,38 @@ import axios from "axios";
 import MusicList from "../../../components/musicList/MusicList";
 import "./lecturer_song.scss";
 import { SlEmotsmile } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
 
-const Lecturer_songs = () => {
+const Lecturer_songs = ({ id }) => {
   const [data, setData] = useState([]);
   const [drop, setDrop] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get("https://www.dawahbox.com/mongo/api/leclisting_page_api.php?page=2")
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    const handleRequest = () => {
+      let hold = [];
+      let countloop = 0;
+      for (let i = 1; i <= 20; i++) {
+        axios
+          .get(
+            `http://www.dawahbox.com/mongo/api/leclisting_rp.php?page=${i}&rpid=${id}`
+          )
+          .then((res) => {
+            countloop++;
+            hold = [...hold, ...res.data];
+            if (countloop === 20 && hold.length !== 0) {
+              setData([...hold]);
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    };
+
+    handleRequest();
+  }, [id]);
+
   return (
     <div className="lecsong_wrapper">
       <div className="lecsong_title_wrap">
@@ -30,15 +47,23 @@ const Lecturer_songs = () => {
         <p className="lecsong_title4">Time</p>
       </div>
       <div className="lecsong_content">
-        {data.map(({ title, rp, img }, idx) => {
+        {data.map(({ title, rp, rpname, img, cats, nid }, idx) => {
           return (
-            <div key={idx} className="lecsong_content_item">
+            <div
+              onClick={() => {
+                navigate(`/audiodetail`, {
+                  state: { title, rpname, img, cats, nid },
+                });
+              }}
+              key={idx}
+              className="lecsong_content_item"
+            >
               <MusicList
                 key={idx}
                 id={idx}
                 img={img}
                 title={title}
-                lecturer={rp}
+                lecturer={rpname || rp}
                 drop={drop}
                 setDrop={setDrop}
               />

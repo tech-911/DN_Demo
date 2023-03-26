@@ -14,8 +14,9 @@ const Lecturers = () => {
   const [data2, setData2] = useState([]);
   const [data3, setData3] = useState([]);
   const [active, setActive] = useState("All");
-  const [active1, setActive1] = useState("");
-  const [active2, setActive2] = useState("");
+  const [active1, setActive1] = useState("All");
+  const [active2, setActive2] = useState("Hot");
+  const [langid, setLangid] = useState("6");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,15 +24,30 @@ const Lecturers = () => {
   }, [data]);
 
   useEffect(() => {
-    axios
-      .get("https://www.dawahbox.com/mongo/api/leclisting_page_api.php?page=2")
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    const handleRequest = () => {
+      let hold = [];
+      let countloop = 0;
+      for (let i = 1; i <= 6; i++) {
+        axios
+          .get(
+            `https://www.dawahbox.com/mongo/api/all_rps_api.php?page=${i}&langid=${langid}`
+          )
+          .then((res) => {
+            countloop++;
+            hold = [...hold, ...res.data];
+            if (countloop === 6 && hold.length !== 0) {
+              setData([...hold]);
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    };
+
+    handleRequest();
+  }, [langid]);
+  console.log(data);
 
   return (
     <Container>
@@ -60,7 +76,7 @@ const Lecturers = () => {
             })}
           </div>
           <div className="lecturers_filter_language">
-            {language.map(({ language, id }, idx) => {
+            {language.map(({ language, lid }, idx) => {
               return (
                 <FilterButton
                   key={idx}
@@ -77,6 +93,8 @@ const Lecturers = () => {
                   title={language}
                   action="language"
                   data={data}
+                  lid={lid}
+                  setLangid={setLangid}
                 />
               );
             })}
@@ -105,18 +123,28 @@ const Lecturers = () => {
           </div>
         </div>
         <div className="lecturers_widget">
-          {filter.map(({ img, rp }, idx) => {
+          {filter.map(({ img, rp, name, rpname, catsname, id }, idx) => {
             return (
               <div
                 key={idx}
                 onClick={() => {
                   navigate(`/lecturerdetail`, {
-                    state: { filter },
+                    state: {
+                      title: name,
+                      rpname: name,
+                      img,
+                      cats: catsname,
+                      nid: id,
+                    },
                   });
                 }}
                 className="lecturers_item"
               >
-                <LecturersWidget key={idx} img={img} rp={rp} />
+                <LecturersWidget
+                  key={idx}
+                  img={img}
+                  rp={rp || name || rpname}
+                />
               </div>
             );
           })}

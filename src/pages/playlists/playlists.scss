@@ -31,5 +31,8 @@
     @media screen and (max-width: 512px) {
       justify-content: center;
     }
+    .playlist_lists_items {
+      cursor: pointer;
+    }
   }
 }

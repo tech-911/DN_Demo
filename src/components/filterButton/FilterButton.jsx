@@ -15,6 +15,8 @@ const FilterButton = ({
   setActive,
   data,
   id,
+  lid,
+  setLangid,
   setCatid,
 }) => {
   useEffect(() => {
@@ -23,14 +25,19 @@ const FilterButton = ({
 
   const handleFilter = () => {
     setActive(title);
-    setCatid(id);
     if (action === "name") {
       if (title === "All") {
-        setData1(data.filter((value) => value.rp));
+        setData1(data.filter((value) => value.rp || value.name));
       } else {
-        setData1(data.filter((value) => value.rp.includes(title)));
+        let reset = [];
+        setData2([...reset]);
+        setData3([...reset]);
+        setData1(
+          data.filter((value) => (value.rp || value.name).includes(title))
+        );
       }
     } else if (action === "language") {
+      setLangid(lid);
       if (title === "All") {
         setData2(data.filter((value) => value.lang));
       } else {
@@ -38,13 +45,17 @@ const FilterButton = ({
       }
     } else if (action === "alphabet") {
       if (title === "Hot") {
-        setData3(data.filter((value) => value.title));
+        setData3(data.filter((value) => value?.title || value?.name));
       } else {
+        let reset = [];
+        setData2([...reset]);
+        setData1([...reset]);
         setData3(
-          data.filter((value) => value.title[0].toLocaleUpperCase() === title)
+          data.filter((value) => value?.name[0]?.toLocaleUpperCase() === title)
         );
       }
     } else if (action === "categories") {
+      setCatid(id);
       if (title === "All") {
         setData3(data.filter((value) => value?.cats || value?.categories));
       } else {
