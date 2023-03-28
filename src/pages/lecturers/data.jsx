@@ -1,33 +1,52 @@
 export const lecturers = [
   {
-    id: 0,
-    lecturer: "All",
+    id: 10,
+    name: "All",
+    img: "https://dawahnigeria.com/dawahcast/sites/default/files/Cover (10).jpg",
+    status: 1,
+    lang_id: 6,
   },
   {
-    id: 1,
-    lecturer: "Ustadh Abu Rahimah...",
+    id: 10,
+    name: "Prof. Abdur-Razzaaq Abdul Majeed Alaro (Ilorin)",
+    img: "https://dawahnigeria.com/dawahcast/sites/default/files/Cover (10).jpg",
+    status: 1,
+    lang_id: 6,
   },
   {
-    id: 2,
-    lecturer: "Dr Nazifi Yunus Al-Bayaan",
+    id: 11,
+    name: "Dr Muhammad Ahmad Ibrahim BUK (Kano)",
+    img: "https://dawahnigeria.com/dawahcast/sites/default/files/Cover (78).jpg",
+    status: 1,
+    lang_id: 8,
   },
   {
-    id: 3,
-    lecturer: "Mallam Mustapha Biu",
-  },
-  {
-    id: 4,
-    lecturer: "Ustadh Qamarudee...",
+    id: 54,
+    name: "Ustadh Isa Christian Okonkwo (Enugu)",
+    img: "https://dawahnigeria.com/dawahcast/sites/default/files/Cover (21).jpg",
+    status: 1,
+    lang_id: 9,
   },
   {
     id: 5,
-    lecturer: "Dr Sharaafudeen Raji",
+    name: "Shaykh Rasheed Buwayb (Iwo)",
+    img: "https://dawahnigeria.com/dawahcast/sites/default/files/Cover (40).jpg",
+    status: 1,
+    lang_id: 7,
+  },
+  {
+    id: 12,
+    name: "Dr Aliyu Bashir Umar (Kano)",
+    img: "https://dawahnigeria.com/dawahcast/sites/default/files/Cover (82).jpg",
+    status: 1,
+    lang_id: 8,
   },
 ];
+
 export const language = [
   {
     language: "All",
-    lid: "6",
+    lid: "7",
   },
   {
     language: "Ebira",

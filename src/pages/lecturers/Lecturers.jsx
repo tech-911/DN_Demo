@@ -16,7 +16,7 @@ const Lecturers = () => {
   const [active, setActive] = useState("All");
   const [active1, setActive1] = useState("All");
   const [active2, setActive2] = useState("Hot");
-  const [langid, setLangid] = useState("6");
+  const [langid, setLangid] = useState("7");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -47,14 +47,14 @@ const Lecturers = () => {
 
     handleRequest();
   }, [langid]);
-  console.log(data);
+  // console.log(data);
 
   return (
     <Container>
       <div className="lecturers_wrapper">
         <div className="lecturers_filter">
           <div className="lecturers_filter_name">
-            {lecturers.map(({ lecturer, id }, idx) => {
+            {lecturers.map(({ name, id }, idx) => {
               return (
                 <FilterButton
                   key={idx}
@@ -68,7 +68,7 @@ const Lecturers = () => {
                   setData3={setData3}
                   active={active}
                   setActive={setActive}
-                  title={lecturer}
+                  title={name}
                   action="name"
                   data={data}
                 />

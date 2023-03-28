@@ -5,10 +5,15 @@ import "./lecturer_song.scss";
 import { SlEmotsmile } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 
-const Lecturer_songs = ({ id }) => {
+const Lecturer_songs = ({ id, setCount1, count1 }) => {
   const [data, setData] = useState([]);
   const [drop, setDrop] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setCount1(data.length);
+    console.log(count1);
+  }, [data]);
 
   useEffect(() => {
     const handleRequest = () => {
@@ -34,7 +39,7 @@ const Lecturer_songs = ({ id }) => {
 
     handleRequest();
   }, [id]);
-
+  // console.log(setCount1);
   return (
     <div className="lecsong_wrapper">
       <div className="lecsong_title_wrap">

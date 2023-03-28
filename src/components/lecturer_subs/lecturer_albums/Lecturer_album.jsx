@@ -5,9 +5,15 @@ import "./lecturer_album.scss";
 import { SlEmotsmile } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 
-const Lecturer_album = ({ id }) => {
+const Lecturer_album = ({ id, setCount2, count2 }) => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setCount2(data.length);
+    console.log(count2);
+  }, [data]);
+
   useEffect(() => {
     const handleRequest = () => {
       let hold = [];
@@ -32,7 +38,8 @@ const Lecturer_album = ({ id }) => {
 
     handleRequest();
   }, [id]);
-  // console.log(data);
+  // console.log(setCount2);
+
   return (
     <>
       <div className="lecalb_wrapper">

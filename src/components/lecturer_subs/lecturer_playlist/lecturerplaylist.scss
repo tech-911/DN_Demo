@@ -6,6 +6,9 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
+  .lecplaylist_item {
+    cursor: pointer;
+  }
 }
 .lecplaylist_comments {
   display: flex;
