@@ -5,6 +5,7 @@ import Favourite_album from "../../components/favourite_subs/favourite_albums/Fa
 import Favourite_songs from "../../components/favourite_subs/favourite_songs/Favourite_songs";
 import Favourite_playlist from "../../components/favourite_subs/favourite_playlist/Favourite_playlist";
 import Favourite_lecturers from "../../components/favourite_subs/favourite_lecturers/Favourite_lecturers";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 
 const Favourite = () => {
   const [tab, setTab] = useState(1);
@@ -12,6 +13,9 @@ const Favourite = () => {
   return (
     <Container>
       <div className="fav_wrapper">
+        <div>
+          <HeaderRouter title={"Favourites"} />
+        </div>
         <div className="fav_tab_wrap">
           <div className="fav_tab">
             <div

@@ -75,7 +75,7 @@ const FilterButton = ({
       }}
       className={`filter_wrapper ${active === title ? "filter_active" : ""}`}
     >
-      {title}
+      <p className="filter_text">{title}</p>
     </div>
   );
 };

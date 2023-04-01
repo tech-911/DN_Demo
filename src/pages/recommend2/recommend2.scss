@@ -1,5 +1,5 @@
 .recommend2_wrapper {
-  padding: 3rem 2rem;
+  padding: 0rem 2rem 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,4 +9,8 @@
   .recommended2_album_wrap {
     cursor: pointer;
   }
+}
+.recommend2_header_link {
+  width: 100%;
+  padding: 2rem 2rem 0rem;
 }

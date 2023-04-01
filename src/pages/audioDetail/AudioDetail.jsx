@@ -32,7 +32,7 @@ const AudioDetail = () => {
   const audioRef = useRef();
   const rangeRef = useRef();
   const { state } = useLocation();
-  const { nid } = state;
+  const { nid, nav1 } = state;
   useEffect(() => {
     axios
       .get(
@@ -99,11 +99,11 @@ const AudioDetail = () => {
           <div className="audiodetail_breadcrumb">
             <p
               onClick={() => {
-                navigate("/");
+                navigate(nav1?.link ? nav1.link : "/home");
               }}
               className="audiodetail_breadcrumb_first"
             >
-              Home/
+              {`${nav1?.title || "Home"}/`}
             </p>
             <p className="audiodetail_breadcrumb_second">
               {Title?.split("-")[0] || title?.split("-")[0] || "Unknown"}

@@ -5,7 +5,7 @@ import { FiChevronsRight } from "react-icons/fi";
 import LecturersWidget from "../lecturersWidget/LecturersWidget";
 import { useNavigate } from "react-router-dom";
 
-const GroupWidget = ({ data, heading, type, navLinking }) => {
+const GroupWidget = ({ data, heading, type, navLinking, nav1 }) => {
   const [more, setMore] = useState(0);
   const navigate = useNavigate();
   return (
@@ -50,6 +50,7 @@ const GroupWidget = ({ data, heading, type, navLinking }) => {
                         cats,
                         nid,
                         audio,
+                        nav1: nav1,
                       },
                     });
                   }}
@@ -73,16 +74,20 @@ const GroupWidget = ({ data, heading, type, navLinking }) => {
           }`}
         >
           {data.map(
-            (
-              { img, categories, cats, title, Title, rpname, nid, audio },
-              idx
-            ) => {
+            ({ img, categories, cats, title, Title, rpname, audio }, idx) => {
               return (
                 <div
                   className="groupWidget_lecturer_item"
                   onClick={() => {
                     navigate(`${navLinking}`, {
-                      state: { title: title||Title, rpname, img, cats, nid, audio },
+                      state: {
+                        title: title || Title,
+                        rpname,
+                        img,
+                        cats,
+                        audio,
+                        nav1: nav1,
+                      },
                     });
                   }}
                   key={idx + 1}

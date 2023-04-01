@@ -5,15 +5,30 @@ import "./lecturer_song.scss";
 import { SlEmotsmile } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 
-const Lecturer_songs = ({ id, setCount1, count1 }) => {
+const Lecturer_songs = ({ id, setCount1, count1, rpname }) => {
   const [data, setData] = useState([]);
   const [drop, setDrop] = useState("");
+  const [rpid, setRpid] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     setCount1(data.length);
-    console.log(count1);
   }, [data]);
+
+  useEffect(() => {
+    axios
+      .get("https://dawahnigeria.com/dawahcast/dboxapi/rpjson")
+      .then((res) => {
+        setRpid(
+          res.data.rp.filter((value) => {
+            return value.name === rpname;
+          })[0].id
+        );
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 
   useEffect(() => {
     const handleRequest = () => {
@@ -22,7 +37,9 @@ const Lecturer_songs = ({ id, setCount1, count1 }) => {
       for (let i = 1; i <= 20; i++) {
         axios
           .get(
-            `http://www.dawahbox.com/mongo/api/leclisting_rp.php?page=${i}&rpid=${id}`
+            `http://www.dawahbox.com/mongo/api/leclisting_rp.php?page=${i}&rpid=${
+              id || rpid
+            }`
           )
           .then((res) => {
             countloop++;
@@ -38,7 +55,7 @@ const Lecturer_songs = ({ id, setCount1, count1 }) => {
     };
 
     handleRequest();
-  }, [id]);
+  }, [rpid]);
   // console.log(setCount1);
   return (
     <div className="lecsong_wrapper">
@@ -57,7 +74,14 @@ const Lecturer_songs = ({ id, setCount1, count1 }) => {
             <div
               onClick={() => {
                 navigate(`/audiodetail`, {
-                  state: { title, rpname, img, cats, nid },
+                  state: {
+                    title,
+                    rpname,
+                    img,
+                    cats,
+                    nid,
+                    nav1: { title: "Lecturers", link: "/lecturers" },
+                  },
                 });
               }}
               key={idx}

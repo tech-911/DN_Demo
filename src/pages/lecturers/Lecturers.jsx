@@ -6,6 +6,7 @@ import { lecturers, language, alphabet } from "./data";
 import LecturersWidget from "../../components/lecturersWidget/LecturersWidget";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 
 const Lecturers = () => {
   const [data, setData] = useState([]);
@@ -52,6 +53,9 @@ const Lecturers = () => {
   return (
     <Container>
       <div className="lecturers_wrapper">
+        <div className="lecturers_head_link">
+          <HeaderRouter title={"Lecturer"} />
+        </div>
         <div className="lecturers_filter">
           <div className="lecturers_filter_name">
             {lecturers.map(({ name, id }, idx) => {
@@ -135,6 +139,7 @@ const Lecturers = () => {
                       img,
                       cats: catsname,
                       nid: id,
+                      nav1: { title: "Lecturers", link: "/lecturers" },
                     },
                   });
                 }}

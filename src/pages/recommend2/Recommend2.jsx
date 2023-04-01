@@ -5,6 +5,7 @@ import AlbumWidget from "../../components/albumWidget/AlbumWidget";
 import { recommended2Data } from "./data";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 
 const Recommend2 = () => {
   const [data, setData] = useState([]);
@@ -24,6 +25,9 @@ const Recommend2 = () => {
   // console.log(r)
   return (
     <Container>
+      <div className="recommend2_header_link">
+        <HeaderRouter title={"Podcast"} />
+      </div>
       <div className="recommend2_wrapper">
         {recommended2Data.map(
           ({ cats, img, title, rpname, nid, cats_name }, idx) => {
@@ -31,7 +35,14 @@ const Recommend2 = () => {
               <div
                 onClick={() => {
                   navigate(`/audiodetail`, {
-                    state: { title: title, rpname, img, cats, nid },
+                    state: {
+                      title: title,
+                      rpname,
+                      img,
+                      cats,
+                      nid,
+                      nav1: { title: "Podcast", link: "/recommend2" },
+                    },
                   });
                 }}
                 key={idx}

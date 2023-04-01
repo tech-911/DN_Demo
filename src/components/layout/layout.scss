@@ -61,4 +61,156 @@
       width: 100%;
     }
   }
+  .layout_buttom_menue {
+    position: absolute;
+    width: 100%;
+    background: #030303;
+    bottom: 0px;
+    left: 0px;
+    z-index: 90;
+    @media screen and (min-width: 500px) {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    .layout_buttom_menue1 {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      border-bottom: 1px solid rgba(88, 88, 88, 0.2);
+      .layout_buttom_text_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        .layout_buttom_text1 {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          color: #d4d4d4;
+          margin: unset;
+          max-width: 210px;
+          white-space: nowrap;
+          overflow: scroll;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          @media screen and (max-width: 389px) {
+            max-width: 150px;
+          }
+        }
+        .layout_buttom_text2 {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          color: #d4d4d4;
+          margin: unset;
+          max-width: 190px;
+          white-space: nowrap;
+          overflow: scroll;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          @media screen and (max-width: 389px) {
+            max-width: 120px;
+          }
+        }
+      }
+      .layout_buttom_share {
+        color: #cfcfcf;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      .layout_buttom_play_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #ddff2b;
+        .layout_buttom_play_icon {
+          font-size: 18px;
+          color: #000000;
+          cursor: pointer;
+        }
+      }
+    }
+    .layout_buttom_menue2 {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      .layout_buttom_menue2_home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8px;
+        cursor: pointer;
+        .layout_buttom_menue2_homeIcon {
+          font-size: 30px;
+          color: #cfcfcf;
+        }
+        .layout_buttom_menue2_homeText {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          color: #d4d4d4;
+          margin: unset;
+        }
+      }
+      .layout_buttom_menue2_library {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8px;
+        cursor: pointer;
+        .layout_buttom_menue2_libraryIcon {
+          font-size: 30px;
+          color: #cfcfcf;
+        }
+        .layout_buttom_menue2_libraryText {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          color: #d4d4d4;
+          margin: unset;
+        }
+      }
+      .layout_buttom_menue2_favourite {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8px;
+        cursor: pointer;
+        .layout_buttom_menue2_favouriteIcon {
+          font-size: 30px;
+          color: #cfcfcf;
+        }
+        .layout_buttom_menue2_favouriteText {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          color: #d4d4d4;
+          margin: unset;
+        }
+      }
+    }
+  }
 }

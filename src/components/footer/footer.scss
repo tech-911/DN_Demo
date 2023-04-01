@@ -29,6 +29,9 @@
     padding-right: 3rem;
     padding-left: 3rem;
   }
+  @media screen and (max-width: 500px) {
+    padding: 3rem 5rem 10.4375rem;
+  }
   .footer_main {
     display: flex;
     flex-direction: row;

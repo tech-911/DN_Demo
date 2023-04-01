@@ -4,6 +4,7 @@ import Container from "../../components/container/Container";
 import axios from "axios";
 import MusicList from "../../components/musicList/MusicList";
 import { useNavigate } from "react-router-dom";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 
 const New = () => {
   const [data, setData] = useState([]);
@@ -24,6 +25,7 @@ const New = () => {
   return (
     <Container>
       <div className="new_wrapper">
+        <HeaderRouter title={"New"} />
         <div className="new_title_wrap">
           <div className="new_title1">
             <p className="new_hash">#</p>
@@ -39,7 +41,14 @@ const New = () => {
               <div
                 onClick={() => {
                   navigate(`/audiodetail`, {
-                    state: { title: Title, rpname, img, cats, nid },
+                    state: {
+                      title: Title,
+                      rpname,
+                      img,
+                      cats,
+                      nid,
+                      nav1: { title: "New", link: "/new" },
+                    },
                   });
                 }}
                 key={idx}

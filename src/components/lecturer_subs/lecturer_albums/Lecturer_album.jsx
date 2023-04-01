@@ -5,14 +5,29 @@ import "./lecturer_album.scss";
 import { SlEmotsmile } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 
-const Lecturer_album = ({ id, setCount2, count2 }) => {
+const Lecturer_album = ({ id, setCount2, count2, rpname }) => {
   const [data, setData] = useState([]);
+  const [rpid, setRpid] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     setCount2(data.length);
-    console.log(count2);
   }, [data]);
+
+  useEffect(() => {
+    axios
+      .get("https://dawahnigeria.com/dawahcast/dboxapi/rpjson")
+      .then((res) => {
+        setRpid(
+          res.data.rp.filter((value) => {
+            return value.name === rpname;
+          })[0].id
+        );
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 
   useEffect(() => {
     const handleRequest = () => {
@@ -21,7 +36,9 @@ const Lecturer_album = ({ id, setCount2, count2 }) => {
       for (let i = 1; i <= 10; i++) {
         axios
           .get(
-            `http://www.dawahbox.com/mongo/api/albumlisting_rp.php?page=${i}&lim=10&rpid=${id}`
+            `http://www.dawahbox.com/mongo/api/albumlisting_rp.php?page=${i}&lim=10&rpid=${
+              id || rpid
+            }`
           )
           .then((res) => {
             countloop++;
@@ -37,7 +54,7 @@ const Lecturer_album = ({ id, setCount2, count2 }) => {
     };
 
     handleRequest();
-  }, [id]);
+  }, [rpid]);
   // console.log(setCount2);
 
   return (
@@ -71,6 +88,7 @@ const Lecturer_album = ({ id, setCount2, count2 }) => {
                       cats: categories,
                       nid: id,
                       audio,
+                      
                     },
                   });
                 }}

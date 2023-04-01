@@ -6,6 +6,7 @@ import { categories } from "./data";
 import FilterButton from "../../components/filterButton/FilterButton";
 import Recommend_widget from "../../components/recommend_widget/Recommend_widget";
 import { useNavigate } from "react-router-dom";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 const Recommend1 = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState([]);
@@ -53,6 +54,9 @@ const Recommend1 = () => {
   return (
     <Container>
       <div className="recommend1_wrapper">
+        <div>
+          <HeaderRouter title={"Buzz"} />
+        </div>
         <div className="recommend1_filter_categories">
           {categories.map(({ categories, id }, idx) => {
             return (
@@ -94,6 +98,7 @@ const Recommend1 = () => {
                       cats: catsname,
                       nid,
                       audio,
+                      nav1: { title: "Buzz", link: "/recommend1" },
                     },
                   });
                 }}

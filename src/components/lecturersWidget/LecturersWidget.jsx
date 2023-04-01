@@ -9,7 +9,7 @@ const LecturersWidget = ({ img, rp }) => {
         <img className="lecturerWidget_img" src={img} alt="circleImg" />
       </div>
       <p className="lecturerWidget_text">
-        {`${rp.split(" ")[0]} ${rp.split(" ")[1]}`}
+        {rp ? `${rp.split(" ")[0]} ${rp.split(" ")[1]}` : "undefined"}
       </p>
       <div className="lecturerWidget_views_wrapper">
         <FiHeadphones className="lecturerWidget_views_icon" />

@@ -8,15 +8,16 @@
 }
 
 .trend_wrapper {
-  padding: 3rem 2rem;
+  padding: 2rem 2rem 3rem;
   .trend_title_res_wrap {
     @media screen and (min-width: 1221px) {
       display: none;
     }
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     margin-bottom: 2rem;
+    justify-content: flex-start;
     .trending_title_res_icon {
       font-size: 40px;
       color: #d4d4d4;
@@ -29,7 +30,8 @@
       font-size: 20px;
       line-height: 30px;
       color: #d4d4d4;
-      margin-left: 40%;
+      grid-column: span 2;
+      margin-left: 1.5rem;
     }
   }
   .trend_title_wrap {

@@ -29,11 +29,12 @@ const LecturerDetail = () => {
   const navigate = useNavigate();
   const [tab, setTab] = useState(1);
   const { state } = useLocation();
-  const { title, rpname, img, cats, nid } = state;
+  const { title, rpname, img, cats, nid, nav1 } = state;
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
-  console.log(count1, count2, count3);
+  // console.log(state);
+
   return (
     <Container>
       <div className="lecdet_wrapper">
@@ -44,11 +45,11 @@ const LecturerDetail = () => {
           <div className="lecdet_breadcrumb">
             <p
               onClick={() => {
-                navigate("/");
+                navigate(nav1?.link ? nav1.link : "/home");
               }}
               className="lecdet_breadcrumb_first"
             >
-              Home/
+              {`${nav1?.title || "Home"}/`}
             </p>
             <p className="lecdet_breadcrumb_second">{title}</p>
           </div>
@@ -166,13 +167,28 @@ const LecturerDetail = () => {
           {/* ------------------------------------ Section 2 ends -------------------------------------- */}
           {/* ------------------------------------ Section 3 -------------------------------------- */}
           {tab === 1 && (
-            <Lecturer_songs id={nid} setCount1={setCount1} count1={count1} />
+            <Lecturer_songs
+              rpname={rpname}
+              id={nid}
+              setCount1={setCount1}
+              count1={count1}
+            />
           )}
           {tab === 2 && (
-            <Lecturer_album id={nid} setCount2={setCount2} count2={count2} />
+            <Lecturer_album
+              rpname={rpname}
+              id={nid}
+              setCount2={setCount2}
+              count2={count2}
+            />
           )}
           {tab === 3 && (
-            <Lecturer_playlist id={nid} setCount3={setCount3} count3={count3} />
+            <Lecturer_playlist
+              rpname={rpname}
+              id={nid}
+              setCount3={setCount3}
+              count3={count3}
+            />
           )}
           {tab === 4 && <Lecturer_videos />}
 

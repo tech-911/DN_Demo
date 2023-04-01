@@ -1,0 +1,38 @@
+.landop_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  .landop_widget {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #ddff2b;
+    overflow: hidden;
+    cursor: pointer;
+    .lanicon1,
+    .lanicon2,
+    .lanicon3,
+    .lanicon4,
+    .lanicon5,
+    .lanicon6,
+    .lanicon7,
+    .lanicon8 {
+      color: #0d0d0d;
+      font-size: 30px;
+    }
+  }
+  .landop_text {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #d4d4d4;
+    margin: unset;
+  }
+}

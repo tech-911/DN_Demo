@@ -5,12 +5,21 @@
   width: 12.5rem;
   height: 14.313rem;
   overflow: hidden;
+  @media screen and (max-width: 500px) {
+    width: 90px;
+    height: 110px;
+  }
   .album_container {
     width: 12.5rem;
     height: 12.5rem;
     overflow: hidden;
     border-radius: 8px;
     position: relative;
+    @media screen and (max-width: 500px) {
+      width: 90px;
+      height: 94.19px;
+    }
+
     .album_background_image {
       position: absolute;
       width: 100%;
@@ -27,8 +36,11 @@
       background: linear-gradient(
         180deg,
         rgba(217, 217, 217, 0) 0%,
-        rgba(25, 25, 26, 0.88) 71.74%
+        rgb(25, 25, 26) 71.74%
       );
+      @media screen and (max-width: 500px) {
+        height: 50%;
+      }
     }
     .album_widget_name {
       font-family: "Poppins";
@@ -44,6 +56,11 @@
       right: 0.5rem;
       margin: unset;
       padding: unset;
+      @media screen and (max-width: 500px) {
+        font-size: 10px;
+        line-height: 0px;
+        top: 1rem;
+      }
     }
     .album_listen_wrapper {
       position: absolute;
@@ -55,6 +72,9 @@
       .album_listen_icon {
         font-size: 16px;
         color: #d4d4d4;
+        @media screen and (max-width: 500px) {
+          font-size: 10px;
+        }
       }
       .album_listen_text {
         margin-left: 0.5rem;
@@ -67,6 +87,11 @@
         text-shadow: 0px 3px 4px rgba(44, 44, 44, 0.25);
         margin-bottom: unset;
         margin-top: unset;
+        @media screen and (max-width: 500px) {
+          font-size: 7.5px;
+          line-height: 0px;
+          margin-left: 0.2rem;
+        }
       }
     }
   }
@@ -78,5 +103,12 @@
     line-height: 21px;
     color: #d4d4d4;
     text-shadow: 0px 3px 4px rgba(44, 44, 44, 0.25);
+    white-space: nowrap;
+    max-width: 12rem;
+    overflow: hidden;
+    @media screen and (max-width: 500px) {
+      font-size: 8px;
+      max-width: 90px;
+    }
   }
 }

@@ -5,6 +5,7 @@ import { categories } from "./data";
 import axios from "axios";
 import FilterButton from "../../components/filterButton/FilterButton";
 import VideoWidget from "../../components/videoWidget/VideoWidget";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 
 const Videos = () => {
   const [data, setData] = useState([]);
@@ -35,6 +36,9 @@ const Videos = () => {
   return (
     <Container>
       <div className="video_wrapper">
+        <div>
+          <HeaderRouter title={"Videos"} />
+        </div>
         <div className="video_filter">
           <div className="video_filter_categories">
             {categories.map(({ categories, id }, idx) => {
@@ -62,7 +66,12 @@ const Videos = () => {
         <div className="video_widget">
           {filter.map(({ img, categories, title }, idx) => {
             return (
-              <VideoWidget key={idx} title={title} lecturer={categories} img={img} />
+              <VideoWidget
+                key={idx}
+                title={title}
+                lecturer={categories}
+                img={img}
+              />
             );
           })}
         </div>

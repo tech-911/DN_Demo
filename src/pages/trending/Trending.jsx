@@ -3,8 +3,8 @@ import "./trending.scss";
 import Container from "../../components/container/Container";
 import axios from "axios";
 import MusicList from "../../components/musicList/MusicList";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 
 const Trending = () => {
   const [data, setData] = useState([]);
@@ -25,15 +25,7 @@ const Trending = () => {
   return (
     <Container>
       <div className="trend_wrapper">
-        <div className="trend_title_res_wrap">
-          <MdOutlineKeyboardArrowLeft
-            onClick={() => {
-              navigate("/");
-            }}
-            className="trending_title_res_icon"
-          />
-          <p className="trending_title_res_text">Trending</p>
-        </div>
+        <HeaderRouter title={"Trending"} />
         <div className="trend_title_wrap">
           <div className="tend_title1">
             <p className="tend_hash">#</p>
@@ -49,7 +41,14 @@ const Trending = () => {
               <div
                 onClick={() => {
                   navigate(`/audiodetail`, {
-                    state: { title: Title, rpname, img, cats, nid },
+                    state: {
+                      title: Title,
+                      rpname,
+                      img,
+                      cats,
+                      nid,
+                      nav1: { title: "Trending", link: "/trending" },
+                    },
                   });
                 }}
                 key={idx}

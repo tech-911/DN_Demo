@@ -6,6 +6,7 @@ import FilterButton from "../../components/filterButton/FilterButton";
 import axios from "axios";
 import AlbumWidget from "../../components/albumWidget/AlbumWidget";
 import { useNavigate } from "react-router-dom";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 
 const Playlists = () => {
   const [data, setData] = useState([]);
@@ -52,6 +53,9 @@ const Playlists = () => {
   return (
     <Container>
       <div className="playlist_wrapper">
+        <div>
+          <HeaderRouter title={"Playlist"} />
+        </div>
         <div className="playlist_filter">
           <div className="playlist_filter_categories">
             {categories.map(({ cats, id }, idx) => {
@@ -118,6 +122,7 @@ const Playlists = () => {
                       cats: catsname,
                       nid,
                       audio,
+                      nav1: { title: "Playlists", link: "/playlists" },
                     },
                   });
                 }}

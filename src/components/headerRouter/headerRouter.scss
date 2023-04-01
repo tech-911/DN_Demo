@@ -1,0 +1,25 @@
+.hroute_title_res_wrap {
+  @media screen and (min-width: 1221px) {
+    display: none;
+  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
+  .hroute_title_res_icon {
+    font-size: 40px;
+    color: #d4d4d4;
+    cursor: pointer;
+  }
+  .hroute_title_res_text {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #d4d4d4;
+    grid-column: span 2;
+    margin-left: 1.5rem;
+  }
+}

@@ -5,6 +5,7 @@ import MusicList from "../../components/musicList/MusicList";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./lecturesListDetail.scss";
+import HeaderRouter from "../../components/headerRouter/HeaderRouter";
 
 const LecturesListDetail = () => {
   const [data, setData] = useState([]);
@@ -34,13 +35,7 @@ const LecturesListDetail = () => {
     <Container>
       <div className="songlidet_wrapper">
         <div className="songlidet_title_res_wrap">
-          <MdOutlineKeyboardArrowLeft
-            onClick={() => {
-              navigate(-1);
-            }}
-            className="songlidet_title_res_icon"
-          />
-          <p className="songlidet_title_res_text">Lectures List</p>
+          <HeaderRouter title={"Lectures Lists"} />
         </div>
         <div className="songlidet_title_wrap">
           <div className="songlidet_title1">
@@ -70,6 +65,7 @@ const LecturesListDetail = () => {
                         nid,
                         rp,
                         lec_img,
+                        nav1: { title: "← Back", link: -1 },
                       },
                     });
                   }}
