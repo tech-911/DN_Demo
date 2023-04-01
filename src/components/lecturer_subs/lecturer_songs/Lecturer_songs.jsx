@@ -5,7 +5,7 @@ import "./lecturer_song.scss";
 import { SlEmotsmile } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 
-const Lecturer_songs = ({ id, setCount1, count1, rpname }) => {
+const Lecturer_songs = ({ id, setCount1, count1, rpname, setImg }) => {
   const [data, setData] = useState([]);
   const [drop, setDrop] = useState("");
   const [rpid, setRpid] = useState("");
@@ -19,11 +19,11 @@ const Lecturer_songs = ({ id, setCount1, count1, rpname }) => {
     axios
       .get("https://dawahnigeria.com/dawahcast/dboxapi/rpjson")
       .then((res) => {
-        setRpid(
-          res.data.rp.filter((value) => {
-            return value.name === rpname;
-          })[0].id
-        );
+        const value = res.data.rp.filter((value) => {
+          return value.name === rpname;
+        })[0];
+        setRpid(value.id);
+        setImg(value.img);
       })
       .catch((err) => {
         console.log(err);

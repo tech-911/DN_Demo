@@ -1,0 +1,12 @@
+.simrp_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  @media screen and (max-width: 512px) {
+    justify-content: center;
+  }
+}

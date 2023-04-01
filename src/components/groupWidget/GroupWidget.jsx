@@ -92,11 +92,7 @@ const GroupWidget = ({ data, heading, type, navLinking, nav1 }) => {
                   }}
                   key={idx + 1}
                 >
-                  <LecturersWidget
-                    key={idx}
-                    rp={categories || cats}
-                    img={img}
-                  />
+                  <LecturersWidget key={idx} rp={rpname} img={img} />
                 </div>
               );
             }

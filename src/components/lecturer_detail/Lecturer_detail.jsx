@@ -25,15 +25,35 @@ import Lecturer_songs from "../lecturer_subs/lecturer_songs/Lecturer_songs";
 import Lecturer_album from "../lecturer_subs/lecturer_albums/Lecturer_album";
 import Lecturer_playlist from "../lecturer_subs/lecturer_playlist/Lecturer_playlist";
 import Lecturer_videos from "../lecturer_subs/lecturer_videos/Lecturer_videos";
+import Simillarrp from "../lecturer_subs/simillarrp/Simillarrp";
 const LecturerDetail = () => {
   const navigate = useNavigate();
   const [tab, setTab] = useState(1);
   const { state } = useLocation();
-  const { title, rpname, img, cats, nid, nav1 } = state;
+  const { title, rpname, cats, nid, nav1 } = state;
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
+  const [img, setImg] = useState(
+    "https://dawahnigeria.com/dawahcast/sites/default/files/600-800/700.jpg"
+  );
   // console.log(state);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("https://dawahnigeria.com/dawahcast/dboxapi/rpjson")
+  //     .then((res) => {
+  //       setImg(
+  //         res.data.rp.filter((value) => {
+  //           return value.name === rpname;
+  //         })[0].img
+  //       );
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
+  // console.log("lecimg: ", img);
 
   return (
     <Container>
@@ -162,6 +182,20 @@ const LecturerDetail = () => {
                   Videos and more
                 </p>
               </div>
+              <div
+                onClick={() => {
+                  setTab(5);
+                }}
+                className="lecdet_tab_simrp"
+              >
+                <p
+                  className={`${
+                    tab === 5 ? "lecdet_tab_simrp1_active" : "lecdet_tab_simrp1"
+                  }`}
+                >
+                  Similar RP
+                </p>
+              </div>
             </div>
           </div>
           {/* ------------------------------------ Section 2 ends -------------------------------------- */}
@@ -172,6 +206,7 @@ const LecturerDetail = () => {
               id={nid}
               setCount1={setCount1}
               count1={count1}
+              setImg={setImg}
             />
           )}
           {tab === 2 && (
@@ -180,6 +215,7 @@ const LecturerDetail = () => {
               id={nid}
               setCount2={setCount2}
               count2={count2}
+              setImg={setImg}
             />
           )}
           {tab === 3 && (
@@ -188,9 +224,11 @@ const LecturerDetail = () => {
               id={nid}
               setCount3={setCount3}
               count3={count3}
+              setImg={setImg}
             />
           )}
           {tab === 4 && <Lecturer_videos />}
+          {tab === 5 && <Simillarrp />}
 
           {/* ------------------------------------ Section 3 ends -------------------------------------- */}
         </div>

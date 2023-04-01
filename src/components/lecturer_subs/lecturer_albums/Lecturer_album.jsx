@@ -5,7 +5,7 @@ import "./lecturer_album.scss";
 import { SlEmotsmile } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 
-const Lecturer_album = ({ id, setCount2, count2, rpname }) => {
+const Lecturer_album = ({ id, setCount2, count2, rpname, setImg }) => {
   const [data, setData] = useState([]);
   const [rpid, setRpid] = useState("");
   const navigate = useNavigate();
@@ -22,6 +22,11 @@ const Lecturer_album = ({ id, setCount2, count2, rpname }) => {
           res.data.rp.filter((value) => {
             return value.name === rpname;
           })[0].id
+        );
+        setImg(
+          res.data.rp.filter((value) => {
+            return value.name === rpname;
+          })[0].img
         );
       })
       .catch((err) => {
@@ -88,7 +93,6 @@ const Lecturer_album = ({ id, setCount2, count2, rpname }) => {
                       cats: categories,
                       nid: id,
                       audio,
-                      
                     },
                   });
                 }}

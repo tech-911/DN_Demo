@@ -18,6 +18,9 @@
 @mixin grid_item_span4 {
   grid-column: span 4 / span 4;
 }
+@mixin grid_item_span6 {
+  grid-column: span 6 / span 6;
+}
 @mixin tab_text {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -118,6 +121,9 @@
         height: 240px;
         border-radius: 8px;
         overflow: hidden;
+        @media screen and (max-width: 432px) {
+          width: 100%;
+        }
         .lecdet_head_left_img {
           width: 100%;
           height: 100%;
@@ -285,13 +291,13 @@
       }
       .lecdet_tab {
         display: grid;
-        grid-template-columns: repeat(13, minmax(0, 1fr));
+        grid-template-columns: repeat(19, minmax(0, 1fr));
         justify-items: center;
         gap: 1rem;
-        width: 60%;
+        width: 90%;
         // border-bottom: 1px solid #5e5e5e;
         @media screen and (max-width: 1400px) {
-          width: 600px;
+          width: 900px;
         }
         .lecdet_tab_song {
           @include tab_text_align;
@@ -299,6 +305,7 @@
           .lecdet_tab_song1 {
             @include tab_text;
             margin: unset;
+            
           }
           .lecdet_tab_song1_active {
             @include tab_activetext;
@@ -396,6 +403,29 @@
               position: absolute;
               bottom: -0.3rem;
               left: 63px;
+              background-color: #ddff2b;
+              border-radius: 50px;
+              width: 2rem;
+              height: 0.25rem;
+            }
+          }
+        }
+        .lecdet_tab_simrp {
+          @include tab_text_align;
+          @include grid_item_span4;
+          .lecdet_tab_simrp1 {
+            @include tab_text;
+            margin: unset;
+          }
+          .lecdet_tab_simrp1_active {
+            @include grid_item_span6;
+            @include tab_activetext;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -0.3rem;
+              left: 22px;
               background-color: #ddff2b;
               border-radius: 50px;
               width: 2rem;

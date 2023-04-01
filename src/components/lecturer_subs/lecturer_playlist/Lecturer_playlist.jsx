@@ -5,7 +5,7 @@ import "./lecturerplaylist.scss";
 import { SlEmotsmile } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 
-const Lecturer_playlist = ({ id, setCount3, count3, rpname }) => {
+const Lecturer_playlist = ({ id, setCount3, count3, rpname, setImg }) => {
   const [data, setData] = useState([]);
   const [rpid, setRpid] = useState([]);
   const navigate = useNavigate();
@@ -22,6 +22,11 @@ const Lecturer_playlist = ({ id, setCount3, count3, rpname }) => {
           res.data.rp.filter((value) => {
             return value.name === rpname;
           })[0].id
+        );
+        setImg(
+          res.data.rp.filter((value) => {
+            return value.name === rpname;
+          })[0].img
         );
       })
       .catch((err) => {
