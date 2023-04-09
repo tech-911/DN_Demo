@@ -81,11 +81,15 @@
     flex-direction: column;
     gap: 1rem;
     .trend_content_item {
-      cursor: pointer;
       &:hover {
         background-color: rgba(255, 255, 255, 0.404);
         border-radius: 8px;
-        padding: 0.5rem 0.2rem;
+        padding: 0.5rem;
+        @media screen and (max-width: 1220px) {
+          background-color: unset;
+          border: unset;
+          padding: unset;
+        }
       }
     }
   }

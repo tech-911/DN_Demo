@@ -10,16 +10,46 @@ import {
 } from "react-icons/bs";
 import { RiAddBoxLine, RiDownload2Fill } from "react-icons/ri";
 import { SlOptionsVertical } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
 
-const MusicList = ({ lecturer, id, title, img, drop, setDrop }) => {
-  
+const MusicList = ({
+  lecturer,
+  id,
+  title,
+  image,
+  drop,
+  setDrop,
+  url,
+  Title,
+  rpname,
+  cats,
+  nid,
+  navName,
+  navLink,
+}) => {
+  const navigate = useNavigate();
+
   return (
     <div className="musicList_wrapper_main">
       <div className="musicList_wrapper">
-        <div className="musicList_main">
+        <div
+          onClick={() => {
+            navigate(url, {
+              state: {
+                title: Title,
+                rpname,
+                image,
+                cats,
+                nid,
+                nav1: { title: navName, link: navLink },
+              },
+            });
+          }}
+          className="musicList_main"
+        >
           <p className="musicList_main_left">{id + 1}</p>
           <div className="musicList_main_right">
-            <img src={Music} alt="music" />
+            <img src={image} alt="music" width={56} height={56} />
             <div className="musicList_main_right_content2">
               <marquee
                 direction="left"
@@ -76,10 +106,24 @@ const MusicList = ({ lecturer, id, title, img, drop, setDrop }) => {
             <p className="text">Add to Playlist</p>
           </div>
         </div>
-        <div className="musicListres_wrapper_left">
+        <div
+          onClick={() => {
+            navigate(url, {
+              state: {
+                title: Title,
+                rpname,
+                image,
+                cats,
+                nid,
+                nav1: { title: navName, link: navLink },
+              },
+            });
+          }}
+          className="musicListres_wrapper_left"
+        >
           <div className="musicListres_container">
             <img
-              src={img}
+              src={image}
               alt="background"
               className="musicListres_background_image"
             />

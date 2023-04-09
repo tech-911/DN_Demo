@@ -22,7 +22,11 @@ const LecturersWidget = ({ img, rp }) => {
         <div className="lecwidres_img_wrap">
           <img className="lecwidres_img" src={img} alt="lecturer image" />
         </div>
-        <p className="lecwidres_text">{rp}</p>
+        <p className="lecwidres_text">
+          {rp
+            ? `${rp.split(" ")[0]} ${rp.split(" ")[1]} ${rp.split(" ")[2]}`
+            : "undefined"}
+        </p>
       </div>
       {/* -----------------responsive lecturer widget Ends----------------- */}
     </>

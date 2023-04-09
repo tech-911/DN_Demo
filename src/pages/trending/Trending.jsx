@@ -22,6 +22,7 @@ const Trending = () => {
         console.log(err);
       });
   }, []);
+
   return (
     <Container>
       <div className="trend_wrapper">
@@ -35,33 +36,26 @@ const Trending = () => {
           <p className="tend_title3"></p>
           <p className="tend_title4">Time</p>
         </div>
+
         <div className="trend_content">
           {data.map(({ Title, rpname, img, cats, nid }, idx) => {
             return (
-              <div
-                onClick={() => {
-                  navigate(`/audiodetail`, {
-                    state: {
-                      title: Title,
-                      rpname,
-                      img,
-                      cats,
-                      nid,
-                      nav1: { title: "Trending", link: "/trending" },
-                    },
-                  });
-                }}
-                key={idx}
-                className="trend_content_item"
-              >
+              <div key={idx} className="trend_content_item">
                 <MusicList
                   key={idx}
                   id={idx}
-                  img={img}
+                  image={img}
                   title={Title}
                   lecturer={rpname}
                   drop={drop}
                   setDrop={setDrop}
+                  url="/audiodetail"
+                  Title={Title}
+                  rpname={rpname}
+                  cats={cats}
+                  nid={nid}
+                  navName={"Trending"}
+                  navLink={"/trending"}
                 />
               </div>
             );

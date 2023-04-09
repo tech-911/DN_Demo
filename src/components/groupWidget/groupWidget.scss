@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden;
   .groupWidget_top {
+    padding: 0rem 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -45,26 +46,40 @@
     }
   }
   .groupWidget_items {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
-    flex-wrap: wrap;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-    @media screen and (max-width: 512px) {
-      justify-content: center;
+    padding-left: 2rem;
+    @media screen and (max-width: 513px) {
+      padding-right: 2rem;
     }
     .groupWidget_lecturer_item,
     .groupWidget_album_item {
       cursor: pointer;
     }
+    .groupWidget_album_item {
+      width: fit-content !important;
+      height: fit-content !important;
+    }
+    .groupWidget_lecturer_item {
+      @media screen and (max-width: 513px) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .groupWidget_carousel_lecturers {
+    // .slick-list {
+    //   height: 100% !important;
+    // }
+    // @media screen and (max-width: 513px) {
+    //   height: 400px;
+    // }
   }
   .groupWidget_close_more {
     height: 14.313rem;
   }
   .groupWidget_albumclose_more {
     height: 276px;
+    @media screen and (max-width: 513px) {
+      height: 250px;
+    }
   }
   .groupWidget_open_more {
     height: 100%;

@@ -71,7 +71,9 @@ const LecturerDetail = () => {
             >
               {`${nav1?.title || "Home"}/`}
             </p>
-            <p className="lecdet_breadcrumb_second">{title}</p>
+            <p className="lecdet_breadcrumb_second">
+              {title.split("-")[2] || title}
+            </p>
           </div>
 
           {/* ------------------------------------ Section 1 -------------------------------------- */}
@@ -80,7 +82,9 @@ const LecturerDetail = () => {
               <img className="lecdet_head_left_img" src={img} alt="head" />
             </div>
             <div className="lecdet_head_right">
-              <h1 className="lecdet_head_right_head">{title}</h1>
+              <h1 className="lecdet_head_right_head">
+                {title.split("-")[2] || title}
+              </h1>
               <div className="lecdet_head_right_text">
                 <p className="lecdet_head_right_text1">{title.split(" ")[2]}</p>
                 <p className="lecdet_head_right_text2">{cats}</p>

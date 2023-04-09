@@ -39,6 +39,7 @@
     justify-items: flex-start;
     width: 100%;
     .musicList_main {
+      cursor: pointer;
       grid-column: span 5 / span 5;
       display: flex;
       flex-direction: row;
@@ -138,6 +139,10 @@
       * {
         font-size: 22px;
         color: #d4d4d4;
+        &:hover {
+          color: #d6ff00;
+          cursor: pointer;
+        }
       }
     }
     .musicList_time {
@@ -208,6 +213,7 @@
       height: 5.063rem;
       overflow: hidden;
       gap: 1rem;
+      cursor: pointer;
       .musicListres_container {
         width: 81px;
         height: 81px;
@@ -267,6 +273,9 @@
         height: 100%;
         width: 207px;
         overflow: hidden;
+        @media screen and (max-width: 430px) {
+          width: 150px;
+        }
         .musicListres_main_right_content2_header {
           font-family: "Poppins";
           font-style: normal;
@@ -274,7 +283,7 @@
           font-size: 12px;
           line-height: 27px;
           color: #d4d4d4;
-          max-width: 50%;
+          max-width: 70%;
           padding: unset;
           margin: unset;
           overflow: hidden;

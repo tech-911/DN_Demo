@@ -69,32 +69,24 @@ const Lecturer_songs = ({ id, setCount1, count1, rpname, setImg }) => {
         <p className="lecsong_title4">Time</p>
       </div>
       <div className="lecsong_content">
-        {data.map(({ title, rp, rpname, img, cats, nid }, idx) => {
+        {data.map(({ title, Title, rp, rpname, img, cats, nid }, idx) => {
           return (
-            <div
-              onClick={() => {
-                navigate(`/audiodetail`, {
-                  state: {
-                    title,
-                    rpname,
-                    img,
-                    cats,
-                    nid,
-                    nav1: { title: "Lecturers", link: "/lecturers" },
-                  },
-                });
-              }}
-              key={idx}
-              className="lecsong_content_item"
-            >
+            <div key={idx} className="lecsong_content_item">
               <MusicList
                 key={idx}
                 id={idx}
-                img={img}
                 title={title}
                 lecturer={rpname || rp}
                 drop={drop}
                 setDrop={setDrop}
+                image={img}
+                url="/audiodetail"
+                Title={Title || title}
+                rpname={rpname}
+                cats={cats}
+                nid={nid}
+                navName={"Back"}
+                navLink={-1}
               />
             </div>
           );

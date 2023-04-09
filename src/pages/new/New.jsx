@@ -38,30 +38,22 @@ const New = () => {
         <div className="new_content">
           {data.map(({ Title, rpname, img, cats, nid }, idx) => {
             return (
-              <div
-                onClick={() => {
-                  navigate(`/audiodetail`, {
-                    state: {
-                      title: Title,
-                      rpname,
-                      img,
-                      cats,
-                      nid,
-                      nav1: { title: "New", link: "/new" },
-                    },
-                  });
-                }}
-                key={idx}
-                className="new_content_item"
-              >
+              <div key={idx} className="new_content_item">
                 <MusicList
                   key={idx}
                   id={idx}
-                  img={img}
+                  image={img}
                   title={Title}
                   lecturer={rpname}
                   drop={drop}
                   setDrop={setDrop}
+                  url="/audiodetail"
+                  Title={Title}
+                  rpname={rpname}
+                  cats={cats}
+                  nid={nid}
+                  navName={"New"}
+                  navLink={"/new"}
                 />
               </div>
             );

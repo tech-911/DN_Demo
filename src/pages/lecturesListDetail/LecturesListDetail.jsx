@@ -53,34 +53,22 @@ const LecturesListDetail = () => {
               idx
             ) => {
               return (
-                <div
-                  onClick={() => {
-                    navigate(`/audiodetail`, {
-                      state: {
-                        title: Title || title,
-                        rpname,
-                        img,
-                        cats,
-                        categories,
-                        nid,
-                        rp,
-                        lec_img,
-                        nav1: { title: "← Back", link: -1 },
-                      },
-                    });
-                  }}
-                  key={idx}
-                  className="songlidet_content_item"
-                >
+                <div key={idx} className="songlidet_content_item">
                   <MusicList
                     key={idx}
                     id={idx}
-                    img={img || lec_img}
                     title={Title || title}
                     lecturer={rpname || rp}
                     drop={drop}
                     setDrop={setDrop}
                     nid={nid}
+                    image={img || lec_img}
+                    url="/audiodetail"
+                    Title={Title}
+                    rpname={rpname}
+                    cats={cats}
+                    navName={"Back"}
+                    navLink={-1}
                   />
                 </div>
               );

@@ -66,7 +66,7 @@ const Charts = () => {
   return (
     <Container>
       <div className="charts_wrapper">
-        <div>
+        <div className="charts_header_route">
           <HeaderRouter title={"Charts"} />
         </div>
 
