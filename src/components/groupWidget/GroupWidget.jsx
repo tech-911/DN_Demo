@@ -12,29 +12,24 @@ import { settings2, settings3, settings4 } from "./settings";
 const GroupWidget = ({ data, heading, type, navLinking, nav1 }) => {
   const [more, setMore] = useState(0);
   const navigate = useNavigate();
-  const [size, setSize] = useState(() => {
-    return Number(localStorage.getItem("widthsize")) || window.innerWidth;
-  });
+  const [size, setSize] = useState(window.innerWidth);
   const [settingsresponsive, setSettingsresponsive] = useState(() => {
     return size < 513 ? { ...settings4 } : { ...settings3 };
   });
 
   useEffect(() => {
-    localStorage.setItem("widthsize", JSON.stringify(size));
     const handleResize = () => {
       setSize(window.innerWidth);
+      setSettingsresponsive(() => {
+        return window.innerWidth < 513 ? { ...settings4 } : { ...settings3 };
+      });
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [size]);
 
-  useEffect(() => {
-    setSettingsresponsive(() => {
-      return size < 513 ? { ...settings4 } : { ...settings3 };
-    });
-  }, [size]);
-  console.log(size);
   console.log(settingsresponsive);
+
   return (
     <div className="groupWidget_wrapper">
       <div className="groupWidget_top">

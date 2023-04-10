@@ -5,6 +5,7 @@ export const settings2 = {
   fade: false,
   speed: 500,
   slidesToShow: 6.3,
+  swipeToSlide: true,
   slidesToScroll: 1,
   initialSlide: 0,
   // lazyLoad: true,
@@ -134,6 +135,7 @@ export const settings3 = {
   slidesToShow: 6,
   slidesToScroll: 1,
   initialSlide: 0,
+  swipeToSlide: true,
   // lazyLoad: true,
   responsive: [
     {
@@ -258,7 +260,7 @@ export const settings4 = {
   fade: false,
   speed: 500,
   vertical: true,
-  verticalSwiping: true,
+  verticalSwiping: false,
   swipeToSlide: true,
   slidesToShow: 6,
   slidesToScroll: 1,

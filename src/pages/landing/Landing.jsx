@@ -90,6 +90,7 @@ const Landing = () => {
     fade: false,
     speed: 500,
     slidesToShow: 6,
+    swipeToSlide: true,
     slidesToScroll: 1,
     prevArrow: false,
     nextArrow: false,
