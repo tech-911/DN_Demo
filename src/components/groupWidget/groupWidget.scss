@@ -11,6 +11,9 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 1rem;
+    @media screen and (max-width: 500px) {
+      padding: 0rem 1rem;
+    }
     .groupWidget_top_heading {
       font-family: "Nunito Sans";
       font-style: normal;
@@ -49,6 +52,9 @@
     padding-left: 2rem;
     @media screen and (max-width: 513px) {
       padding-right: 2rem;
+    }
+    @media screen and (max-width: 500px) {
+      padding-left: 1rem;
     }
     .groupWidget_lecturer_item,
     .groupWidget_album_item {

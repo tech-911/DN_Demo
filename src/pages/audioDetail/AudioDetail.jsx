@@ -218,7 +218,10 @@ const AudioDetail = () => {
                   </marquee>
                 </div>
                 <div className="audiodetail_play_control">
-                  <TbPlayerSkipBackFilled className="audiodetail_play_back" />
+                  <TbPlayerSkipBackFilled
+                    onClick={handleNextAudio}
+                    className="audiodetail_play_back"
+                  />
                   <div onClick={handlePlay} className="audiodetail_play_start">
                     {!playicon ? (
                       <FaPlay className="audiodetail_play_start_icon" />
@@ -226,7 +229,10 @@ const AudioDetail = () => {
                       <GiPauseButton className="audiodetail_play_start_icon" />
                     )}
                   </div>
-                  <TbPlayerSkipForwardFilled className="audiodetail_play_forward" />
+                  <TbPlayerSkipForwardFilled
+                    onClick={handleNextAudio}
+                    className="audiodetail_play_forward"
+                  />
                 </div>
 
                 <div className="audiodetail_play_action">
