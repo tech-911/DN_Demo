@@ -40,7 +40,7 @@ const AudioDetail = () => {
     })
   );
   // console.log("count: ", count);
-  console.log("controlData: ", controlData);
+  // console.log("controlData: ", controlData);
 
   useEffect(() => {
     axios
