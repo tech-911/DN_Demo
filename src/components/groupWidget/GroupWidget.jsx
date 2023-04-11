@@ -28,7 +28,7 @@ const GroupWidget = ({ data, heading, type, navLinking, nav1 }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [size]);
 
-  console.log(settingsresponsive);
+  // console.log(settingsresponsive);
 
   return (
     <div className="groupWidget_wrapper">
@@ -69,6 +69,7 @@ const GroupWidget = ({ data, heading, type, navLinking, nav1 }) => {
                         nid,
                         audio,
                         nav1: nav1,
+                        controlData: data,
                       },
                     });
                   }}

@@ -32,7 +32,15 @@ const AudioDetail = () => {
   const audioRef = useRef();
   const rangeRef = useRef();
   const { state } = useLocation();
-  const { nid, nav1 } = state;
+  let { nid, nav1, controlData } = state;
+  const [nidValue, setNidValue] = useState(nid);
+  const [count, setCount] = useState(
+    controlData.findIndex((value) => {
+      return value.nid === nidValue;
+    })
+  );
+  // console.log("count: ", count);
+  // console.log("controlData: ", controlData.length);
   useEffect(() => {
     axios
       .get(
@@ -45,14 +53,16 @@ const AudioDetail = () => {
         console.log(err);
       });
     axios
-      .get(`http://www.dawahbox.com/mongo/api/leclistingapi.php?lecid=${nid}`)
+      .get(
+        `http://www.dawahbox.com/mongo/api/leclistingapi.php?lecid=${nidValue}`
+      )
       .then((res) => {
         setSubData(res.data[0]);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [nidValue]);
 
   // useEffect(() => {
   //   if (audioRef.current) {
@@ -77,6 +87,38 @@ const AudioDetail = () => {
       audioRef.current.currentTime = e.target.value;
     }
   };
+  const handleNextAudio = () => {
+    console.log("first count: ", count);
+    setCount(
+      controlData.findIndex((value) => {
+        return value.nid === nidValue;
+      })
+    );
+    console.log("second count: ", count);
+    if (count === controlData.length - 1) {
+      setNidValue(controlData[count].nid);
+      console.log("end of track next");
+    } else {
+      setNidValue(controlData[count + 1].nid);
+      console.log("last count: ", count);
+    }
+  };
+  const handlePreviousAudio = () => {
+    console.log("first count: ", count);
+    setCount(
+      controlData.findIndex((value) => {
+        return value.nid === nidValue;
+      })
+    );
+    console.log("second count: ", count);
+    if (count === 0) {
+      setNidValue(controlData[count].nid);
+      console.log("end of track prev");
+    } else {
+      console.log("third count: ", count);
+      setNidValue(controlData[count - 1].nid);
+    }
+  };
 
   const {
     title,
@@ -90,7 +132,7 @@ const AudioDetail = () => {
     post_date,
     audio = "https://media.dawahnigeria.com/dnlectures/Shaykh%20Umar%20Dada%20Paiko%20%28Niger%29/Paiko_Backlog1435/Paiko-Non-Series/Ustaz-Umar-Paiko_Modern-Muslim-The-Confuse-Specie_www.dawahnigeria.com.mp3",
   } = subdata;
-  // console.log(subdata);
+  // console.log(controlData);
   return (
     <Container>
       <div className="audiodetail_wrapper">
@@ -329,7 +371,12 @@ const AudioDetail = () => {
             <div className="audiores_play_control_wrap">
               <TbRepeat className="audiores_play_control_repeat" />
               <div className="audiores_play_control">
-                <TbPlayerSkipBackFilled className="audiores_play_back" />
+                <TbPlayerSkipBackFilled
+                  onClick={() => {
+                    handlePreviousAudio();
+                  }}
+                  className="audiores_play_back"
+                />
                 <div onClick={handlePlay} className="audiores_play_start">
                   {!playicon ? (
                     <FaPlay className="audiores_play_start_icon" />
@@ -337,7 +384,12 @@ const AudioDetail = () => {
                     <GiPauseButton className="audiores_play_start_icon" />
                   )}
                 </div>
-                <TbPlayerSkipForwardFilled className="audiores_play_forward" />
+                <TbPlayerSkipForwardFilled
+                  onClick={() => {
+                    handleNextAudio();
+                  }}
+                  className="audiores_play_forward"
+                />
               </div>
               <RiPlayListFill className="audiores_play_control_list" />
             </div>
