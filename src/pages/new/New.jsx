@@ -54,6 +54,7 @@ const New = () => {
                   nid={nid}
                   navName={"New"}
                   navLink={"/new"}
+                  controlData={data}
                 />
               </div>
             );

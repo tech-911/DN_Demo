@@ -20,7 +20,15 @@ const Genres = () => {
               <div
                 onClick={() => {
                   navigate("/audiodetail", {
-                    state: { title: title, rpname, img, cats, nid, audio },
+                    state: {
+                      title: title,
+                      rpname,
+                      img,
+                      cats,
+                      nid,
+                      audio,
+                      controlData: genreData,
+                    },
                   });
                 }}
                 key={idx + 1}

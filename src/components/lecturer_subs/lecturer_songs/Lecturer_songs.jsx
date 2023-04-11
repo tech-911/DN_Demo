@@ -87,6 +87,7 @@ const Lecturer_songs = ({ id, setCount1, count1, rpname, setImg }) => {
                 nid={nid}
                 navName={"Back"}
                 navLink={-1}
+                controlData={data}
               />
             </div>
           );

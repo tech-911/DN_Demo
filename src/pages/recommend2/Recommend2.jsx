@@ -41,6 +41,7 @@ const Recommend2 = () => {
                       img,
                       cats,
                       nid,
+                      controlData: recommended2Data,
                       nav1: { title: "Podcast", link: "/recommend2" },
                     },
                   });

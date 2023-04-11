@@ -26,9 +26,9 @@ const MusicList = ({
   nid,
   navName,
   navLink,
+  controlData,
 }) => {
   const navigate = useNavigate();
-
   return (
     <div className="musicList_wrapper_main">
       <div className="musicList_wrapper">
@@ -41,6 +41,7 @@ const MusicList = ({
                 image,
                 cats,
                 nid,
+                controlData,
                 nav1: { title: navName, link: navLink },
               },
             });
@@ -115,6 +116,7 @@ const MusicList = ({
                 image,
                 cats,
                 nid,
+                controlData,
                 nav1: { title: navName, link: navLink },
               },
             });

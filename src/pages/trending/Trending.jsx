@@ -56,6 +56,7 @@ const Trending = () => {
                   nid={nid}
                   navName={"Trending"}
                   navLink={"/trending"}
+                  controlData={data}
                 />
               </div>
             );

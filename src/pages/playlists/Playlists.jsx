@@ -122,6 +122,7 @@ const Playlists = () => {
                       cats: catsname,
                       nid,
                       audio,
+                      controlData: filter,
                       nav1: { title: "Playlists", link: "/playlists" },
                     },
                   });

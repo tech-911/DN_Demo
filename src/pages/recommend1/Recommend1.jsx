@@ -98,6 +98,7 @@ const Recommend1 = () => {
                       cats: catsname,
                       nid,
                       audio,
+                      controlData: filter,
                       nav1: { title: "Buzz", link: "/recommend1" },
                     },
                   });

@@ -22,6 +22,8 @@ import axios from "axios";
 import Disk from "../../assets/png/Disk_tranparent.png";
 
 const AudioDetail = () => {
+  const { state } = useLocation();
+  let { nid, nav1, controlData } = state;
   const navigate = useNavigate();
   const [more, setMore] = useState(0);
   const [play, setPlay] = useState(0);
@@ -31,16 +33,15 @@ const AudioDetail = () => {
   const [subdata, setSubData] = useState([]);
   const audioRef = useRef();
   const rangeRef = useRef();
-  const { state } = useLocation();
-  let { nid, nav1, controlData } = state;
   const [nidValue, setNidValue] = useState(nid);
   const [count, setCount] = useState(
-    controlData.findIndex((value) => {
+    controlData?.findIndex((value) => {
       return value.nid === nidValue;
     })
   );
   // console.log("count: ", count);
-  // console.log("controlData: ", controlData.length);
+  console.log("controlData: ", controlData);
+
   useEffect(() => {
     axios
       .get(
@@ -90,33 +91,33 @@ const AudioDetail = () => {
   const handleNextAudio = () => {
     console.log("first count: ", count);
     setCount(
-      controlData.findIndex((value) => {
+      controlData?.findIndex((value) => {
         return value.nid === nidValue;
       })
     );
     console.log("second count: ", count);
-    if (count === controlData.length - 1) {
-      setNidValue(controlData[count].nid);
+    if (count === controlData?.length - 1) {
+      setNidValue(controlData[count]?.nid);
       console.log("end of track next");
     } else {
-      setNidValue(controlData[count + 1].nid);
+      setNidValue(controlData[count + 1]?.nid);
       console.log("last count: ", count);
     }
   };
   const handlePreviousAudio = () => {
     console.log("first count: ", count);
     setCount(
-      controlData.findIndex((value) => {
+      controlData?.findIndex((value) => {
         return value.nid === nidValue;
       })
     );
     console.log("second count: ", count);
     if (count === 0) {
-      setNidValue(controlData[count].nid);
+      setNidValue(controlData[count]?.nid);
       console.log("end of track prev");
     } else {
       console.log("third count: ", count);
-      setNidValue(controlData[count - 1].nid);
+      setNidValue(controlData[count - 1]?.nid);
     }
   };
 

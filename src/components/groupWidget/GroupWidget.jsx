@@ -118,6 +118,7 @@ const GroupWidget = ({ data, heading, type, navLinking, nav1 }) => {
                         cats,
                         audio,
                         nav1: nav1,
+                        controlData: data,
                       },
                     });
                   }}

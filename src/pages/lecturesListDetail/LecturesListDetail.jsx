@@ -69,6 +69,7 @@ const LecturesListDetail = () => {
                     cats={cats}
                     navName={"Back"}
                     navLink={-1}
+                    controlData={data}
                   />
                 </div>
               );
