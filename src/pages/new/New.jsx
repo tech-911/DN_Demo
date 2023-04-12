@@ -13,7 +13,7 @@ const New = () => {
   useEffect(() => {
     axios
       .get(
-        `http://www.dawahbox.com/mongo/api/popular_lec_api.php?langid=6&lim=200`
+        `https://www.dawahbox.com/mongo/api/popular_lec_api.php?langid=6&lim=200`
       )
       .then((res) => {
         setData(() => res.data.slice(99, 200));

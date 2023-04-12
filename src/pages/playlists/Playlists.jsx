@@ -32,7 +32,7 @@ const Playlists = () => {
       for (let i = 1; i <= 10; i++) {
         axios
           .get(
-            `http://www.dawahbox.com/mongo/api/leclisting_cat_api.php?page=${i}&langid=${langid}&catid=${catid}`
+            `https://www.dawahbox.com/mongo/api/leclisting_cat_api.php?page=${i}&langid=${langid}&catid=${catid}`
           )
           .then((res) => {
             countloop++;

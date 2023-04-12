@@ -55,7 +55,7 @@ const AudioDetail = () => {
       });
     axios
       .get(
-        `http://www.dawahbox.com/mongo/api/leclistingapi.php?lecid=${nidValue}`
+        `https://www.dawahbox.com/mongo/api/leclistingapi.php?lecid=${nidValue}`
       )
       .then((res) => {
         setSubData(res.data[0]);

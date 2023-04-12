@@ -21,7 +21,7 @@ const Landing = () => {
   useEffect(() => {
     axios
       .get(
-        "http://www.dawahbox.com/mongo/api/popular_lec_api.php?langid=6&lim=20"
+        "https://www.dawahbox.com/mongo/api/popular_lec_api.php?langid=6&lim=20"
       )
       .then((res) => {
         setRecent(res.data);
@@ -44,7 +44,7 @@ const Landing = () => {
       });
     axios
       .get(
-        "http://www.dawahbox.com/mongo/api/leclistingapi.php?lim=3000&langid=6"
+        "https://www.dawahbox.com/mongo/api/leclistingapi.php?lim=3000&langid=6"
       )
       .then((res) => {
         setRamadan(
@@ -57,7 +57,7 @@ const Landing = () => {
       });
     axios
       .get(
-        "http://www.dawahbox.com/mongo/api/leclistingapi.php?lim=1000&langid=6"
+        "https://www.dawahbox.com/mongo/api/leclistingapi.php?lim=1000&langid=6"
       )
       .then((res) => {
         setQuran(
